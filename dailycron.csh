@@ -20,7 +20,7 @@ www.ncbi.nlm.nih.gov \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
-echo runwget.csh $URL $LOG
+runwget.csh $URL $LOG
 end
 
 date
