@@ -1,0 +1,146 @@
+TAG: mirror_ftp-1-0-17
+DATE: 11/17/2003
+STAFF: lec
+RELEASE:
+CHANGES:
+1) genome-ftp.stanford.edu - GO.defs file is moving into \ontology directory
+   (TR 5319)
+
+TAG: mirror_ftp-1-0-16
+DATE: 10-01-03
+STAFF: sc
+RELEASE:
+CHANGES:
+1) ftp.ncbi.nih.gov package file-  removed mouse EST package 
+   and added refseq release, and non-cum updates 
+
+TAG: mirror_ftp-1-0-15
+DATE: 06-10-03
+STAFF: mbw
+RELEASE:
+CHANGES:
+1) bug fix: added a message naming the log file when exiting runmirror due to locking error
+
+
+TAG: mirror_ftp-1-0-14
+DATE: 06-10-03
+STAFF: mbw
+RELEASE:
+CHANGES:
+1) ignoring comment lines from package files when runmirror tries to calculate runtime directories for locking
+2) redirecting mirror_lock output to the log files
+
+
+TAG: mirror_ftp-1-0-13
+DATE: 05-23-03
+STAFF: mbw
+RELEASE:
+CHANGES:
+1) bug fix : uncommented code executing the runmirror command
+
+
+TAG: mirror_ftp-1-0-12
+DATE: 05-23-03
+STAFF: mbw
+RELEASE:
+CHANGES:
+1) added new script for locking directories called mirror_lock
+
+
+TAG: mirror_ftp-1-0-11
+DATE: 04-23-03
+STAFF: sc
+RELEASE: 2.96
+CHANGES: TR:4650
+1) runmirror - Removed references to LOCK.builddb
+2) Configuration.defaults - removed lock file names
+
+TAG: mirror_ftp-1-0-10
+TAG: mirror_ftp-1-0-9
+DATE: 04-18-03
+STAFF: lec
+RELEASE: 2.96
+CHANGES: added dailycron.csh, added weeklycron.csh
+
+TAG: mirror_ftp-1-0-8
+DATE: 04-17-03
+STAFF: mbw
+RELEASE: 2.96
+CHANGES: hardcoding name of lock file instead of using a configuration variable
+
+TAG: mirror_ftp-1-0-7
+DATE: 04-15-03
+STAFF: mbw
+RELEASE: 2.96
+CHANGES: 
+1) changed locking mechanism to be more specific to provider directory not the whole app
+2) added the following mirror package files:
+ftp.geneontology.org
+genome-ftp.stanford.edu
+ftp.ebi.ac.uk
+aretha.jax.org
+ratmap.gen.gu.se
+ftp.ncbi.nih.gov2
+grendel.jax.org
+
+TAG: mirror_ftp-1-0-6
+DATE: 03-25-03
+STAFF: sc
+RELEASE: prime-time
+CHANGES:
+1) grendel.jax.org - commented out package GB_NEW the cumulative
+   update mirror because it is obsolete
+
+TAG: mirror_ftp-1-0-5
+DATE: 03-15-03
+STAFF: sc
+RELEASE: prime-time
+CHANGES:
+1) Added lock file mechanism so that two instances of run_mirror cannot run
+   simultaneously and run_mirror cannot run if seqdb_engine builddb is running
+   Configuration.defaults - added LOCK_MIRROR and LOCK_BUILDDB
+   run_mirror added checking/creating/removing for $LOCK_MIRROR
+              added checking for $LOCK_BUILDDB
+
+TAG: mirror_ftp-1-0-4
+DATE: 03-11-2003
+STAFF: sc
+RELEASE: prime-time
+CHANGES: 
+1) moved fetching of genbank mouse ests from ftp.ncbi.nih.gov
+   to grendel.jax.org package file
+2) changed local dir in us.expasy.ch
+3) added ftp.ensembl.org
+4) runmirror - added reporting start/stop time and exit code for 
+   mirror.
+
+TAG: mirror_ftp-1-0-3
+DATE: 09/04/02
+STAFF: sc
+RELEASE: prime-time
+CHANGES: these changes cam about from neojunior testing
+1) Added more instructions to Install.readme
+
+TAG: mirror_ftp-1-0-2
+DATE: 08/30/02
+STAFF: sc
+RELEASE: prime-time
+CHANGES: these changes cam about from neojunior testing
+1) runmirror - added code to cd to dir of runmirror in order to find the config
+   file when running from cron
+2) added mirror.defaults and Install.readme to explain its use
+
+TAG: mirror_ftp-1-0-1
+DATE: 12/31/2001
+STAFF: blk
+RELEASE: prime-time
+CHANGES:
+1) Removed ftp.ensembl.org since it does not work.  Mirror cannot ls -R on their FTP server.
+2) Updated PURPOSE to add RIKEN flat files.
+
+TAG: mirror_ftp-1-0-0
+DATE: 12/28/2001
+STAFF: blk
+RELEASE: prime-time
+CHANGES:
+1) Initial release.

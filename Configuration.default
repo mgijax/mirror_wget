@@ -1,0 +1,10 @@
+# Default Configuration for mirror_wget
+
+# Top level installation directory
+setenv INSTALLDIR	/usr/local/mgi/mirror_wget/current
+
+# full path to data download directory
+setenv DATADIR		/data/downloads
+
+# full path to mirror log directory
+setenv MIRRORLOG	/data/downloads/mirror_wget_logs
