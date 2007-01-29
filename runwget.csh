@@ -52,5 +52,5 @@ setenv LOGFILE	$2
 # -t = number of retries
 #
 
-wget -o ${MIRRORLOG}/${LOGFILE}.log -rxNS -t 10 ${URL}
+wget -o ${MIRRORLOG}/${LOGFILE}.log -rxNS -t 10 "${URL}"
 
