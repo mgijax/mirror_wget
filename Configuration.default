@@ -11,8 +11,5 @@ endif
 source ${MGICONFIG}/master.config.csh
 
 # full path to mirror log directory
-setenv MIRRORLOG	/data/downloads/mirror_wget_logs
-
-# full path to data download directory
-setenv DATADIR          /data/downloads
+setenv MIRRORLOG	${DATADOWNLOADS}/mirror_wget_logs
 

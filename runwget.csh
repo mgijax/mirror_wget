@@ -39,7 +39,7 @@
 #	- TR 5310; new
 #
 
-cd `dirname $0` && source ./Configuration && cd ${DATADIR}
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 setenv URL	$1
 setenv LOGFILE	$2

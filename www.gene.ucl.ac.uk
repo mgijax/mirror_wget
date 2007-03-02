@@ -17,10 +17,26 @@
 #	- TR 8123
 #
 
-cd `dirname $0` && source ./Configuration && cd ${DATADIR}
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
+# Full URL of the file
 setenv URL	"http://www.gene.ucl.ac.uk/cgi-bin/nomenclature/hcop_data.cgi?species=mus&lite=1&Search=Submit"
-setenv LOGFILE	www.gene.ucl.ac.uk
+
+# Base URL of the file
+setenv BASEURL	www.gene.ucl.ac.uk
+setenv LOGFILE	${BASEURL}
+
+# output directory
+setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
+
+# output file
+setenv OUTPUTFILE	${OUTPUTDIR}/hcop_hum_mus_lite.txt
+
+# if OUTPUTDIR does not exist, create it
+if ( ! -d ${OUTPUTDIR} ) then
+        mkdir -p ${OUTPUTDIR}
+endif
+
 #
 # -r = overwrite existing copy with new copy
 # -x = force file to be saved in URL directory hierarchy
@@ -30,8 +46,9 @@ setenv LOGFILE	www.gene.ucl.ac.uk
 # -O = full path to output file
 
 # This works, but it won't create directories, I remover the -x and added the -O
-wget -o ${MIRRORLOG}/${LOGFILE}.log -O${DATADOWNLOADS}/${LOGFILE}/hcop_hum_mus_lite.txt -rNS -t 10 "${URL}"
-# Lori's original - file is created under the URL directory structure under ${DATADIR} and named  
-# hcop_data.cgi?species=mus&lite=1&S earch=Submit
+wget -o ${MIRRORLOG}/${LOGFILE}.log -O${OUTPUTFILE} -rNS -t 10 "${URL}"
+
+# Lori's original - file is created under the URL directory structure under ${DATADOWNLOADS}
+#  and named  hcop_data.cgi?species=mus&lite=1&Search=Submit
 #wget -o ${MIRRORLOG}/${LOGFILE}.log -rxNS -t 10 "${URL}"
 
