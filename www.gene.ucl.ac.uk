@@ -1,0 +1,37 @@
+#!/bin/csh -f
+
+#
+# Program: www.gene.ucl.ac.uk
+#
+# Original Author: Lori Corbani
+#
+# Purpose:
+#
+#	Due to the ? in this URL, we need to have a separate script
+#	to download this file;  the "cut" command in runwget.csh doesn't
+#	run correctly.
+#
+# Modification History:
+#
+# 01/29/2007	lec
+#	- TR 8123
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADIR}
+
+setenv URL	"http://www.gene.ucl.ac.uk/cgi-bin/nomenclature/hcop_data.cgi?species=mus&lite=1&Search=Submit"
+setenv LOGFILE	www.gene.ucl.ac.uk
+#
+# -r = overwrite existing copy with new copy
+# -x = force file to be saved in URL directory hierarchy
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -N = turn on time stamping (so file doesn't get downloaded if no changes)
+# -t = number of retries
+# -O = full path to output file
+
+# This works, but it won't create directories, I remover the -x and added the -O
+wget -o ${MIRRORLOG}/${LOGFILE}.log -O${DATADOWNLOADS}/${LOGFILE}/hcop_hum_mus_lite.txt -rNS -t 10 "${URL}"
+# Lori's original - file is created under the URL directory structure under ${DATADIR} and named  
+# hcop_data.cgi?species=mus&lite=1&S earch=Submit
+#wget -o ${MIRRORLOG}/${LOGFILE}.log -rxNS -t 10 "${URL}"
+
