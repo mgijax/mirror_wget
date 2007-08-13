@@ -17,6 +17,7 @@ date
 
 foreach i (\
 www.ncbi.nlm.nih.gov \
+www.genetrap.org \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
