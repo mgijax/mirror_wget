@@ -16,6 +16,7 @@ cd `dirname $0` && source ./Configuration
 date
 
 foreach i (\
+www.brain-map.org \
 www.gene.ucl.ac.uk \
 )
 $i
