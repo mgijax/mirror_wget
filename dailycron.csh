@@ -25,4 +25,10 @@ set LOG=`cut -f2 $i`
 runwget.csh ${URL} ${LOG}
 end
 
+foreach i (\
+www.sanger.ac.uk2 \
+)
+$i
+end
+
 date
