@@ -16,8 +16,15 @@ cd `dirname $0` && source ./Configuration
 date
 
 foreach i (\
-www.brain-map.org \
-www.gene.ucl.ac.uk \
+mouse.brain-map.org \
+)
+set URL=`cut -f1 $i`
+set LOG=`cut -f2 $i`
+runwget.csh ${URL} ${LOG}
+end
+
+foreach i (\
+www.genenames.org \
 )
 $i
 end

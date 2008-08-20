@@ -1,3 +1,11 @@
+TAG: mirror_wget-4-1-0-2
+DATE: 08/20/2008
+STAFF: sc
+CHANGES: 
+1) TR9222 - update hcop url
+2) fix weeklycron.csh - abaload url file was being invoked  
+   incorrectly
+
 TAG: mirror_wget-4-1-0-1
 DATE: 08/19/2008
 STAFF: sc

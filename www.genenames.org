@@ -1,30 +1,24 @@
 #!/bin/csh -f
 
 #
-# Program: www.gene.ucl.ac.uk
+# Program: www.genenames.org
 #
-# Original Author: Lori Corbani
+# Original Author: sc
 #
 # Purpose:
-#
-#	Due to the ? in this URL, we need to have a separate script
-#	to download this file;  the "cut" command in runwget.csh doesn't
-#	run correctly.
-#
-# Modification History:
-#
-# 01/29/2007	lec
-#	- TR 8123
+#	Fetch HCOP orthology file
 #
 
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 # Full URL of the file
-setenv URL	"http://www.gene.ucl.ac.uk/cgi-bin/nomenclature/hcop_data.cgi?species=mus&lite=1&Search=Submit"
+setenv URL	"http://www.genenames.org/cgi-bin/hcop_data.cgi?species=mus&lite=1&Search=Submit"
 
 # Base URL of the file
-setenv BASEURL	www.gene.ucl.ac.uk
-setenv LOGFILE	${BASEURL}
+setenv BASEURL	www.genenames.org
+
+# Full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}.log
 
 # output directory
 setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
@@ -46,9 +40,4 @@ endif
 # -O = full path to output file
 
 # This works, but it won't create directories, I remover the -x and added the -O
-wget -o ${MIRRORLOG}/${LOGFILE}.log -O${OUTPUTFILE} -rNS -t 10 "${URL}"
-
-# Lori's original - file is created under the URL directory structure under ${DATADOWNLOADS}
-#  and named  hcop_data.cgi?species=mus&lite=1&Search=Submit
-#wget -o ${MIRRORLOG}/${LOGFILE}.log -rxNS -t 10 "${URL}"
-
+wget -o ${LOGFILE} -O${OUTPUTFILE} -rNS -t 10 "${URL}"
