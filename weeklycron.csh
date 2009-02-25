@@ -24,6 +24,7 @@ runwget.csh ${URL} ${LOG}
 end
 
 foreach i (\
+func.med.harvard.edu \
 www.genenames.org \
 )
 $i
