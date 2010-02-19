@@ -1,15 +1,13 @@
 #!/bin/csh -f
 
 #
-# Program: www.sanger.ac.uk2
+# Program: www.sanger.ac.uk4
 #
-# Original Author: sc
+# Original Author: jmason
 #
 # Purpose:
 #
-#	Due to the ? in this URL, we need to have a separate script
-#	to download this file;  the "cut" command in runwget.csh doesn't
-#	run correctly.
+#	Download the sanger allele report
 #
 
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
@@ -43,5 +41,4 @@ endif
 # -O = full path to output file
 
 wget -o ${LOGFILE} -O${OUTPUTFILE} -rNS -t 10 "${URL}"
-gunzip ${OUTPUTFILE}
 
