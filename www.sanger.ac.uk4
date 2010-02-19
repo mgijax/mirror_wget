@@ -1,0 +1,47 @@
+#!/bin/csh -f
+
+#
+# Program: www.sanger.ac.uk2
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Due to the ? in this URL, we need to have a separate script
+#	to download this file;  the "cut" command in runwget.csh doesn't
+#	run correctly.
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
+
+# Full URL of the file
+setenv URL	"http://www.sanger.ac.uk/htgt/static/mgi_allele_report.csv.gz"
+
+# Base URL of the file
+setenv BASEURL www.sanger.ac.uk
+
+# full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}4.log
+
+# output directory
+setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}/htgt
+
+# output file
+setenv OUTPUTFILE	${OUTPUTDIR}/mgi_allele_report.csv.gz
+
+# if OUTPUTDIR does not exist, create it
+if ( ! -d ${OUTPUTDIR} ) then
+        mkdir -p ${OUTPUTDIR}
+endif
+
+#
+# -r = overwrite existing copy with new copy
+# -x = force file to be saved in URL directory hierarchy
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -N = turn on time stamping (so file doesn't get downloaded if no changes)
+# -t = number of retries
+# -O = full path to output file
+
+wget -o ${LOGFILE} -O${OUTPUTFILE} -rNS -t 10 "${URL}"
+gunzip ${OUTPUTFILE}
+
