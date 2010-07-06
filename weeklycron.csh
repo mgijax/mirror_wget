@@ -7,6 +7,11 @@
 #
 # History
 #
+# 07/06/2010	lec
+#	- TR 9316/cgd.jax.org
+#	  if you need to add this to weekly tasks,
+#         then it is the same as mouse.brain-map.org
+#
 # 01/29/2007	lec
 #	- TR 8123
 #
