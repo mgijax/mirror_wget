@@ -1,2 +1,2 @@
-http://cgd.jax.org/mousemapconverter/MIT-marker-data.xlsx cgd.jax.org
 http://cgd.jax.org/mousemapconverter/Revised_HSmap_SNPs.csv cgd.jax.org
+http://cgd.jax.org/mousemapconverter/MIT-marker-data.xlsx cgd.jax.org
