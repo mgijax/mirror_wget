@@ -12,7 +12,7 @@
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 # Full URL of the file
-setenv URL	"http://www.ebi.ac.uk/microarray-as/atlas/download/gene_identifiers.txt"
+setenv URL	"http://www.ebi.ac.uk/gxa/download/gene_identifiers.txt"
 
 # Base URL of the file
 setenv BASEURL	www.ebi.ac.uk
@@ -24,7 +24,7 @@ setenv LOGFILE	${MIRRORLOG}/${BASEURL}.log
 setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
 
 # output file
-setenv OUTPUTFILE	${OUTPUTDIR}/microarray-as/atlas/download/gene_identifiers.txt
+setenv OUTPUTFILE	${OUTPUTDIR}/gxa/download/gene_identifiers.txt
 
 # if OUTPUTDIR does not exist, create it
 if ( ! -d ${OUTPUTDIR} ) then
