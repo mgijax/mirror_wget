@@ -30,6 +30,7 @@ foreach i (\
 www.sanger.ac.uk2 \
 www.sanger.ac.uk3 \
 www.sanger.ac.uk4 \
+www.norcomm.org \
 )
 $i
 end

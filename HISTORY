@@ -1,3 +1,12 @@
+TAG: mirror_wget-4-4-0-2
+DATE: 11/17/2010
+STAFF: jmason
+CHANGES:
+1) added wget script to get norcomm allele data from IKMC 
+   targeting repository mart (i-dcc.org)
+2) added task to dailytasks cron to execute the new norcomm
+   file download
+
 TAG: mirror_wget-4-4-0-1
 DATE: 10/04/2010
 STAFF: dbm
