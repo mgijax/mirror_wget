@@ -1,3 +1,10 @@
+TAG: mirror_wget-4-4-1-1
+DATE: 02/03/2010
+STAFF: jmason
+CHANGES:
+1) updated the norcomm download parameters to sort the file by cassette before
+   saving it
+
 TAG: mirror_wget-4-4-0-3
 DATE: 11/18/2010
 STAFF: jmason
