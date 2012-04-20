@@ -1,0 +1,46 @@
+#!/bin/csh -f
+
+#
+# Program: www.i-dcc.org3
+#
+# Original Author: jmason
+#
+# Purpose:
+#
+#	Download the EUCOMM allele report from IKMC targ repository
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
+
+# Full URL of the file
+setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="0" count="" datasetConfigVersion="0.6" ><Dataset name="idcc_targ_rep" interface="default" ><Filter name="pipeline" value="mirKO"/><Attribute name="mgi_accession_id" /><Attribute name="assembly" /><Attribute name="cassette" /><Attribute name="pipeline" /><Attribute name="ikmc_project_id" /><Attribute name="escell_clone" /><Attribute name="parental_cell_line" /><Attribute name="allele_symbol_superscript" /><Attribute name="mutation_subtype" /><Attribute name="cassette_start" /><Attribute name="cassette_end" /><Attribute name="loxp_start" /><Attribute name="loxp_end" /></Dataset></Query>'
+
+# Base URL of the file
+setenv BASEURL www.i-dcc.org
+
+# full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}.log
+
+# output directory
+setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
+
+# output file
+setenv OUTPUTFILE	${OUTPUTDIR}/mirko_clones.tsv
+
+# if OUTPUTDIR does not exist, create it
+if ( ! -d ${OUTPUTDIR} ) then
+        mkdir -p ${OUTPUTDIR}
+endif
+
+#
+# wget
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -O = full path to output file
+# -t = number of retries
+# sort
+# -r = reverse
+# -k 7 = sort by the 7th column
+#
+
+wget -S -O- -t 10 "${URL}" | sort -rk 7 > ${OUTPUTFILE}
+
