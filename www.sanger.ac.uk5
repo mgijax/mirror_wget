@@ -26,7 +26,7 @@ setenv LOGFILE	${MIRRORLOG}/${BASEURL}5.log
 setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}/htgt
 
 # output file
-setenv OUTPUTFILE	${OUTPUTDIR}/mgi_sangor_mp.tsv
+setenv OUTPUTFILE	${OUTPUTDIR}/mgi_sanger_mp.tsv
 
 # if OUTPUTDIR does not exist, create it
 if ( ! -d ${OUTPUTDIR} ) then
