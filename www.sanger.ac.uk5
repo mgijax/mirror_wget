@@ -1,0 +1,45 @@
+#!/bin/csh -f
+
+#
+# Program: www.sanger.ac.uk5
+#
+# Original Author: lec
+#
+# Purpose:
+#
+#	Download the sanger biomart mammalian phenotype data
+#	TR10273
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
+
+# Full URL of the file
+setenv URL	'http://www.sanger.ac.uk/htgt/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0"  uniqueRows="0" count="" datasetConfigVersion="0.6"><Dataset name="mgi_mp_term_export" interface="default"><Attribute name="phenotyping_center"/><Attribute name="es_cell"/><Attribute name="mp_id"/><Attribute name="mgi_allele_id"/><Attribute name="allele_state"/><Attribute name="allele_symbol"/><Attribute name="link_out_id"/><Attribute name="evidence_code"/><Attribute name="pipeline"/><Attribute name="genetic_background"/><Attribute name="annotation_center"/><Attribute name="gender"/></Dataset></Query>'
+
+# Base URL of the file
+setenv BASEURL www.sanger.ac.uk
+
+# full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}5.log
+
+# output directory
+setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}/htgt
+
+# output file
+setenv OUTPUTFILE	${OUTPUTDIR}/mgi_sangor_mp.tsv
+
+# if OUTPUTDIR does not exist, create it
+if ( ! -d ${OUTPUTDIR} ) then
+        mkdir -p ${OUTPUTDIR}
+endif
+
+#
+# -r = overwrite existing copy with new copy
+# -x = force file to be saved in URL directory hierarchy
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -N = turn on time stamping (so file doesn't get downloaded if no changes)
+# -t = number of retries
+# -O = full path to output file
+
+wget -S -O- -t 10 "${URL}" | sort -rk 7 > ${OUTPUTFILE}
+

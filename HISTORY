@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-0-10-2
+DATE: 08/28/2012
+STAFF: lec
+CHANGES: 
+1) added www.sanger.ac.uk5
+download the sanger biomart mammalian phenotype data (TR10273)
+
 TAG: mirror_wget-5-0-10-1
 DATE: 04/20/2012
 STAFF: jmason
