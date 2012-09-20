@@ -1,10 +1,12 @@
+TAG: mirror_wget-5-0-10-4
 TAG: mirror_wget-5-0-10-3
 TAG: mirror_wget-5-0-10-2
-DATE: 08/28/2012
+DATE: 08/28/2012, 09/20/2012
 STAFF: lec
 CHANGES: 
 1) added www.sanger.ac.uk5
 download the sanger biomart mammalian phenotype data (TR10273)
+2) remove "pipeline" from download and set 'uniqueRows="1"'
 
 TAG: mirror_wget-5-0-10-1
 DATE: 04/20/2012
