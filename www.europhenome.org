@@ -17,27 +17,23 @@
 # p-value cutoff parameter
 # <Filter name="significance" value="0.0001"/>
 #
-# <Attribute name="europhenome_id"/>
-# <Attribute name="line_name"/>
-# <Attribute name="sex"/>
-# <Attribute name="zygosity"/>
+# <Attribute name="pipeline"/>
+# <Attribute name="escell_clone"/>
+# <Attribute name="mp_term"/>
 # <Attribute name="allele_id"/>
+# <Attribute name="zygosity"/>
 # <Attribute name="allele_name"/>
 # <Attribute name="mgi_accession_id"/>
-# <Attribute name="marker_symbol"/>
 # <Attribute name="international_strain_name"/>
 # <Attribute name="stocklist_id"/>
-# <Attribute name="escell_clone"/>
-# <Attribute name="pipeline"/>
+# <Attribute name="sex"/>
 # <Attribute name="significance"/>
-# <Attribute name="mp_term"/>
-# <Attribute name="mp_term_name"/>
 #
 
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 # Full URL of the file
-setenv URL	'http://www.europhenome.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6"><Dataset name= "europhenome" interface="default"><Filter name="significance" value="0.0001"/><Attribute name="europhenome_id"/><Attribute name="line_name"/><Attribute name="sex"/><Attribute name="zygosity"/><Attribute name="allele_id"/><Attribute name="allele_name"/><Attribute name="mgi_accession_id"/><Attribute name="marker_symbol"/><Attribute name="international_strain_name"/><Attribute name="stocklist_id"/><Attribute name="escell_clone"/><Attribute name="pipeline"/><Attribute name="significance"/><Attribute name="mp_term"/><Attribute name="mp_term_name"/></Dataset></Query>'
+setenv URL	'http://www.europhenome.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6"><Dataset name= "europhenome" interface="default"><Filter name="significance" value="0.0001"/><Attribute name="pipeline"/><Attribute name="escell_clone"/><Attribute name="mp_term"/><Attribute name="allele_id"/><Attribute name="zygosity"/><Attribute name="allele_name"/><Attribute name="mgi_accession_id"/><Attribute name="international_strain_name"/><Attribute name="stocklist_id"/><Attribute name="sex"/><Attribute name="significance"/></Dataset></Query>'
 
 # Base URL of the file
 setenv BASEURL www.europhenome.org
