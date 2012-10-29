@@ -10,6 +10,21 @@
 #	Download the sanger biomart mammalian phenotype data
 #	TR10273
 #
+# easier to read:
+#
+# uniqueRows="1"
+# <Attribute name="phenotyping_center"/>
+# <Attribute name="annotation_center"/>
+# <Attribute name="es_cell"/>
+# <Attribute name="mp_id"/>
+# <Attribute name="mgi_allele_id"/>
+# <Attribute name="allele_state"/>
+# <Attribute name="allele_symbol"/>
+# <Attribute name="link_out_id"/>
+# <Attribute name="evidence_code"/>
+# <Attribute name="genetic_background"/>
+# <Attribute name="gender"/>
+#
 
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 

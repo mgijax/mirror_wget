@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-0-10-?
+DATE: 10/29/2012
+STAFF: lec
+CHANGES: 
+1) added www.europhenome.org
+download the europhenome biomart mammalian phenotype data (TR10273)
+
 TAG: mirror_wget-5-0-10-4
 TAG: mirror_wget-5-0-10-3
 TAG: mirror_wget-5-0-10-2
