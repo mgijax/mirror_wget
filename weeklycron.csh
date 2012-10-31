@@ -7,6 +7,9 @@
 #
 # History
 #
+# 10/31/2012
+#	- TR10273/added www.sanger.ac.uk5; www.europhenome.org
+#
 # 07/06/2010	lec
 #	- TR 9316/cgd.jax.org
 #	  if you need to add this to weekly tasks,
@@ -35,6 +38,7 @@ www.i-dcc.org1 \
 www.i-dcc.org2 \
 www.i-dcc.org3 \
 www.sanger.ac.uk5 \
+www.europhenome.org \
 )
 $i
 end
