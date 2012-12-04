@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-1-1-1
+DATE: 12/04/2012
+STAFF: sc
+CHANGES: www.i-dcc.org*
+1) updated "mutation_subtype" to "mutation_type"
+2) updated uniqueRows="0" to uniqueRows="1"
+
 TAG: mirror_wget-5-0-10-7
 TAG: mirror_wget-5-0-10-6
 TAG: mirror_wget-5-0-10-5

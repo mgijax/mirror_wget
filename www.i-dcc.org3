@@ -13,7 +13,7 @@
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 # Full URL of the file
-setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="0" count="" datasetConfigVersion="0.6" ><Dataset name="idcc_targ_rep" interface="default" ><Filter name="pipeline" value="EUCOMM"/><Attribute name="mgi_accession_id" /><Attribute name="assembly" /><Attribute name="cassette" /><Attribute name="pipeline" /><Attribute name="ikmc_project_id" /><Attribute name="escell_clone" /><Attribute name="parental_cell_line" /><Attribute name="allele_symbol_superscript" /><Attribute name="mutation_subtype" /><Attribute name="cassette_start" /><Attribute name="cassette_end" /><Attribute name="loxp_start" /><Attribute name="loxp_end" /></Dataset></Query>'
+setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6" ><Dataset name="idcc_targ_rep" interface="default" ><Filter name="pipeline" value="EUCOMM"/><Attribute name="mgi_accession_id" /><Attribute name="assembly" /><Attribute name="cassette" /><Attribute name="pipeline" /><Attribute name="ikmc_project_id" /><Attribute name="escell_clone" /><Attribute name="parental_cell_line" /><Attribute name="allele_symbol_superscript" /><Attribute name="mutation_type" /><Attribute name="cassette_start" /><Attribute name="cassette_end" /><Attribute name="loxp_start" /><Attribute name="loxp_end" /></Dataset></Query>'
 
 # Base URL of the file
 setenv BASEURL www.i-dcc.org
