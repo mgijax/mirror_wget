@@ -1,7 +1,32 @@
+TAG: mirror_wget-5-1-2-1 
+DATE: 4/01/2013
+STAFF: sc
+CHANGES: merge tr6519 changes to trunk
+
+TAG: mirror_wget-tr6519-3
+DATE: 3/25/2013
+STAFF: sc
+CHANGES:
+1) 1) www.i-dcc.org3 - reversed the change in tr6519-2
+
+TAG: mirror_wget-tr6519-2
+DATE: 2/15/2013
+STAFF: sc
+CHANGES:
+1) www.i-dcc.org3 - updated <Attribute name="ikmc_project_id"> 
+    to <Attribute name="targeting_vector_ikmc_project_id">
+
+TAG: mirror_wget-tr6519-1
+DATE: 1/31/2013
+STAFF: sc
+CHANGES: 
+1) www.i-dcc.org3 - added mutation_subtype fo targetedalleleload
+
 TAG: mirror_wget-tr6519-BP
 DATE: 1/31/2013
 STAFF: sc
 CHANGES: Branch point tag for N2MO 
+1) www.i-dcc.org3 - added mutation_subtype fo targetedalleleload
 
 TAG: mirror_wget-5-1-1-1
 DATE: 12/04/2012
