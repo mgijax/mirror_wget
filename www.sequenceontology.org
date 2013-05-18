@@ -1,1 +1,1 @@
-http://www.sequenceontology.org/resources/obo_files/current_release.obo www.sequenceontology.org
+http://www.sequenceontology.org/resources/obo_files/current_release.obo	www.sequenceontology.org
