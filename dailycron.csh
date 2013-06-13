@@ -21,6 +21,11 @@ www.genetrap.org \
 www.sanger.ac.uk \
 www.sequenceontology.org \
 purl.obolibrary.org \
+purl.obolibrary1.org \
+purl.obolibrary2.org \
+purl.obolibrary3.org \
+purl.obolibrary4.org \
+purl.obolibrary5.org \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
