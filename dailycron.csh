@@ -18,7 +18,6 @@ date
 foreach i (\
 www.ncbi.nlm.nih.gov \
 www.genetrap.org \
-www.sanger.ac.uk \
 www.sequenceontology.org \
 purl.obolibrary.org \
 purl.obolibrary1.org \
