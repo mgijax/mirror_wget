@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-1-4-3
+DATE: 07/12/2013
+STAFF: sc
+CHANGES: TR11396 
+1) www.i-dcc.org2 AND www.i-dcc.org3 - updated pipeline in the URL
+2) *.csh -fx for linux
+
 TAG: mirror_wget-5-1-4-2
 DATE: 07/12/2013
 STAFF: sc

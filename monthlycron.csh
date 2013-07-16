@@ -1,4 +1,4 @@
-#!/bin/csh -x -f
+#!/bin/csh -fx
 
 #
 # Wrapper for running monthly crons
