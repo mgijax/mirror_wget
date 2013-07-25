@@ -16,7 +16,6 @@ cd `dirname $0` && source ./Configuration
 date
 
 foreach i (\
-www.ncbi.nlm.nih.gov \
 www.genetrap.org \
 www.sequenceontology.org \
 purl.obolibrary.org \

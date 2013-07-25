@@ -26,14 +26,6 @@ cd `dirname $0` && source ./Configuration
 
 date
 
-foreach i (\
-mouse.brain-map.org \
-)
-set URL=`cut -f1 $i`
-set LOG=`cut -f2 $i`
-runwget.csh ${URL} ${LOG}
-end
-
 #remove temporarily
 #www.europhenome.org \
 foreach i (\
