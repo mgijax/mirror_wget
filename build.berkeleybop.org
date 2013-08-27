@@ -1,0 +1,1 @@
+http://build.berkeleybop.org/job/gaf-check-mgi/lastBuild/artifact/gene_association.mgi.inf.gaf	build.berkeleybop.org
