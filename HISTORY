@@ -1,3 +1,9 @@
+TAG: mirror_wget-5-1-5-1
+DATE: 09/03/2013
+STAFF: dbm
+CHANGES: TR11475
+1) dailycron.csh, monthlycron.csh, weeklycron.csh: remove "-x" option
+
 TAG: mirror_wget-5-1-4-7
 TAG: mirror_wget-5-1-4-6
 DATE: 08/27/2013
