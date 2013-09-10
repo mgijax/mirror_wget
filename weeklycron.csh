@@ -26,10 +26,17 @@ cd `dirname $0` && source ./Configuration
 
 date
 
+foreach i (\
+func.med.harvard.edu \
+)
+set URL=`cut -f1 $i`
+set LOG=`cut -f2 $i`
+runwget.csh ${URL} ${LOG}
+end
+
 #remove temporarily
 #www.europhenome.org \
 foreach i (\
-func.med.harvard.edu \
 www.genenames.org \
 www.i-dcc.org1 \
 www.i-dcc.org2 \

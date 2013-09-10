@@ -19,7 +19,7 @@ setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" e
 setenv BASEURL www.i-dcc.org
 
 # full path to log file
-setenv LOGFILE	${MIRRORLOG}/${BASEURL}.log
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}1.log
 
 # output directory
 setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
@@ -42,5 +42,5 @@ endif
 # -k 7 = sort by the 7th column
 #
 
-wget -S -O- -t 10 "${URL}" | sort -rk 7 > ${OUTPUTFILE}
+wget -o ${LOGFILE} -S -O- -t 10 "${URL}" | sort -rk 7 > ${OUTPUTFILE}
 

@@ -18,7 +18,9 @@ date
 foreach i (\
 www.ebi.ac.uk \
 )
-$i
+set URL=`cut -f1 $i`
+set LOG=`cut -f2 $i`
+runwget.csh ${URL} ${LOG}
 end
 
 date

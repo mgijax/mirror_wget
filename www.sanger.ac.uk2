@@ -36,11 +36,9 @@ endif
 
 #
 # -r = overwrite existing copy with new copy
-# -x = force file to be saved in URL directory hierarchy
 # -S = print the headers sent by HTTP servers and responses sent by FTP servers.
-# -N = turn on time stamping (so file doesn't get downloaded if no changes)
 # -t = number of retries
 # -O = full path to output file
 
 # This works, but it won't create directories, I remover the -x and added the -O
-wget -o ${LOGFILE} -O${OUTPUTFILE} -rNS -t 10 "${URL}"
+wget -o ${LOGFILE} -O${OUTPUTFILE} -rS -t 10 "${URL}"
