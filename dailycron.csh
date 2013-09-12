@@ -18,7 +18,6 @@ date
 foreach i (\
 www.genetrap.org \
 www.sequenceontology.org \
-purl.obolibrary.org \
 purl.obolibrary1.org \
 purl.obolibrary2.org \
 purl.obolibrary3.org \
@@ -32,6 +31,7 @@ runwget.csh ${URL} ${LOG}
 end
 
 foreach i (\
+purl.obolibrary.org \
 www.sanger.ac.uk2 \
 www.sanger.ac.uk3 \
 www.sanger.ac.uk4 \
