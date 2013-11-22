@@ -1,3 +1,12 @@
+TAG: mirror_wget-5-1-5-6
+DATE: 11/22/2013
+STAFF: dbm
+CHANGES:
+1) dailycron.csh, weeklycron.csh, monthlycron.csh: echo package name
+2) purl.obolibrary.org, www.genenames.org,
+   www.gensat.org, www.sanger.ac.uk2,
+   www.sanger.ac.uk3, www.sanger.ac.uk4: send wget stdout to /dev/null
+
 TAG: mirror_wget-5-1-5-5
 DATE: 10/04/2013
 STAFF: sc
