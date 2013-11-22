@@ -27,6 +27,7 @@ build.berkeleybop.org \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
+echo $i
 runwget.csh ${URL} ${LOG}
 end
 
@@ -37,6 +38,7 @@ www.sanger.ac.uk3 \
 www.sanger.ac.uk4 \
 www.gensat.org \
 )
+echo $i
 $i
 end
 

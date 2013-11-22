@@ -20,6 +20,7 @@ www.ebi.ac.uk \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
+echo $i
 runwget.csh ${URL} ${LOG}
 end
 

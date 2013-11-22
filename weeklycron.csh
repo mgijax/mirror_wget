@@ -31,6 +31,7 @@ func.med.harvard.edu \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
+echo $i
 runwget.csh ${URL} ${LOG}
 end
 
@@ -43,6 +44,7 @@ www.i-dcc.org2 \
 www.i-dcc.org3 \
 www.sanger.ac.uk5 \
 )
+echo $i
 $i
 end
 
