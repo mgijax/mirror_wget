@@ -43,4 +43,4 @@ endif
 # -t = number of retries
 # -O = full path to output file
 
-wget -o ${LOGFILE} -O${OUTPUTFILE} -rS -t 10 "${URL}"
+wget -o ${LOGFILE} -O${OUTPUTFILE} -rS -t 10 "${URL}" >>& /dev/null

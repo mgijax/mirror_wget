@@ -42,4 +42,4 @@ endif
 # -O = full path to output file
 
 # This works, but it won't create directories, I remover the -x and added the -O
-wget -o ${LOGFILE} -O${OUTPUTFILE} -rNS -t 10 "${URL}"
+wget -o ${LOGFILE} -O${OUTPUTFILE} -rNS -t 10 "${URL}" >>& /dev/null
