@@ -1,0 +1,36 @@
+#!/bin/csh -f
+
+#
+# Program: www.mousephenotype.org
+#
+# Original Author: Lori Corbani
+#
+# Purpose:
+#
+#	Wrapper for GNU "curl" utility.
+#	Allows us to configure a suite of URLs for
+#	downloading into /data/downloads on a daily,
+#	weekly or monthly basis.
+#
+# Implementation:
+#
+#	This is a quick and dirty version.
+#	It basically just calls "curl" with some pre-defined options.
+#
+# Modification History:
+#
+# 01/27/2014	lec
+#	- TR11515/add Sanger/Derivate Allele
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/www.mousephenotype.org
+
+setenv URL	https://www.mousephenotype.org/imits/v2/reports/mgi_modification_allele_report.tsv
+setenv LOGFILE  www.mousephenotype.org.log
+
+#
+# -k = insecure/SSL; allows curl to perform inscrue SSL connections and transvers
+# -O = where to save the output
+#
+
+curl -kO "${URL}"
