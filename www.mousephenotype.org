@@ -33,4 +33,4 @@ setenv LOGFILE  www.mousephenotype.org.log
 # -O = where to save the output
 #
 
-curl -kO "${URL}"
+curl -kO "${URL}" >>& /dev/null
