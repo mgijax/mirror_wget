@@ -7,6 +7,9 @@
 #
 # History
 #
+# 02/05/2014
+#	- TR11515/add www.mousephenotype.org
+#
 # 07/22/2013
 #	- TR11442/remove www.europhenome.org temporarily
 #
@@ -43,6 +46,7 @@ www.i-dcc.org1 \
 www.i-dcc.org2 \
 www.i-dcc.org3 \
 www.sanger.ac.uk5 \
+www.mousephenotype.org \
 )
 echo $i
 $i
