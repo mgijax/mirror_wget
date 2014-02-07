@@ -7,6 +7,9 @@
 #
 # History
 #
+# 02/07/2014
+#	- TR11515/add emnet.informatics.jax.org:48080
+#
 # 02/05/2014
 #	- TR11515/add www.mousephenotype.org
 #
@@ -31,6 +34,7 @@ date
 
 foreach i (\
 func.med.harvard.edu \
+emnet.informatics.jax.org:48080 \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
