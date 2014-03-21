@@ -7,6 +7,9 @@
 #
 # History
 #
+# 03/21/2014
+#	- TR11615/add emnet.informatics.jax.org2
+#
 # 02/07/2014
 #	- TR11515/add emnet.informatics.jax.org:48080
 #
@@ -35,6 +38,7 @@ date
 foreach i (\
 func.med.harvard.edu \
 emnet.informatics.jax.org:48080 \
+emnet.informatics.jax.org2 \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
