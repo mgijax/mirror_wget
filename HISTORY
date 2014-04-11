@@ -1,3 +1,12 @@
+TAG: mirror_wget-5-1-7-4
+DATE: 04/11/2014
+STAFF: dbm
+CHANGES:
+1) TR11613/removed www.ebi.ac.uk package because the input file will now
+           come from the mirror_ftp product
+2) TR11613/removed monthlycron.csh since www.ebi.ac.uk was the only package
+           that it was downloading
+
 TAG: mirror_wget-5-1-7-3
 DATE: 03/21/2014
 STAFF: lec
