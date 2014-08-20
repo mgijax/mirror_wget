@@ -14,7 +14,9 @@ cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 # Full URL of the file
 
-setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6" ><Dataset name="imits2" interface="default" ><Attribute name="production_centre" /><Attribute name="marker_symbol" /><Attribute name="allele_symbol_superscript" /><Attribute name="escell_clone" /><Attribute name="mgi_accession_id" /><Attribute name="phenotype_colony_name" /></Dataset></Query>'
+#setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6" ><Dataset name="imits2" interface="default" ><Attribute name="production_centre" /><Attribute name="marker_symbol" /><Attribute name="allele_symbol_superscript" /><Attribute name="escell_clone" /><Attribute name="mgi_accession_id" /><Attribute name="phenotype_colony_name" /></Dataset></Query>'
+
+setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6" ><Dataset name="imits2" interface="default" ><Attribute name="production_centre" /><Attribute name="marker_symbol" /><Attribute name="allele_symbol_superscript" /><Attribute name="escell_clone" /><Attribute name="mgi_accession_id" /><Attribute name="phenotype_colony_name" /><Attribute name = "phenotype_allele_type" /><Attribute name = "phenotype_status" /><Attribute name = "colony_background_strain" /><Attribute name = "test_cross_strain" /><Attribute name = "blastocyst_strain" /><Attribute name = "deleter_strain_name" /><Attribute name = "colony_background_strain_name" /><Attribute name = "genotyping_comment" /></Dataset></Query>'
 
 # Base URL of the file
 setenv BASEURL www.i-dcc.org
