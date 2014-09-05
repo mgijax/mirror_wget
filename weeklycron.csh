@@ -7,6 +7,9 @@
 #
 # History
 #
+# 09/05/2014	lec
+#	- TR11654/add geisha.arizona.edu
+#
 # 03/21/2014
 #	- TR11615/add emnet.informatics.jax.org2
 #
@@ -39,6 +42,7 @@ foreach i (\
 func.med.harvard.edu \
 emnet.informatics.jax.org:48080 \
 emnet.informatics.jax.org2 \
+geisha.arizona.edu \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
