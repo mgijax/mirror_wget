@@ -1,0 +1,40 @@
+#!/bin/csh -f
+
+#
+# Program: ftp.ncbi.nih.gov.refseqRel
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Download the refseq release
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/refseq/vertebrate_mammalian
+
+# Full URL of gbff files
+setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*rna.gbff*'
+
+# Full URL of gpff files
+setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*.gpff*'
+
+# full path to log files
+setenv LOGFILE1	${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gbff.log
+setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
+
+#
+# wget
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -o = full path to log file
+# -O = full path to output file
+# -t = number of retries
+# -r = reverse
+# -k 7 = sort by the 7th column
+# -m = Turn on options suitable for mirroring. This option turns on recursion 
+#    and time-stamping, sets infinite recursion depth and keeps FTP 
+#    directory listings. It is currently equivalent to .-r -N -l 
+#    inf --no-remove-listing.. 
+
+rm *
+wget -o ${LOGFILE1} -S -t 10 -nd -m "${URL1}"
+wget -o ${LOGFILE2} -S -t 10 -nd -m "${URL2}"
