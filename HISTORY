@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-2-0-2
+DATE: 10/03/2014
+STAFF: sc
+CHANGES: TR11754 added:
+* ftp.ncbi.nih.gov.gbRel 
+* ftp.ncbi.nih.gov.refseqRel
+
 TAG: mirror_wget-5-2-0-1
 TAG: mirror_wget-5-1-9-1
 DATE: 09/05/2014, 09/15/2014
