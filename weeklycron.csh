@@ -43,8 +43,6 @@ foreach i (\
 func.med.harvard.edu \
 emnet.informatics.jax.org:48080 \
 emnet.informatics.jax.org2 \
-geisha.arizona.edu \
-www.zfin.org \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
