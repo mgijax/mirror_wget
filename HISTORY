@@ -1,3 +1,12 @@
+TAG: mirror_wget-5-2-0-3
+DATE: 10/08/2014
+STAFF: lec
+CHANGES: TR11654
+removed in weeklycron.csh
+1) geisha.arizona.edu
+2) www.zfin.org
+3) weeklycron.csh - added
+
 TAG: mirror_wget-5-2-0-2
 DATE: 10/03/2014
 STAFF: sc
