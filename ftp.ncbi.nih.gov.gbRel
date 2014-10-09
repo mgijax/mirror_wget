@@ -84,6 +84,7 @@ setenv LOGFILE14 ${MIRRORLOG}/ftp.ncbi.nih.gov.gbRel.vrt.log
 # -t = number of retries
 # -r = reverse
 # -k 7 = sort by the 7th column
+# -nd = don't create directories
 # -m = Turn on options suitable for mirroring. This option turns on recursion 
 #    and time-stamping, sets infinite recursion depth and keeps FTP 
 #    directory listings. It is currently equivalent to .-r -N -l 

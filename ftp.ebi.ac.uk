@@ -1,26 +1,26 @@
 #!/bin/csh -f
 
 #
-# Program: ftp.ncbi.nih.gov.refseqRel
+# Program: ftp.ebi.ac.uk
 #
 # Original Author: sc
 #
 # Purpose:
 #
-#	Download the refseq release
+#	Download the  uniprot release (swissprot & trembl)
 #
 
-cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/refseq/vertebrate_mammalian
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/uniprot/swissprot
 
 # Full URL of gbff files
-setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*rna.gbff*'
+setenv URL1 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_sprot.dat.gz'
 
 # Full URL of gpff files
-setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*.gpff*'
+setenv URL2 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_trembl.dat.gz'
 
 # full path to log files
-setenv LOGFILE1	${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gbff.log
-setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
+setenv LOGFILE1	${MIRRORLOG}/ftp.ebi.ac.uk.sprot.log
+setenv LOGFILE2 ${MIRRORLOG}/ftp.ebi.ac.uk.trembl.log
 
 #
 # wget
@@ -36,6 +36,10 @@ setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
 #    directory listings. It is currently equivalent to .-r -N -l 
 #    inf --no-remove-listing.. 
 
+cd ${DATADOWNLOADS}/uniprot/swissprot
 rm *
 wget -o ${LOGFILE1} -S -t 10 -nd -m "${URL1}"
+
+cd ${DATADOWNLOADS}/uniprot/trembl
+rm *
 wget -o ${LOGFILE2} -S -t 10 -nd -m "${URL2}"
