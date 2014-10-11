@@ -1,0 +1,80 @@
+#!/bin/csh -f
+
+#
+# Program: ftp.ebi.ac.uk
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Download the  uniprot release (swissprot & trembl)
+#
+
+cd `dirname $0` && source ./Configuration 
+
+# Full URL for swissprot
+setenv URL_SPROT 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_sprot.dat.gz'
+
+# Full URL for trembl
+setenv URL_TREMBL 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_trembl.dat.gz'
+
+# Full path to download directories
+setenv DOWNLOADS_SPROT	${DATADOWNLOADS}/uniprot/swissprot
+setenv DOWNLOADS_TREMBL	${DATADOWNLOADS}/uniprot/trembl
+
+# full path to log files
+setenv LOGFILE_SPROT	${MIRRORLOG}/ftp.ebi.ac.uk.sprot.log
+setenv LOGFILE_TREMBL ${MIRRORLOG}/ftp.ebi.ac.uk.trembl.log
+
+#
+# wget
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -o = full path to log file
+# -O = full path to output file
+# -t = number of retries
+# -r = reverse
+# -k 7 = sort by the 7th column
+# -nd = don't create directories
+# -m = Turn on options suitable for mirroring. This option turns on recursion 
+#    and time-stamping, sets infinite recursion depth and keeps FTP 
+#    directory listings. It is currently equivalent to .-r -N -l 
+#    inf --no-remove-listing.. 
+
+# run mirror_lock to place lock files in working directories
+# this command will return non-zero if there is an error 
+# attempt to set lock in both sprot and trembl - we don't want one to be
+# mirrored without the other
+
+# set SPROT write lock
+mirror_lock wlock mirror_wget ${DOWNLOADS_SPROT} > ${LOGFILE_SPROT}
+if ($status != 0) then
+  echo mirror_lock returned nonzero status...exiting ftp.ebi.ac.uk sprot
+  echo "See logs at ${LOGFILE_SPROT}"
+  echo "Stop Time: `date`"
+  exit (1)
+endif
+
+# set TREMBL write lock
+mirror_lock wlock mirror_wget ${DOWNLOADS_TREMBL} > ${LOGFILE_TREMBL}
+if ($status != 0) then
+  echo mirror_lock returned nonzero status...exiting ftp.ebi.ac.uk trembl
+  # remove the SPROT lock
+  mirror_lock unlock mirror_wget ${DOWNLOADS_SPROT} >> ${LOGFILE_SPROT}
+  echo "See logs at ${LOGFILE_TREMBL}"
+  echo "Stop Time: `date`"
+  exit (1)
+endif
+
+# run SPROT mirror
+cd ${DOWNLOADS_SPROT}
+rm *
+wget -a ${LOGFILE_SPROT} -S -t 10 -nd -m "${URL_SPROT}"
+
+# run TREMBL mirror
+cd ${DOWNLOADS_TREMBL}
+rm *
+wget -a ${LOGFILE_TREMBL} -S -t 10 -nd -m "${URL_TREMBL}"
+echo ${MIRROR_WGET}
+cd ${MIRROR_WGET}
+mirror_lock unlock mirror_wget ${DOWNLOADS_SPROT} >> ${LOGFILE_SPROT}
+mirror_lock unlock mirror_wget ${DOWNLOADS_TREMBL} >> ${LOGFILE_TREMBL}

@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-2-0-4
+DATE: 10/?/2014
+STAFF: sc
+CHANGES: TR11796
+1) added ftp.ebi.ac.uk to mirror swissprot/trembl sequences; uses lock files
+2) added mirror_lock
+
 TAG: mirror_wget-5-2-0-3
 DATE: 10/08/2014
 STAFF: lec

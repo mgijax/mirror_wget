@@ -1,0 +1,112 @@
+#!/bin/csh -f
+# program: mirror_lock
+# exit codes: 1 if usage error
+#             2 if fatal error removing or creating locks
+#             4 if lock file exists
+#             ? if uncaught exception occurs
+
+#ensure commands used in this script are not aliased to other commands
+unalias ls
+unalias rm
+unalias echo
+unalias touch
+unalias mkdir
+
+set USAGE='Usage: mirror_lock <wlock|rlock|unlock> lockname directory1 directory2 ...'
+if ( $#argv < 3 ) then
+   echo ${USAGE}
+   exit (1)
+endif
+
+set LOCK_TYPE=$1
+set LOCK_NAME=$2
+set DIR_LIST="${argv[3-$#argv]}"
+
+if ( ${LOCK_TYPE} != wlock && ${LOCK_TYPE} != rlock && ${LOCK_TYPE} != unlock ) then
+  echo ${USAGE}
+  exit (1)
+endif
+
+# Set Configuration
+cd `dirname $0`
+source ./Configuration
+
+# If this is an unlock then go ahead and remove files and exit program
+
+if ( ${LOCK_TYPE} == unlock ) then
+  echo mirror_lock removing lock files
+  set count=0 # this counts number of locks removed
+  foreach THIS_DIR ( ${DIR_LIST} )
+     if ( -e ${THIS_DIR}/rlock.${LOCK_NAME} ) then
+        set count=`expr $count + 1`
+        echo removing ${THIS_DIR}/rlock.${LOCK_NAME}
+        rm -f ${THIS_DIR}/rlock.${LOCK_NAME}
+        if ($status != 0) then
+           echo fatal error trying to remove lock...exiting program
+           exit (2)
+        endif
+     endif
+     if ( -e ${THIS_DIR}/wlock.${LOCK_NAME} ) then
+        set count=`expr $count + 1`
+        echo removing ${THIS_DIR}/wlock.${LOCK_NAME}
+        rm -f ${THIS_DIR}/wlock.${LOCK_NAME}
+        if ($status != 0) then
+          echo fatal error trying to remove lock...exiting program
+          exit (2)
+        endif
+     endif
+  end
+  echo $count lock file'(s)' removed
+  # exiting the program
+  exit (0)
+endif
+
+# If program made it here then we are locking
+
+# First check to make sure no locks already exists
+
+echo mirror_lock checking for existing locks
+if ( ${LOCK_TYPE} == wlock ) then
+   foreach THIS_DIR ( ${DIR_LIST} )
+     # check for write locks and read locks
+     ls ${THIS_DIR}/?lock.* >& /dev/null
+     # status != 0 then no match; status = 0 then file exist
+     if ( $status == 0 ) then
+        echo ${THIS_DIR}/?lock.* exists
+        exit (4)
+     endif
+   end
+else if ( ${LOCK_TYPE} == rlock ) then
+   #check for write locks only
+   foreach THIS_DIR ( ${DIR_LIST} )
+     # see if any files match the expression
+     ls ${THIS_DIR}/wlock.* >& /dev/null
+     # status = 1 then no match; status = 0 then file exist
+     if ( $status == 0 ) then 
+        echo ${THIS_DIR}/wlock.* exists
+        exit (4)
+     endif
+   end
+endif
+
+#add new lock files
+
+echo mirror_lock creating new locks
+foreach THIS_DIR ( ${DIR_LIST} )
+   set LOCK=${THIS_DIR}/${LOCK_TYPE}.${LOCK_NAME}
+   echo "Creating lock file" $LOCK
+   if ( ! -d `dirname $LOCK`) then
+      mkdir -p `dirname $LOCK`
+      if ($status != 0) then
+         echo fatal error when creating a new directory...exiting program
+         exit (2)
+      endif
+   endif
+   touch $LOCK
+   if ($status != 0) then
+      echo fatal error when creating lock file...exiting program
+      exit (2)
+   endif
+end
+
+exit (0)
