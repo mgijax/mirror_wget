@@ -59,6 +59,7 @@ www.i-dcc.org2 \
 www.i-dcc.org3 \
 www.sanger.ac.uk5 \
 www.mousephenotype.org \
+ftp.ebi.ac.uk \
 )
 echo $i
 $i

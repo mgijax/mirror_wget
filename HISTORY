@@ -1,3 +1,9 @@
+TAG: mirror_wget-5-2-0-5
+DATE: 10/13/2014
+STAFF: sc
+CHANGES: TR11796
+1) added ftp.ebi.ac.uk to weeklycron.csh
+
 TAG: mirror_wget-5-2-0-4
 DATE: 10/?/2014
 STAFF: sc
