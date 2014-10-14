@@ -1,3 +1,9 @@
+TAG: mirror_wget-5-2-0-6
+DATE: 10/14/2014
+STAFF: dbm
+CHANGES:
+1) added check_mirror_logs.csh - copy of script from mirror_ftp
+
 TAG: mirror_wget-5-2-0-5
 DATE: 10/13/2014
 STAFF: sc
