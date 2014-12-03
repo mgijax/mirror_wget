@@ -22,7 +22,7 @@ setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" e
 setenv BASEURL www.i-dcc.org
 
 # full path to log file
-setenv LOGFILE	${MIRRORLOG}/${BASEURL}1.log
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}_imits.log
 
 # output directory
 setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
