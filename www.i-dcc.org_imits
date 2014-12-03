@@ -1,0 +1,49 @@
+#!/bin/csh -f
+
+#
+# Program: www.i-dcc.org_imits
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Download the IMPC data from  iMits2
+#
+
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
+
+# Full URL of the file
+
+#setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6" ><Dataset name="imits2" interface="default" ><Attribute name="production_centre" /><Attribute name="marker_symbol" /><Attribute name="allele_symbol_superscript" /><Attribute name="escell_clone" /><Attribute name="mgi_accession_id" /><Attribute name="phenotype_colony_name" /></Dataset></Query>'
+
+setenv URL 'http://www.i-dcc.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><\!DOCTYPE Query><Query virtualSchemaName="default" formatter="TSV" header="0" uniqueRows="1" count="" datasetConfigVersion="0.6" ><Dataset name="imits2" interface="default" ><Attribute name="production_centre" /><Attribute name="marker_symbol" /><Attribute name="allele_symbol_superscript" /><Attribute name="escell_clone" /><Attribute name="mgi_accession_id" /><Attribute name="phenotype_colony_name" /><Attribute name = "phenotype_allele_type" /><Attribute name = "phenotype_status" /><Attribute name = "colony_background_strain" /><Attribute name = "test_cross_strain" /><Attribute name = "blastocyst_strain" /><Attribute name = "deleter_strain_name" /><Attribute name = "colony_background_strain_name" /><Attribute name = "genotyping_comment" /></Dataset></Query>'
+
+# Base URL of the file
+setenv BASEURL www.i-dcc.org
+
+# full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}1.log
+
+# output directory
+setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}
+
+# output file
+setenv OUTPUTFILE	${OUTPUTDIR}/imits.mp.tsv
+
+# if OUTPUTDIR does not exist, create it
+if ( ! -d ${OUTPUTDIR} ) then
+        mkdir -p ${OUTPUTDIR}
+endif
+
+#
+# wget
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -O = full path to output file
+# -t = number of retries
+# sort
+# -r = reverse
+# -k 7 = sort by the 7th column
+#
+
+wget -o ${LOGFILE} -S -O- -t 10 "${URL}" | sort -rk 7 > ${OUTPUTFILE}
+

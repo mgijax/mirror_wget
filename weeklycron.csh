@@ -7,9 +7,16 @@
 #
 # History
 #
+#
+# 10/08/2014
+#       - TR11674 added ftp.ebi.ac.uk
+#
 # 09/05/2014	lec
 #	- TR11654/add geisha.arizona.edu
 #	- TR11654/add www.zfin.org
+#
+# 08/20/2014
+#       -TR11674/add www.i-dcc.org_imits, www.ebi.ac.uk
 #
 # 03/21/2014
 #	- TR11615/add emnet.informatics.jax.org2
@@ -59,6 +66,8 @@ www.i-dcc.org2 \
 www.i-dcc.org3 \
 www.sanger.ac.uk5 \
 www.mousephenotype.org \
+www.i-dcc.org_imits \
+www.ebi.ac.uk \
 ftp.ebi.ac.uk \
 )
 echo $i

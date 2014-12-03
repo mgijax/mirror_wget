@@ -1,3 +1,8 @@
+TAG: mirror_wget-5-2-1-1
+DATE: 12/03/2014
+STAFF: sc
+CHANGES: merge tr11674 branch to trunk
+
 TAG: mirror_wget-5-2-0-6
 DATE: 10/14/2014
 STAFF: dbm
@@ -41,6 +46,20 @@ CHANGES:TR11654 - geisha.arizona.edu
 1) geisha.arizona.edu
 2) www.zfin.org
 3) weeklycron.csh - added
+
+TAG: mirror_wget-tr11674-2
+DATE: 08/20/2014
+STAFF: sc
+CHANGES:
+1) www.i-dcc.org_imits - added fetch of 8 new columns for curator use only
+2)  www.ebi.ac.uk - filter out 'EuroPhenome', set rows=100000, limit to just fields we want
+
+TAG: mirror_wget-tr11674-1
+DATE: 08/01/2014
+STAFF: sc
+CHANGES: 
+1. added: www.i-dcc.org_imits and www.ebi.ac.uk
+2. added above to weekly script
 
 TAG: mirror_wget-tr11674-BP
 DATE: 08/01/2014
