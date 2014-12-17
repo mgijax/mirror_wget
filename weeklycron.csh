@@ -7,6 +7,10 @@
 #
 # History
 #
+# 12/17/2014 kstone
+#	- Added allStrains.csv imsr report for postgres conversion of 
+#		qcreports and public reports
+#
 #
 # 10/08/2014
 #       - TR11674 added ftp.ebi.ac.uk
@@ -60,6 +64,7 @@ end
 #remove temporarily
 #www.europhenome.org \
 foreach i (\
+emnet.informatics.jax.org3 \
 www.genenames.org \
 www.i-dcc.org1 \
 www.i-dcc.org2 \
