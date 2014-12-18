@@ -16,7 +16,7 @@
 #
 
 
-cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/www.i-dcc.org
+cd `dirname $0` && source ./Configuration
 
 # Full URL of the file
 
