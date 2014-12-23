@@ -41,15 +41,15 @@ cd `dirname $0` && source ./Configuration
 echo "Grepping the mirror logs for errors:"
 foreach file ( `ls ${MIRRORLOG}/*.log` )
     echo "checking $file"
-    grep 'Failure' $file
-    grep 'Fatal' $file
-    grep 'Failed' $file
-    grep 'timed out' $file
-    grep 'Cannot' $file
-    grep 'error' $file
-    grep 'Error' $file
-    grep 'exists' $file
-    grep 'file shrunk' $file
+    grep -i 'Failure' $file
+    grep -i 'Fatal' $file
+    grep -i 'Failed' $file
+    grep -i 'timed out' $file
+    grep -i 'Cannot' $file
+    grep -i 'error' $file
+    grep -i 'Error' $file
+    grep -i 'exists' $file
+    grep -i 'file shrunk' $file
 end
 echo "Finished grepping for errors"
 
