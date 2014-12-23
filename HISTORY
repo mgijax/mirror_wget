@@ -1,3 +1,9 @@
+TAG: mirror_wget-5-2-1-5
+DATE: 12/23/2014
+STAFF: dbm
+CHANGES:
+1) check_mirror_logs.csh: use "-i" to ignore case with grep commands
+
 TAG: mirror_wget-5-2-1-4
 DATE: 12/18/2014
 STAFF: sc
