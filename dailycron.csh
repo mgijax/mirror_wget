@@ -33,9 +33,6 @@ end
 
 foreach i (\
 purl.obolibrary.org \
-www.sanger.ac.uk2 \
-www.sanger.ac.uk3 \
-www.sanger.ac.uk4 \
 www.gensat.org \
 )
 echo $i
