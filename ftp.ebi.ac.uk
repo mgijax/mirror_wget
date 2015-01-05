@@ -12,10 +12,8 @@
 
 cd `dirname $0` && source ./Configuration 
 
-# Full URL for swissprot
+# Full URLs for swissprot and trembl
 setenv URL_SPROT 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_sprot.dat.gz'
-
-# Full URL for trembl
 setenv URL_TREMBL 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_trembl.dat.gz'
 
 # Full path to download directories
@@ -67,14 +65,13 @@ endif
 
 # run SPROT mirror
 cd ${DOWNLOADS_SPROT}
-rm *
 wget -a ${LOGFILE_SPROT} -S -t 10 -nd -m "${URL_SPROT}"
 
 # run TREMBL mirror
 cd ${DOWNLOADS_TREMBL}
-rm *
 wget -a ${LOGFILE_TREMBL} -S -t 10 -nd -m "${URL_TREMBL}"
 echo ${MIRROR_WGET}
+
 cd ${MIRROR_WGET}
 mirror_lock unlock mirror_wget ${DOWNLOADS_SPROT} >> ${LOGFILE_SPROT}
 mirror_lock unlock mirror_wget ${DOWNLOADS_TREMBL} >> ${LOGFILE_TREMBL}

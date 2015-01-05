@@ -1,3 +1,9 @@
+TAG: mirror_wget-5-2-1-7
+DATE: 01/05/2014
+STAFF: sc
+CHANGES: bug in ftp.ebi.ac.uk. Removed rm* from swissprot and trembl AFTER
+the lock files created.
+
 TAG: mirror_wget-5-2-1-6
 DATE: 12/30/2014
 STAFF: dbm
