@@ -1,3 +1,11 @@
+TAG: mirror_wget-5-2-1-9
+DATE: 01/07/2015
+STAFF: sc
+CHANGES: Update to look for/create uniprot lock file in parent directory
+  (/data/downloads/uniprot), because this is where seqdb_engine places read
+   locks, rather than trembl and swissprot directories
+  (/data/downloads/uniprot/trembl /data/downloads/uniprot/swissprot)
+
 TAG: mirror_wget-5-2-1-8
 DATE: 01/07/2015
 STAFF: sc

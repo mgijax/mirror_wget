@@ -20,6 +20,9 @@ setenv URL_TREMBL 'ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/unipr
 setenv DOWNLOADS_SPROT	${DATADOWNLOADS}/uniprot/swissprot
 setenv DOWNLOADS_TREMBL	${DATADOWNLOADS}/uniprot/trembl
 
+# Full path the read/write lock directory
+setenv LOCK_DIR	${DATADOWNLOADS}/uniprot
+
 # full path to log files
 setenv LOGFILE_SPROT	${MIRRORLOG}/ftp.ebi.ac.uk.sprot.log
 setenv LOGFILE_TREMBL ${MIRRORLOG}/ftp.ebi.ac.uk.trembl.log
@@ -38,27 +41,16 @@ setenv LOGFILE_TREMBL ${MIRRORLOG}/ftp.ebi.ac.uk.trembl.log
 #    directory listings. It is currently equivalent to .-r -N -l 
 #    inf --no-remove-listing.. 
 
-# run mirror_lock to place lock files in working directories
-# this command will return non-zero if there is an error 
-# attempt to set lock in both sprot and trembl - we don't want one to be
-# mirrored without the other
+# run mirror_lock to place lock file
+# this command will return non-zero if  read or write lock is found
+# attempt to set lock in the parent directory of sprot and trembl - 
+# we don't want one to be mirrored without the other
 
-# set SPROT write lock
-mirror_lock wlock mirror_wget ${DOWNLOADS_SPROT} > ${LOGFILE_SPROT}
+# attempt to set SPROT/TREMBL write lock
+mirror_lock wlock mirror_wget ${LOCK_DIR} > ${LOGFILE_SPROT}
 if ($status != 0) then
   echo mirror_lock returned nonzero status...exiting ftp.ebi.ac.uk sprot
   echo "See logs at ${LOGFILE_SPROT}"
-  echo "Stop Time: `date`"
-  exit (1)
-endif
-
-# set TREMBL write lock
-mirror_lock wlock mirror_wget ${DOWNLOADS_TREMBL} > ${LOGFILE_TREMBL}
-if ($status != 0) then
-  echo mirror_lock returned nonzero status...exiting ftp.ebi.ac.uk trembl
-  # remove the SPROT lock
-  mirror_lock unlock mirror_wget ${DOWNLOADS_SPROT} >> ${LOGFILE_SPROT}
-  echo "See logs at ${LOGFILE_TREMBL}"
   echo "Stop Time: `date`"
   exit (1)
 endif
@@ -73,5 +65,4 @@ wget -a ${LOGFILE_TREMBL} -S -t 10 -nd -m "${URL_TREMBL}"
 echo ${MIRROR_WGET}
 
 cd ${MIRROR_WGET}
-mirror_lock unlock mirror_wget ${DOWNLOADS_SPROT} >> ${LOGFILE_SPROT}
-mirror_lock unlock mirror_wget ${DOWNLOADS_TREMBL} >> ${LOGFILE_TREMBL}
+mirror_lock unlock mirror_wget ${LOCK_DIR} >> ${LOGFILE_SPROT}
