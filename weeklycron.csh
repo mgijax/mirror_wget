@@ -7,10 +7,12 @@
 #
 # History
 #
+# 01/07/2015 sc
+#	- Added www.zfin.gene.org, www.zfin.xpat.org, www.mouse_orthos.org
+#
 # 12/17/2014 kstone
 #	- Added allStrains.csv imsr report for postgres conversion of 
 #		qcreports and public reports
-#
 #
 # 10/08/2014
 #       - TR11674 added ftp.ebi.ac.uk
@@ -54,6 +56,9 @@ foreach i (\
 func.med.harvard.edu \
 emnet.informatics.jax.org:48080 \
 emnet.informatics.jax.org2 \
+www.zfin.gene.org \
+www.zfin.mouse_orthos.org \
+www.zfin.xpat.org \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`

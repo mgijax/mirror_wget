@@ -1,3 +1,11 @@
+TAG: mirror_wget-5-2-1-8
+DATE: 01/07/2015
+STAFF: sc
+CHANGES: TR11721 - Establish gene-based links to ZFIN expression data
+1) renamed www.zfin.org to www.zfin.xpat.org
+2) added www.zfin.gene.org and www.zfin.mouse_ortho.org
+3) weeklycron.csh - added above three files
+
 TAG: mirror_wget-5-2-1-7
 DATE: 01/05/2014
 STAFF: sc
