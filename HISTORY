@@ -1,3 +1,11 @@
+TAG: mirror_wget-5-2-1-10
+DATE: 01/07/2015
+STAFF: sc
+CHANGES: TR11887
+1) renamed geisha.arizona.edu --> geisha.arizona.expr.edu
+2) added geisha.arizona.orthos.edu
+3) added both to weeklycron.csh
+
 TAG: mirror_wget-5-2-1-9
 DATE: 01/07/2015
 STAFF: sc

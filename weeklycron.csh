@@ -7,8 +7,12 @@
 #
 # History
 #
+# 01/13/2015 sc
+#	- Added www.geisha* - TR11887
+#
 # 01/07/2015 sc
 #	- Added www.zfin.gene.org, www.zfin.xpat.org, www.mouse_orthos.org
+#	- TR11721
 #
 # 12/17/2014 kstone
 #	- Added allStrains.csv imsr report for postgres conversion of 
@@ -59,6 +63,8 @@ emnet.informatics.jax.org2 \
 www.zfin.gene.org \
 www.zfin.mouse_orthos.org \
 www.zfin.xpat.org \
+geisha.arizona.expr.edu \
+geisha.arizona.orthos.edu \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
