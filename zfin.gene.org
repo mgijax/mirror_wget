@@ -1,0 +1,1 @@
+http://zfin.org/downloads/gene.txt zfin.gene.org

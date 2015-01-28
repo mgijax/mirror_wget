@@ -7,6 +7,9 @@
 #
 # History
 #
+# 01/28/2015 sc
+#	- renamed www.zfin.* zfin.*
+#
 # 01/13/2015 sc
 #	- Added www.geisha* - TR11887
 #
@@ -60,9 +63,9 @@ foreach i (\
 func.med.harvard.edu \
 emnet.informatics.jax.org:48080 \
 emnet.informatics.jax.org2 \
-www.zfin.gene.org \
-www.zfin.mouse_orthos.org \
-www.zfin.xpat.org \
+zfin.gene.org \
+zfin.mouse_orthos.org \
+zfin.xpat.org \
 geisha.arizona.expr.edu \
 geisha.arizona.orthos.edu \
 )
