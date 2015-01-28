@@ -9,6 +9,10 @@
 #
 # HISTORY
 #
+# - lnh 01/27/2015 - added mirror write lock and
+#       a check to enforce to run the script only if 
+#       the date specified in the date range falls on a Saturday 
+#
 # - sc 10/01/14 - Carol OK with removing following divisions:
 #    INV, PLN, BCT, VRL, PHG
 #
@@ -16,7 +20,31 @@
 #	Download the gb release
 #
 
-cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/genbank
+cd `dirname $0` && source ./Configuration
+setenv SCRIPT_NAME `basename $0`
+setenv LOG ${MIRRORLOG}/${SCRIPT_NAME}.log
+rm -f ${LOG}
+touch ${LOG}
+echo "$0" >> ${LOG}
+echo `date` >> ${LOG}
+
+#check if this is a Saturday 
+if ( `date '+%u'` != 6 ) then
+    echo "Today is not an update day . It is day: " `date '+%u'` "of the week" >> ${LOG}
+    echo "Stop Time: `date`" >> ${LOG}
+    exit
+endif
+
+# attempt to set genbank write lock
+mirror_lock wlock mirror_wget ${LOCK_DIR} >> ${LOG}
+if ($status != 0) then
+  echo "mirror_lock is being used...exiting ${SCRIPT_NAME}" >> ${LOG}
+  echo "See logs at ${LOG}">> ${LOG}
+  echo "Stop Time: `date`" >> ${LOG}
+  exit (1)
+endif
+
+cd ${DATADOWNLOADS}/genbank
 
 # Full URL to ENV division files
 setenv URL1 'ftp://ftp.ncbi.nih.gov/genbank/gbenv*.gz'
@@ -104,3 +132,9 @@ wget -o ${LOGFILE11} -S -t 10 -nd -m "${URL11}"
 wget -o ${LOGFILE12} -S -t 10 -nd -m "${URL12}"
 wget -o ${LOGFILE13} -S -t 10 -nd -m "${URL13}"
 wget -o ${LOGFILE14} -S -t 10 -nd -m "${URL14}"
+
+#unluck wget lock
+cd ${MIRROR_WGET}
+mirror_lock unlock mirror_wget ${LOCK_DIR} >> ${LOG}
+echo `date` >> ${LOG}
+echo "Program complete" >> ${LOG}

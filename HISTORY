@@ -1,3 +1,10 @@
+TAG: mirror_wget-5-2-1-12
+DATE: 01/28/2015
+STAFF: lnh
+CHANGES:
+1) added mirror_lock to ftp.ncbi.nih.gbRel
+2) added theupdate day check to ftp.ncbi.nih.gbRel 
+
 TAG: mirror_wget-5-2-1-11
 DATE: 01/28/2015
 STAFF: sc
