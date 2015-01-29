@@ -15,6 +15,7 @@
 #    Changed the mirror download base directory from release/vertebrate_mammalian to release/complete
 #    Created a new directory called complete under ${DATADOWNLOADS}/refseq/
 #    Added a step to also download the release*.removed-records.gz file
+#    Added a step to also download the release Number file
 #   
 
 cd `dirname $0` && source ./Configuration
@@ -35,9 +36,13 @@ setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/complete/*rna.gbff*'
 #setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*.gpff*'
 setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/complete/*protein.gpff*'
 
-# Full URL of 
+# Full URL of depracated ACCECCION  
 #
 setenv URL3 'ftp://ftp.ncbi.nih.gov/refseq/release/release-catalog/release*.removed-records.gz' 
+
+#Full path to the release number
+#
+setenv URL4 'ftp://ftp.ncbi.nih.gov/refseq/release/RELEASE_NUMBER' 
 
 # full path to log files
 setenv LOGFILE1	${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gbff.log
@@ -59,6 +64,7 @@ setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
 rm *
 wget -o ${LOGFILE1} -S -t 10 -nd -m "${URL1}"
 wget -o ${LOGFILE2} -S -t 10 -nd -m "${URL2}"
+wget -S -t 10 -nd -m "${URL4}" >> ${LOG}
 
 cat ${LOGFILE1} >> ${LOG}
 cat ${LOGFILE2} >> ${LOG}
