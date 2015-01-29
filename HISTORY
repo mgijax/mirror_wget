@@ -1,9 +1,17 @@
+TAG: mirror_wget-5-2-1-13
+DATE: 01/29/2015
+STAFF: lnh 
+CHANGES:- TR11918 
+1)    Changed the mirror download base directory from release/vertebrate_mammalian to release/complete
+2)    Created a new directory called complete under ${DATADOWNLOADS}/refseq/
+3)    Added a step to also download the release*.removed-records.gz file
+
 TAG: mirror_wget-5-2-1-12
 DATE: 01/28/2015
 STAFF: lnh
 CHANGES:
 1) added mirror_lock to ftp.ncbi.nih.gbRel
-2) added theupdate day check to ftp.ncbi.nih.gbRel 
+2) added the update day check to ftp.ncbi.nih.gbRel 
 
 TAG: mirror_wget-5-2-1-11
 DATE: 01/28/2015
