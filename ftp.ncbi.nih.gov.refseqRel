@@ -7,16 +7,37 @@
 #
 # Purpose:
 #
-#	Download the refseq release
+#	Download the refseq release *.rna.gbff.* and *.protein.gpff.*
 #
+#HISTORY
+#
+## - lnh 01/29/2015 - TR11918 
+#    Changed the mirror download base directory from release/vertebrate_mammalian to release/complete
+#    Created a new directory called complete under ${DATADOWNLOADS}/refseq/
+#    Added a step to also download the release*.removed-records.gz file
+#   
 
-cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/refseq/vertebrate_mammalian
+cd `dirname $0` && source ./Configuration
+setenv SCRIPT_NAME `basename $0`
+setenv LOG ${MIRRORLOG}/${SCRIPT_NAME}.log
+rm -f ${LOG}
+touch ${LOG}
+echo "$0" >> ${LOG}
+echo `date` >> ${LOG}
 
+setenv refseq_deletes ${DATADOWNLOADS}/refseq/refseq_deletes
+cd ${DATADOWNLOADS}/refseq/complete
 # Full URL of gbff files
-setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*rna.gbff*'
+#setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*rna.gbff*'
+setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/complete/*rna.gbff*'
 
 # Full URL of gpff files
-setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*.gpff*'
+#setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*.gpff*'
+setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/complete/*protein.gpff*'
+
+# Full URL of 
+#
+setenv URL3 'ftp://ftp.ncbi.nih.gov/refseq/release/release-catalog/release*.removed-records.gz' 
 
 # full path to log files
 setenv LOGFILE1	${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gbff.log
@@ -38,3 +59,12 @@ setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
 rm *
 wget -o ${LOGFILE1} -S -t 10 -nd -m "${URL1}"
 wget -o ${LOGFILE2} -S -t 10 -nd -m "${URL2}"
+
+cat ${LOGFILE1} >> ${LOG}
+cat ${LOGFILE2} >> ${LOG}
+#download the release*.removed-records.gz file
+cd ${refseq_deletes}
+wget -S -t 10 -nd -m "${URL3}" >> ${LOG}
+
+echo `date` >> ${LOG}
+echo "Program complete" >> ${LOG}
