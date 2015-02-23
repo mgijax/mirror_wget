@@ -1,3 +1,9 @@
+TAG: mirror_wget-5-2-1-15
+DATE: 02/23/2015
+STAFF: lnh
+CHANGES:
+1) added lock_dir to ftp.ncbi.nih.gbRel
+
 TAG: mirror_wget-5-2-1-14
 TAG: mirror_wget-5-2-1-13
 DATE: 01/29/2015

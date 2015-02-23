@@ -34,6 +34,8 @@ if ( `date '+%u'` != 6 ) then
     echo "Stop Time: `date`" >> ${LOG}
     exit
 endif
+# Full path the read/write lock directory
+setenv LOCK_DIR ${DATADOWNLOADS}/genbank
 
 # attempt to set genbank write lock
 mirror_lock wlock mirror_wget ${LOCK_DIR} >> ${LOG}
