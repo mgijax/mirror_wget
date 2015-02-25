@@ -7,6 +7,9 @@
 #
 # History
 #
+# 02/25/2015 - sc TR11888
+#	- added ftp.xenbase.org
+#
 # 01/28/2015 sc
 #	- renamed www.zfin.* zfin.*
 #
@@ -88,6 +91,7 @@ www.mousephenotype.org \
 www.i-dcc.org_imits \
 www.ebi.ac.uk \
 ftp.ebi.ac.uk \
+ftp.xenbase.org \
 )
 echo $i
 $i
