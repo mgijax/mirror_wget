@@ -1,0 +1,55 @@
+#!/bin/csh -f
+
+#
+# Program: ftp.xenbase.org
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Download the xenbase homology and gene expression files
+#
+
+cd `dirname $0` && source ./Configuration 
+
+# Full URLs for each file
+setenv URL_ORTH 'ftp://ftp.xenbase.org/pub/GenePageReports/XenbaseGeneMouseOrthologMapping.txt'
+
+setenv URL_EG 'ftp://ftp.xenbase.org/pub/GenePageReports/GenePageTropicalisEntrezGeneUnigeneMapping.txt'
+
+setenv URL_EXPR 'ftp://ftp.xenbase.org/pub/GenePageReports/GeneExpression_tropicalis.txt'
+
+setenv URL_TRANS 'ftp://ftp.xenbase.org/pub/GenePageReports/XenbaseGenepageToGeneIdMapping.txt'
+
+# Full path to download directory
+setenv DOWNLOADS_DIR	${DATADOWNLOADS}/ftp.xenbase.org
+
+# full path to log files
+setenv LOGFILE_ORTH	${MIRRORLOG}/ftp.xenbase.org.orth.log
+setenv LOGFILE_EG 	${MIRRORLOG}/ftp.xenbase.org.eg.log
+setenv LOGFILE_EXPR       ${MIRRORLOG}/ftp.xenbase.org.expr.log
+setenv LOGFILE_TRANS      ${MIRRORLOG}/ftp.xenbase.org.trans.log
+
+#
+# wget
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -o = full path to log file
+# -O = full path to output file
+# -t = number of retries
+# -r = reverse
+# -k 7 = sort by the 7th column
+# -nd = don't create directories
+# -m = Turn on options suitable for mirroring. This option turns on recursion 
+#    and time-stamping, sets infinite recursion depth and keeps FTP 
+#    directory listings. It is currently equivalent to .-r -N -l 
+#    inf --no-remove-listing.. 
+
+# run mirrors
+cd ${DOWNLOADS_DIR}
+wget -a ${LOGFILE_ORTH} -S -t 10 -nd -m "${URL_ORTH}"
+
+wget -a ${LOGFILE_EG} -S -t 10 -nd -m "${URL_EG}"
+
+wget -a ${LOGFILE_EXPR} -S -t 10 -nd -m "${URL_EXPR}"
+
+wget -a ${LOGFILE_TRANS} -S -t 10 -nd -m "${URL_TRANS}"
