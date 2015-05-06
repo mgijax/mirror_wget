@@ -83,7 +83,6 @@ end
 foreach i (\
 emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
-www.i-dcc.org1 \
 www.i-dcc.org2 \
 www.i-dcc.org3 \
 www.sanger.ac.uk5 \
