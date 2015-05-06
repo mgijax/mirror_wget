@@ -77,8 +77,6 @@ echo $i
 runwget.csh ${URL} ${LOG}
 end
 
-#remove temporarily
-#www.europhenome.org \
 foreach i (\
 emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
