@@ -63,7 +63,6 @@ cd `dirname $0` && source ./Configuration
 date
 
 foreach i (\
-func.med.harvard.edu \
 emnet.informatics.jax.org:48080 \
 emnet.informatics.jax.org2 \
 zfin.gene.org \
