@@ -1,32 +1,30 @@
 #!/bin/csh -f
 
 #
-# Program: ftp.ebi.ac.uk_interpro
+# Program: ftp.ebi.ac.uk_arrayexpress
 #
 # Original Author: kstone
 #
 # Purpose:
 #
-#	Download Interpro vocab and GO mapping
+#	Download ArrayExpress IDs
 #
 
 cd `dirname $0` && source ./Configuration 
 
-# Full URLs for Interpro files
-setenv URL_IP1 'ftp://ftp.ebi.ac.uk/pub/databases/interpro/interpro2go'
-setenv URL_IP2 'ftp://ftp.ebi.ac.uk/pub/databases/interpro/names.dat'
-setenv URL_IP3 'ftp://ftp.ebi.ac.uk/pub/databases/interpro/short_names.dat'
+# Full URLs for ArrayExpress file
+setenv URL_AEXP 'ftp://ftp.ebi.ac.uk/pub/databases/arrayexpress/data/atlas/bioentity_properties/ensembl/mus_musculus.ensgene.tsv'
 
 # Full path to download directories
-setenv DOWNLOADS_IP	${DATADOWNLOADS}/ftp.ebi.ac.uk/pub/databases/interpro
+setenv DOWNLOADS_AEXP	${DATADOWNLOADS}/ftp.ebi.ac.uk/pub/databases/arrayexpress/data/atlas/bioentity_properties/ensembl
 
 # Full path the read/write lock directory
-setenv LOCK_DIR	${DOWNLOADS_IP}
+setenv LOCK_DIR	${DOWNLOADS_AEXP}
 
 # full path to log files
-setenv LOGFILE_IP	${MIRRORLOG}/ftp.ebi.ac.uk.interpro.log
+setenv LOGFILE_AEXP	${MIRRORLOG}/ftp.ebi.ac.uk.arrayexpress.log
 
-mkdir -p $DOWNLOADS_IP
+mkdir -p $DOWNLOADS_AEXP
 mkdir -p $MIRRORLOG
 
 #
@@ -45,25 +43,23 @@ mkdir -p $MIRRORLOG
 
 # run mirror_lock to place lock file
 # this command will return non-zero if  read or write lock is found
-# attempt to set lock in the parent directory of interpro - 
+# attempt to set lock in the parent directory of ArrayExpress - 
 # we don't want one to be mirrored without the other
 
-# attempt to set interpro write lock
-mirror_lock wlock mirror_wget ${LOCK_DIR} > ${LOGFILE_IP}
+# attempt to set AEXP write lock
+mirror_lock wlock mirror_wget ${LOCK_DIR} > ${LOGFILE_AEXP}
 if ($status != 0) then
-  echo mirror_lock returned nonzero status...exiting ftp.ebi.ac.uk interpro 
-  echo "See logs at ${LOGFILE_IP}"
+  echo mirror_lock returned nonzero status...exiting ftp.ebi.ac.uk arrayexpress
+  echo "See logs at ${LOGFILE_AEXP}"
   echo "Stop Time: `date`"
   exit (1)
 endif
 
-# run Interpro mirror
-cd ${DOWNLOADS_IP}
-foreach url_ip ( $URL_IP1 $URL_IP2 $URL_IP3 )
-    wget -a ${LOGFILE_IP} -S -t 10 -nd --retr-symlinks -m "${url_ip}"
-end
+# run AEXP mirror
+cd ${DOWNLOADS_AEXP}
+wget -a ${LOGFILE_AEXP} -S -t 10 -nd -m "${URL_AEXP}"
 
 echo ${MIRROR_WGET}
 
 cd ${MIRROR_WGET}
-mirror_lock unlock mirror_wget ${LOCK_DIR} >> ${LOGFILE_IP}
+mirror_lock unlock mirror_wget ${LOCK_DIR} >> ${LOGFILE_AEXP}

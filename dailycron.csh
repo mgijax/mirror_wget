@@ -31,9 +31,13 @@ echo $i
 runwget.csh ${URL} ${LOG}
 end
 
+# standalone scripts
 foreach i (\
 purl.obolibrary.org \
 www.gensat.org \
+ftp.ebi.ac.uk_goa \
+ftp.ebi.ac.uk_interpro \
+ftp.ebi.ac.uk_arrayexpress \
 )
 echo $i
 $i
