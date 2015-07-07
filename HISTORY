@@ -1,3 +1,10 @@
+DATE: 07/07/2015
+STAFF: kstone
+CHANGES:
+1) moving ftp.ebi.ac.uk from mirror_ftp
+2) moving radar-dependent scripts of ftp.ncbi.nih.gov from mirror_ftp
+
+
 TAG: mirror_wget-5-2-1-20
 TAG: mirror_wget-5-2-1-19
 TAG: mirror_wget-5-2-1-18
