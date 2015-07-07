@@ -15,6 +15,7 @@ foreach i (\
 ftp.ncbi.nih.gov.gbNC \
 ftp.ncbi.nih.gov.gbTpaNC \
 ftp.ncbi.nih.gov.refseqDaily \
+ftp.ncbi.nih.gov.gbDel \
 )
 echo $i
 $i
