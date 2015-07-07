@@ -28,7 +28,9 @@ touch ${LOG}
 echo "$0" >> ${LOG}
 echo `date` >> ${LOG}
 
-#check if this is a Saturday 
+# Enforce running only on Saturday
+# NOTE: This is because we can't ensure that
+# 	cron runs this on the correct days (3rd & 4th Saturdays)
 if ( `date '+%u'` != 6 ) then
     echo "Today is not an update day . It is day: " `date '+%u'` "of the week" >> ${LOG}
     echo "Stop Time: `date`" >> ${LOG}
