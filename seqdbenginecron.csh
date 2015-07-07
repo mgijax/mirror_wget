@@ -12,6 +12,7 @@ date
 
 # standalone scripts
 foreach i (\
+ftp.ebi.ac.uk \
 ftp.ncbi.nih.gov.gbNC \
 ftp.ncbi.nih.gov.gbTpaNC \
 ftp.ncbi.nih.gov.refseqDaily \
