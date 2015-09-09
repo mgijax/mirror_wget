@@ -19,6 +19,9 @@
 #
 # Modification History:
 #
+# 09/09/2015	lec
+#	- TR12070/TR12011/add new Targeted Allele Load files
+#
 # 01/27/2014	lec
 #	- TR11515/add Sanger/Derivate Allele
 #
@@ -34,3 +37,14 @@ setenv LOGFILE  www.mousephenotype.org.log
 #
 
 curl -kO "${URL}" >>& /dev/null
+
+setenv URL	https://www.mousephenotype.org/imits/v2/reports/mgi_es_cell_allele_report.tsv
+setenv LOGFILE  www.mousephenotype.org.log
+
+#
+# -k = insecure/SSL; allows curl to perform inscrue SSL connections and transvers
+# -O = where to save the output
+#
+
+curl -kO "${URL}" >>& /dev/null
+

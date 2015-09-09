@@ -7,9 +7,6 @@
 #
 # History
 #
-# 09/2/20155 - lec
-#	- added raw.githubusercontent.com
-#
 # 02/25/2015 - sc TR11888
 #	- added ftp.xenbase.org
 #
@@ -91,7 +88,6 @@ www.i-dcc.org_imits \
 www.ebi.ac.uk \
 ftp.ebi.ac.uk \
 ftp.xenbase.org \
-raw.githubusercontent.com \
 )
 echo $i
 $i
