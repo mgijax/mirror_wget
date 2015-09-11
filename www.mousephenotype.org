@@ -25,26 +25,19 @@
 # 01/27/2014	lec
 #	- TR11515/add Sanger/Derivate Allele
 #
+# -k = insecure/SSL; allows curl to perform inscrue SSL connections and transvers
+# -O = where to save the output
+#
 
 cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}/www.mousephenotype.org
 
+# used by derivative-allele-load
 setenv URL	https://www.mousephenotype.org/imits/v2/reports/mgi_modification_allele_report.tsv
 setenv LOGFILE  www.mousephenotype.org.log
-
-#
-# -k = insecure/SSL; allows curl to perform inscrue SSL connections and transvers
-# -O = where to save the output
-#
-
 curl -kO "${URL}" >>& /dev/null
 
+# used by targted-allele-load
 setenv URL	https://www.mousephenotype.org/imits/v2/reports/mgi_es_cell_allele_report.tsv
 setenv LOGFILE  www.mousephenotype.org.log
-
-#
-# -k = insecure/SSL; allows curl to perform inscrue SSL connections and transvers
-# -O = where to save the output
-#
-
 curl -kO "${URL}" >>& /dev/null
 

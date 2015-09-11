@@ -80,11 +80,8 @@ end
 foreach i (\
 emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
-www.i-dcc.org2 \
-www.i-dcc.org3 \
 www.sanger.ac.uk5 \
 www.mousephenotype.org \
-www.i-dcc.org_imits \
 www.ebi.ac.uk \
 ftp.ebi.ac.uk \
 ftp.xenbase.org \
