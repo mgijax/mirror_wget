@@ -46,9 +46,6 @@
 # 07/22/2013
 #	- TR11442/remove www.europhenome.org temporarily
 #
-# 10/31/2012
-#	- TR10273/added www.sanger.ac.uk5; www.europhenome.org
-#
 # 07/06/2010	lec
 #	- TR 9316/cgd.jax.org
 #	  if you need to add this to weekly tasks,
@@ -80,7 +77,6 @@ end
 foreach i (\
 emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
-www.sanger.ac.uk5 \
 www.mousephenotype.org \
 www.ebi.ac.uk \
 ftp.ebi.ac.uk \
