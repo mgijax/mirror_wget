@@ -23,6 +23,7 @@ purl.obolibrary2.org \
 purl.obolibrary3.org \
 purl.obolibrary4.org \
 purl.obolibrary5.org \
+purl.obolibrary6.org \
 build.berkeleybop.org \
 )
 set URL=`cut -f1 $i`
