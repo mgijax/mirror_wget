@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-1-2
+DATE: 11/27/2015
+STAFF: 
+CHANGES: TR12148
+1) added mygene.info package
+2) added mygene.info to weeklycron.csh
+
 TAG: mirror_wget-6-0-1-1
 DATE: 11/2/2015
 STAFF: lec

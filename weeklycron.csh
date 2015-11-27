@@ -7,6 +7,9 @@
 #
 # History
 #
+# 11/27/2015 - sc TR12148
+#	- added mygene.info
+#
 # 02/25/2015 - sc TR11888
 #	- added ftp.xenbase.org
 #
@@ -81,6 +84,7 @@ www.mousephenotype.org \
 www.ebi.ac.uk \
 ftp.ebi.ac.uk \
 ftp.xenbase.org \
+mygene.info \
 )
 echo $i
 $i

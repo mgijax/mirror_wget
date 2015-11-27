@@ -1,0 +1,44 @@
+#!/bin/csh -f
+
+#
+# Program: mygene.info
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Download the Textual Gene Summary wiki data	
+#
+# Modification History:
+#
+# 11/27/2015    sc
+#       - TR12148	Project Florida 
+#
+
+
+cd `dirname $0` && source ./Configuration
+
+# Full URL of the file
+
+setenv URL	"http://mygene.info/v2/query?q=_exists_:wikipedia&fields=wikipedia,entrezgene&limit=100000"
+
+
+# Base URL of the file
+setenv BASEURL mygene.info
+
+# full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}.log
+
+# output directory
+setenv OUTPUTDIR        ${DATADOWNLOADS}/${BASEURL}
+
+# output file
+setenv OUTPUTFILE       ${OUTPUTDIR}/mygene.xml
+
+#
+# -k = insecure/SSL; allows curl to perform insecure SSL connections 
+# -o = the output file
+# --create-dirs = used with -o, create dirs that don't exist in output file path
+#
+
+curl --create-dirs -ko ${OUTPUTFILE} "${URL}" >& ${LOGFILE}
