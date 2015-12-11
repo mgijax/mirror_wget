@@ -7,6 +7,9 @@
 #
 # History
 #
+# 12/11/2015 - lec
+#	- TR12070/12011/add ikmc.vm.bytemark.co.uk
+#
 # 11/27/2015 - sc TR12148
 #	- added mygene.info
 #
@@ -82,6 +85,7 @@ emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
 www.mousephenotype.org \
 www.ebi.ac.uk \
+ikmc.vm.bytemark.co.uk \
 ftp.ebi.ac.uk \
 ftp.xenbase.org \
 mygene.info \
