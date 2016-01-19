@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-2-3
+DATE: 1/19/2016
+STAFF: dbm
+CHANGES:
+1) ftp.xenbase.org: Overwrite log files so previous errors don't persist
+
 TAG: mirror_wget-6-0-2-2
 TAG: mirror_wget-6-0-2-1
 DATE: 12/11/2015
