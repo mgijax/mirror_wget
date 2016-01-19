@@ -46,10 +46,10 @@ setenv LOGFILE_TRANS      ${MIRRORLOG}/ftp.xenbase.org.trans.log
 
 # run mirrors
 cd ${DOWNLOADS_DIR}
-wget -a ${LOGFILE_ORTH} -S -t 10 -nd -m "${URL_ORTH}"
+wget -o ${LOGFILE_ORTH} -S -t 10 -nd -m "${URL_ORTH}"
 
-wget -a ${LOGFILE_EG} -S -t 10 -nd -m "${URL_EG}"
+wget -o ${LOGFILE_EG} -S -t 10 -nd -m "${URL_EG}"
 
-wget -a ${LOGFILE_EXPR} -S -t 10 -nd -m "${URL_EXPR}"
+wget -o ${LOGFILE_EXPR} -S -t 10 -nd -m "${URL_EXPR}"
 
-wget -a ${LOGFILE_TRANS} -S -t 10 -nd -m "${URL_TRANS}"
+wget -o ${LOGFILE_TRANS} -S -t 10 -nd -m "${URL_TRANS}"
