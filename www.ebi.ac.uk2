@@ -1,0 +1,50 @@
+#!/bin/csh -f
+
+#
+# Program: www.ebi.ac.uk
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#	Download the IMPC LacZdata
+#
+# Modification History:
+#
+# 02 /01/2016    sc
+#       - 
+#
+# Upon a new release, plug this into a browser to get the number of rows in the release and then update
+# rows= in the URL in necessary: 
+# "http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ALZ_001"
+#
+# Look for <result name="response" numFound="24556" start="0">
+# Where 'numFound' specifies the number of records in the release
+#
+
+cd `dirname $0` && source ./Configuration
+
+# Full URL of the file
+
+setenv URL	"http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ALZ_001&wt=json&rows=30000"
+
+
+# Base URL of the file
+setenv BASEURL www.ebi.ac.uk
+
+# full path to log file
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}2.log
+
+# output directory
+setenv OUTPUTDIR        ${DATADOWNLOADS}/${BASEURL}
+
+# output file
+setenv OUTPUTFILE       ${OUTPUTDIR}/impc_lacz.json
+
+#
+# -k = insecure/SSL; allows curl to perform insecure SSL connections 
+# -o = the output file
+# --create-dirs = used with -o, create dirs that don't exist in output file path
+#
+
+curl --create-dirs -ko ${OUTPUTFILE} "${URL}" >& ${LOGFILE}
