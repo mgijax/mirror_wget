@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-2-5
+DATE: 2/2/2016
+STAFF: dbm
+CHANGES: TR12163
+1) data.omim.org: New - get omim.txt from new location
+2) weeklycron.csh: Added data.omim.org package
+
 TAG: mirror_wget-6-0-2-4
 DATE: 2/01/2016
 STAFF: sc
