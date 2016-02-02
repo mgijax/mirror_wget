@@ -89,6 +89,7 @@ ikmc.vm.bytemark.co.uk \
 ftp.ebi.ac.uk \
 ftp.xenbase.org \
 mygene.info \
+data.omim.org \
 )
 echo $i
 $i
