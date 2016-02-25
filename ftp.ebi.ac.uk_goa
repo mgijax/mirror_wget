@@ -9,11 +9,19 @@
 #
 #	Download GOA Mouse Annotations
 #
+# Modified by: lnh
+# Date: 2/25/2016
+# Changes: Changed URL_GOA from ../gene_association.goa_mouse.gz to ../*.goa_mouse.gz 
+#          In order to download GPAD and GPI files in addition to the GAF file
+#
 
 cd `dirname $0` && source ./Configuration 
 
 # Full URLs for GOA file
-setenv URL_GOA 'ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/gene_association.goa_mouse.gz'
+#setenv URL_GOA 'ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/gene_association.goa_mouse.gz'
+setenv URL_GOA 'ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/*.goa_mouse.gz'
+#
+#Add GPAD AND GPI files do
 
 # Full path to download directories
 setenv DOWNLOADS_GOA	${DATADOWNLOADS}/ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE
