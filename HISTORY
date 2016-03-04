@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-2-8
+DATE: 3/04/2016
+STAFF: sc
+CHANGES: TR12267
+1) added: compbio.charite.de and purl.obolibrary8.org
+2) added above to weeklycron.csh
+
 TAG: mirror_wget-6-0-2-7
 DATE: 2/25/2016
 STAFF: lnh

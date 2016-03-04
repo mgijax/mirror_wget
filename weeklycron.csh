@@ -73,6 +73,8 @@ zfin.mouse_orthos.org \
 zfin.xpat.org \
 geisha.arizona.expr.edu \
 geisha.arizona.orthos.edu \
+purl.obolibrary8.org \
+compbio.charite.de \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
