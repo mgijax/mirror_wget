@@ -1,3 +1,13 @@
+TAG: mirror_wget-6-0-2-9
+DATE: 3/07/2016
+STAFF: sc
+CHANGES: TR12267
+1) updated: compbio.charite.de  to use curl, issue with diff versions of wget
+   on diff servers and downloading to different directories
+2) added:  purl.obolibrary7.org using curl to replace purl.obolibrary8.org
+   using wget
+2) updated weeklycron.csh to reflect above
+
 TAG: mirror_wget-6-0-2-8
 DATE: 3/04/2016
 STAFF: sc
