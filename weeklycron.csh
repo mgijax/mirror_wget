@@ -73,6 +73,7 @@ zfin.mouse_orthos.org \
 zfin.xpat.org \
 geisha.arizona.expr.edu \
 geisha.arizona.orthos.edu \
+compbio.charite.de \
 )
 set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
@@ -91,7 +92,6 @@ ftp.xenbase.org \
 mygene.info \
 data.omim.org \
 purl.obolibrary7.org \
-compbio.charite.de \
 )
 echo $i
 $i

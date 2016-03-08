@@ -2,42 +2,45 @@
 
 #
 # Program: purl.obolibrary8.org
-
 #
 # Original Author: sc
 #
 # Purpose:
+#	
+#	Need to use the -O and specifically specify the output directory
 #
-#	Download the  HPO obo file
-#
-# Modification History:
-#
-# 03/07/2016    sc
-#       - new 
+#	The solaris version will automatically use the absolute URL
+#	but the linux version uses the redirected URL.  So, we need
+#	to use the -O option to force the output directory to the
+#	the absolute URL.
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && source ./Configuration && cd ${DATADOWNLOADS}
 
 # Full URL of the file
-
-setenv URL	"http://purl.obolibrary.org/obo/hp.obo purl.obolibrary8.org"
+setenv URL      "http://purl.obolibrary.org/obo/hp.obo"
 
 # Base URL of the file
 setenv BASEURL purl.obolibrary.org
 
 # full path to log file
-setenv LOGFILE	${MIRRORLOG}/${BASEURL}8.log
+setenv LOGFILE	${MIRRORLOG}/${BASEURL}.log
 
 # output directory
-setenv OUTPUTDIR        ${DATADOWNLOADS}/${BASEURL}
+setenv OUTPUTDIR	${DATADOWNLOADS}/${BASEURL}/obo/hp/
 
 # output file
-setenv OUTPUTFILE       ${OUTPUTDIR}/hp.obo
+setenv OUTPUTFILE	${OUTPUTDIR}/hp.obo
+
+# if OUTPUTDIR does not exist, create it
+if ( ! -d ${OUTPUTDIR} ) then
+        mkdir -p ${OUTPUTDIR}
+endif
 
 #
-# -k = insecure/SSL; allows curl to perform insecure SSL connections 
-# -o = the output file
-# --create-dirs = used with -o, create dirs that don't exist in output file path
-#
+# -r = overwrite existing copy with new copy
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -t = number of retries
+# -O = full path to output file
 
-curl --create-dirs -ko ${OUTPUTFILE} "${URL}" >& ${LOGFILE}
+wget -o ${LOGFILE} -O${OUTPUTFILE} -rS -t 10 "${URL}" >>& /dev/null
