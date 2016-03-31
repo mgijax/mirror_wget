@@ -1,3 +1,17 @@
+TAG: mirror_wget-6-0-3-1
+DATE: 03/31/2016
+STAFF: lec
+CHANGES: TR12273/IMPC load (htmpload)
+1) www.mousephenotype.org : add new imits report (mp2_load_phenotyping_colonies_report.tsv)
+2) remove : ikmc.vm.bytemark.co.uk
+
+TAG: mirror_wget-6-0-2-10
+DATE: 3/08/2016
+STAFF: sc
+CHANGES: TR12273/IMPC load (htmpload)
+1) www.mousephenotype.org : add new imits report (mp2_load_phenotyping_colonies_report.tsv)
+2) remove : ikmc.vm.bytemark.co.uk
+
 TAG: mirror_wget-6-0-2-10
 DATE: 3/08/2016
 STAFF: sc

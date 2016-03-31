@@ -19,6 +19,9 @@
 #
 # Modification History:
 #
+# 03/31/2016	lec
+# 	- TR12273/use imits report for htmpload
+# 	
 # 09/09/2015	lec
 #	- TR12070/TR12011/add new Targeted Allele Load files
 #
@@ -38,6 +41,11 @@ curl -kO "${URL}" >>& /dev/null
 
 # used by targted-allele-load
 setenv URL	https://www.mousephenotype.org/imits/v2/reports/mgi_es_cell_allele_report.tsv
+setenv LOGFILE  www.mousephenotype.org.log
+curl -kO "${URL}" >>& /dev/null
+
+# used by htmpload
+setenv URL	https://www.mousephenotype.org/imits/v2/reports/mp2_load_phenotyping_colonies_report.tsv
 setenv LOGFILE  www.mousephenotype.org.log
 curl -kO "${URL}" >>& /dev/null
 
