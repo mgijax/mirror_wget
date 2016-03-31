@@ -1,0 +1,193 @@
+#!/bin/sh 
+
+#
+# Program: download_package 
+#
+# Original Author: lnh
+#
+# Purpose:
+#
+#	Download files from a remote server to our local download directory.
+#       Taking advantage of the structure already in place, it makes sense
+#       we implement one script that can handle the download of any external package.
+#       Each package will have its configuration file with the following global variables:
+#       1) ANNOTATIONS  - used to name the log file
+#       2) REMOTE_SITE  - package host
+#       2) REMOTE_SITE_URL  - package site url (ftp://$REMOTE_SITE, or htp://$REMOTE_SITE)
+#       3) REMOTE_DIR   - path to package on host
+#       4) REMOTE_FILES - list of packages
+#
+# Usage : ./download_package package.config
+# 
+# Assumption: 
+# 1) remote_dir path is set the same on local server
+# 2) MIRRORLOG directory is set on local server
+#
+# What it does:
+# 1) source the Configuration file to access mgiconfig global environment variables
+# 2) setup path to files locally and remotely
+# 3) if local_directory path does not exist create it
+# 4) foreach file on the list, downloads a local copy
+# 5) Reports any error
+# 6) exit
+#
+# Date: 2/25/2016
+#
+mirror_servers="bhmgiapp01 bhmgidevapp01"
+WGET=`which wget`
+
+if [ $# -lt 1 ]
+then
+   echo "Usage: ./download_package annotation_config_file"
+   echo "Note: This program should only run on one of these servers:$mirror_servers"
+   exit 1
+fi
+cd `dirname $0`
+WORKING_DIR=`pwd`
+THIS_CONFIG_FILE=$1
+if [ ! -f $THIS_CONFIG_FILE ]
+then
+  echo "The Configuration file $THIS_CONFIG_FILE is missing from $WORKING_DIR"
+  exit 1
+fi
+#
+# Source mgiconfig master config file
+MGICONFIG=/usr/local/mgi/live/mgiconfig
+if [ ! -f $MGICONFIG/master.config.sh ]
+then
+  echo "$MGICONFIG/master.config.sh main Configuration file is missing"
+  exit 1
+fi
+. $MGICONFIG/master.config.sh
+SCRIPT_NAME=`basename $0`
+MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
+
+#source the config file specific to these annotations
+. $THIS_CONFIG_FILE
+
+#Check if this server is one of the assigned servers to run the mirrors
+#
+is_mirror_server=0
+for server in `echo $mirror_servers`
+do
+   if [ "$server" = $SERVER_NAME ]
+   then
+      is_mirror_server=1
+   fi
+done
+if [ $is_mirror_server -eq 0 ]
+then
+    echo "$SERVER_NAME is not the designated server to run mirror_wget ... exiting" | tee -a ${LOG_FILE}
+    date | tee -a ${LOG_FILE}
+    exit 1
+fi
+# Set path of files on local server
+#
+if [ "$LOCAL_DIR" = "" ]
+then
+   LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+fi
+LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}/$LOCAL_DIR
+LOCK_DIR=$LOCAL_DOWNLOAD_BASE
+#
+#setup the log
+LOG_FILE="${MIRRORLOG}/$REMOTE_SITE.$ANNOTATIONS.log"
+rm -rf $LOG_FILE
+touch $LOG_FILE
+date | tee -a $LOG_FILE
+#
+#LOG current setting 
+#
+echo "------------------------------" | tee -a $LOG_FILE
+echo "***** Remote site setting *****" | tee -a $LOG_FILE
+echo "------------------------------" | tee -a $LOG_FILE
+echo "Remote site: $REMOTE_SITE" | tee -a $LOG_FILE
+echo "Remote directory: $REMOTE_DIR" | tee -a $LOG_FILE
+echo "Files to download: $REMOTE_FILES" | tee -a $LOG_FILE
+echo "------------------------------" | tee -a $LOG_FILE
+echo "***** Local setting *****" | tee -a $LOG_FILE
+echo "------------------------------" | tee -a $LOG_FILE
+echo "Working directory is:$WORKING_DIR" | tee -a $LOG_FILE
+echo "Running $SCRIPT_NAME on Server :$SERVER_NAME" | tee -a $LOG_FILE
+echo "Annotation Config file used: $THIS_CONFIG_FILE" | tee -a $LOG_FILE
+echo "Annotation download directory: $LOCAL_DOWNLOAD_BASE" | tee -a $LOG_FILE
+echo "Annotation locks directory: $LOCK_DIR" | tee -a $LOG_FILE
+echo "mirror logs directory: $MIRRORLOG" | tee -a $LOG_FILE
+echo "Annotions log: $LOG_FILE" | tee -a $LOG_FILE
+echo "------------------------------" | tee -a $LOG_FILE
+#
+# Set path of files on local server
+# Make parent directories as needed
+if [ ! -d $LOCAL_DOWNLOAD_BASE ]
+then
+   echo "Creating new directory $LOCAL_DOWNLOAD_BASE"
+   mkdir -p $LOCAL_DOWNLOAD_BASE
+fi
+
+# attempt to set write lock
+echo "Working directory is:$SERVER_NAME:`pwd`"
+
+mirror_lock wlock mirror_wget ${LOCK_DIR} 2>&1 | tee -a  ${LOG_FILE}
+if [ $? -ne 0 ] 
+then
+  echo "Run status= Failed - could not set mirror_lock. nonzero status returned ...exiting $REMOTE_SITE $ANNOTATIONS " | tee -a  ${LOG_FILE}
+  echo "See logs at ${LOG_FILE}" | tee -a  ${LOG_FILE}
+  echo "Stop Time: `date`" | tee -a  ${LOG_FILE}
+  exit 1
+fi
+# cd to LOCAL_DOWNLOAD_BASE and run wget command 
+cd ${LOCAL_DOWNLOAD_BASE}
+echo "Running wget command from `pwd`"
+for remote_file in `echo $REMOTE_FILES`
+do
+   target_file="$REMOTE_SITE_URL$REMOTE_DIR/$remote_file"
+   echo "$WGET $WGET_OPTIONS $target_file" | tee -a  ${LOG_FILE}
+   $WGET $WGET_OPTIONS "$target_file" 2>&1 | tee -a  ${LOG_FILE} 
+done
+fail=0
+#
+#Check run status
+if [ $? -ne 0 ]
+then
+   fail=1
+fi
+#
+#Un lock mirrors
+#
+cd $WORKING_DIR
+echo "Running 'mirror_lock unlock mirror_wget' command from `pwd`"
+mirror_lock unlock mirror_wget ${LOCK_DIR}  2>&1 | tee -a  ${LOG_FILE}
+#
+#Check run status
+if [ $fail -ne 0 ]
+then
+   echo " Downloading $REMOTE_SITE $ANNOTATIONS failed - Check the log $LOG_FILE for errors" | tee -a $LOG_FILE
+   mailx -s "$REMOTE_SITE $ANNOTATIONS Download Failed" $USER < ${LOG_FILE}
+   exit 1
+fi
+# Check main log for errors
+#
+fail=0
+echo "Checking $LOG_FILE for errors"
+for error_term in `echo "ERROR error fail"`
+do
+   error_found=`cat $LOG_FILE | grep "$error_term"`
+   if [ "$error_found" != "" ]
+   then
+       let "fail+=1"
+       echo "$error_found "
+   fi
+done
+
+if [ $fail -gt 0 ]
+then
+  echo " Downloading $REMOTE_SITE $ANNOTATIONS failed - Check the log $LOG_FILE for errors" | tee -a $LOG_FILE
+  mailx -s "$REMOTE_SITE $ANNOTATIONS Download Failed" $USER < ${LOG_FILE}
+  exit 1
+else
+  date | tee -a  ${LOG}
+  echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded successfully" | tee -a  ${LOG_FILE}
+  echo "Program complete"| tee -a  ${LOG_FILE}
+  mailx -s "Mirror wget: $REMOTE_SITE $ANNOTATIONS Download Complete" $USER < ${LOG_FILE}
+  exit 0
+fi
