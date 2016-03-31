@@ -1,0 +1,45 @@
+#!/bin/sh
+
+
+comment="Ensembl mouse transcripts"
+# This will be used in the naming the log file
+ANNOTATIONS=mouse_cdna
+#
+# set path of files on remote server
+REMOTE_SITE=ftp.ensembl.org
+#url to remote site
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/pub/current_fasta/mus_musculus/cdna
+LOCAL_DIR=$REMOTE_SITE/cdna/mouse
+## List of files to download
+#
+REMOTE_FILES="Mus_musculus.*.cdna.all.fa.gz"
+#
+# wget options
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+
+
+#
+# wget
+# -S = print the headers sent by HTTP servers and responses sent by FTP servers.
+# -o = full path to log file
+# -O = full path to output file
+# -t = number of retries
+# -r = reverse
+# -k 7 = sort by the 7th column
+# -nd = don't create directories
+# -m = Turn on options suitable for mirroring. This option turns on recursion 
+#    and time-stamping, sets infinite recursion depth and keeps FTP 
+#    directory listings. It is currently equivalent to .-r -N -l 
+#    inf --no-remove-listing.. 
+
+#******** Optional *************
+
+# Do not download any files if local directories do not exist
+local_dir_check=true
+# Remove any files in local directory that are not in remote directory
+do_deletes=false
+recursive=false
