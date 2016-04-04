@@ -180,7 +180,7 @@ fi
 #
 fail=0
 echo "Sanity Check on $LOG_FILE "
-for error_term in `echo "ERROR error Fatal Failure"`
+for error_term in `echo "ERROR error Fatal Failure Cannot 'timed out' 'No such'"`
 do
    error_found=`cat $LOG_FILE | grep "$error_term"`
    if [ "$error_found" != "" ]
@@ -192,13 +192,11 @@ done
 
 if [ $fail -gt 0 ]
 then
-  echo " Downloading $REMOTE_SITE $ANNOTATIONS failed - Check the log $LOG_FILE for errors" | tee -a $LOG_FILE
-  mailx -s "$REMOTE_SITE $ANNOTATIONS Download Failed" $USER < ${LOG_FILE}
+  echo " Downloading $REMOTE_SITE $ANNOTATIONS failed - Check the log $LOG_FILE " | tee -a $LOG_FILE
   exit 1
 else
   date | tee -a  ${LOG}
-  echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded successfully" | tee -a  ${LOG_FILE}
+  echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded" | tee -a  ${LOG_FILE}
   echo "Program complete"| tee -a  ${LOG_FILE}
-  mailx -s "Mirror wget: $REMOTE_SITE $ANNOTATIONS Download Complete" $USER < ${LOG_FILE}
   exit 0
 fi
