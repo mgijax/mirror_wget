@@ -88,6 +88,10 @@ then
    LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 fi
 LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}/$LOCAL_DIR
+if [ $loca_dir_is_absolute -eq 1 ]
+then
+    LOCAL_DOWNLOAD_BASE=$LOCAL_DIR
+fi
 LOCK_DIR=$LOCAL_DOWNLOAD_BASE
 #
 #setup the log
@@ -137,6 +141,13 @@ then
 fi
 # cd to LOCAL_DOWNLOAD_BASE and run wget command 
 cd ${LOCAL_DOWNLOAD_BASE}
+# delete local files as needed
+if [ "$do_deletes" = true ]
+then
+   echo "Current files: "
+   echo `ls -lh `
+   rm -f *
+fi
 echo "Running wget command from `pwd`"
 for remote_file in `echo $REMOTE_FILES`
 do
@@ -168,8 +179,8 @@ fi
 # Check main log for errors
 #
 fail=0
-echo "Checking $LOG_FILE for errors"
-for error_term in `echo "ERROR error fail"`
+echo "Sanity Check on $LOG_FILE "
+for error_term in `echo "ERROR error Fatal Failure"`
 do
    error_found=`cat $LOG_FILE | grep "$error_term"`
    if [ "$error_found" != "" ]
