@@ -48,48 +48,8 @@ do
 done
 
 #Check logs for errors
+echo "Running sanity check on $LOG_FILES"
 log_report=$MIRRORLOG/$SCRIPT_NAME.log
-function getLogStatus() {
-  log=$1
-  fail=0
-  for error_term in `echo "ERROR error Fatal Failure Cannot failed 'timed out' 'No such'"`
-  do
-       error_found=`cat $log | grep "$error_term"`
-       if [ "$error_found" != "" ]
-       then
-            let "fail+=1"
-            echo "$error_found "
-        fi
-  done
-  return $fail
-}
+./check_mirror_logs.sh $log_report "$LOG_FILES"
+date 
 
-rm -rf $log_report
-touch $log_report
-date | tee -a $log_report
-for log in $LOG_FILES
-do
-  if [ ! -f $log ]
-  then 
-       echo "--------------------------------------- " | tee -a $log_report
-       echo "Sanity Check on : $log " | tee -a $log_report
-       echo "ERROR: $log does not exist " | tee -a $log_report
-       echo "Status: Failed " | tee -a $log_report
-       continue
-   fi
-   echo "--------------------------------------- " | tee -a $log_report
-   echo "Sanity Check on : $log " | tee -a $log_report
-   getLogStatus $log
-   if [ $? -gt 0 ]
-   then
-       echo "ERROR: $log contains errors" | tee -a $log_report
-       echo "Status: Failed " | tee -a $log_report
-   else
-       echo "Clean: $log" | tee -a $log_report
-       echo "Status: Success " | tee -a $log_report
-   fi 
-   echo "--------------------------------------- " | tee -a $log_report
-done
-echo "Logs check done " | tee -a $log_report
-mailx -s "MIRROR: $log_report" mgiadmin < $log_report
-date | tee -a $log_report

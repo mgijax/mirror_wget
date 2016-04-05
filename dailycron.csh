@@ -14,6 +14,7 @@
 cd `dirname $0` && source ./Configuration
 
 date
+setenv LOG_FILES ""
 
 foreach i (\
 www.genetrap.org \
@@ -30,6 +31,7 @@ set URL=`cut -f1 $i`
 set LOG=`cut -f2 $i`
 echo $i
 runwget.csh ${URL} ${LOG}
+#setenv LOG_FILES "$LOG_FILES $LOG"
 end
 
 # standalone scripts
@@ -45,7 +47,7 @@ $i
 end
 
 # From ftp mirrors daily
-foreach i (\
+foreach package (\
 ftp.hgu.mrc.ac.uk.emage \
 ftp.sanger.ac.uk.vega_prot \
 ftp.sanger.ac.uk.vega_cdna \
@@ -59,8 +61,15 @@ ftp.ncbi.nih.gov.homologene \
 ftp.ncbi.nih.gov.ccds \
 ftp.ncbi.nih.gov.mapview \
 )
-download_package  $i 
+download_package  $package 
+setenv LOG_FILES "$LOG_FILES $MIRRORLOG/$package.log"
 end
 
+set SCRIPT_NAME=`basename $0`
+#Check logs for errors
+echo "Running sanity check on $LOG_FILES"
+setenv log_report $MIRRORLOG/$SCRIPT_NAME.log
+
+./check_mirror_logs.sh $log_report "$LOG_FILES"
 
 date
