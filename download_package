@@ -134,7 +134,7 @@ echo "Working directory is:$SERVER_NAME:`pwd`"
 mirror_lock wlock mirror_wget ${LOCK_DIR} 2>&1 | tee -a  ${LOG_FILE}
 if [ $? -ne 0 ] 
 then
-  echo "Run status= Failed - could not set mirror_lock. nonzero status returned ...exiting $REMOTE_SITE $ANNOTATIONS " | tee -a  ${LOG_FILE}
+  echo "Run status= Failed - could not set mirror_lock.$REMOTE_SITE $ANNOTATIONS " | tee -a  ${LOG_FILE}
   echo "See logs at ${LOG_FILE}" | tee -a  ${LOG_FILE}
   echo "Stop Time: `date`" | tee -a  ${LOG_FILE}
   exit 1
@@ -153,50 +153,14 @@ for remote_file in `echo $REMOTE_FILES`
 do
    target_file="$REMOTE_SITE_URL$REMOTE_DIR/$remote_file"
    echo "$WGET $WGET_OPTIONS $target_file" | tee -a  ${LOG_FILE}
-   $WGET $WGET_OPTIONS "$target_file" 2>&1 | tee -a  ${LOG_FILE} 
+   $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file" 
 done
-fail=0
-#
-#Check run status
-if [ $? -ne 0 ]
-then
-   fail=1
-fi
 #
 #Un lock mirrors
 #
 cd $WORKING_DIR
 echo "Running 'mirror_lock unlock mirror_wget' command from `pwd`"
 mirror_lock unlock mirror_wget ${LOCK_DIR}  2>&1 | tee -a  ${LOG_FILE}
-#
-#Check run status
-if [ $fail -ne 0 ]
-then
-   echo " Downloading $REMOTE_SITE $ANNOTATIONS failed - Check the log $LOG_FILE for errors" | tee -a $LOG_FILE
-   mailx -s "$REMOTE_SITE $ANNOTATIONS Download Failed" $USER < ${LOG_FILE}
-   exit 1
-fi
-# Check main log for errors
-#
-fail=0
-echo "Sanity Check on $LOG_FILE "
-for error_term in `echo "ERROR error Fatal Failure Cannot 'timed out' 'No such'"`
-do
-   error_found=`cat $LOG_FILE | grep "$error_term"`
-   if [ "$error_found" != "" ]
-   then
-       let "fail+=1"
-       echo "$error_found "
-   fi
-done
-
-if [ $fail -gt 0 ]
-then
-  echo " Downloading $REMOTE_SITE $ANNOTATIONS failed - Check the log $LOG_FILE " | tee -a $LOG_FILE
-  exit 1
-else
-  date | tee -a  ${LOG}
-  echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded" | tee -a  ${LOG_FILE}
-  echo "Program complete"| tee -a  ${LOG_FILE}
-  exit 0
-fi
+echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded" | tee -a  ${LOG_FILE}
+echo "Program complete"| tee -a  ${LOG_FILE}
+exit 0
