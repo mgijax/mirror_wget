@@ -1,14 +1,18 @@
 #!/bin/sh 
 
 #
-# Wrapper for running daily crons
+# This script runs daily to download GO files.
+# GO packages:
+#  1) ftp.geneontology.org.external2go 
+#  2) ftp.geneontology.org.gene-associations 
+#  3) ftp.geneontology.org.gene-associations.paint
 #
 # Usage:  dailycron2.sh
 #
 # History
 #
 # 04/05/2016 lnh
-#    TR12266 : Migrate mirror_ftt to mirror_wget
+#    TR12266 : Migrate mirror_ftp to mirror_wget
 #
 # 12/20/2004	lec
 #	- moved GO FTP to this file because it has to run at 1:30AM or late
