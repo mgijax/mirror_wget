@@ -36,10 +36,10 @@ end
 
 # standalone scripts
 foreach i (\
-purl.obolibrary.org \
-www.gensat.org \
-ftp.ebi.ac.uk_goa \
-ftp.ebi.ac.uk_interpro \
+purl.obolibrary.org.go-basic.obo \
+www.gensat.org.EntrezGeneIds \
+ftp.ebi.ac.uk.goa \
+ftp.ebi.ac.uk.interpro \
 ftp.ebi.ac.uk_arrayexpress \
 )
 echo $i
