@@ -1,1 +1,0 @@
-http://purl.obolibrary.org/obo/uberon.obo purl.obolibrary6.org

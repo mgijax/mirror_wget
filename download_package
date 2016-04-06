@@ -88,7 +88,8 @@ then
    LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 fi
 LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}/$LOCAL_DIR
-if [ $loca_dir_is_absolute -eq 1 ]
+
+if [ $loca_dir_is_absolute  ]
 then
     LOCAL_DOWNLOAD_BASE=$LOCAL_DIR
 fi
@@ -119,6 +120,7 @@ echo "Annotation locks directory: $LOCK_DIR" | tee -a $LOG_FILE
 echo "mirror logs directory: $MIRRORLOG" | tee -a $LOG_FILE
 echo "Annotions log: $LOG_FILE" | tee -a $LOG_FILE
 echo "------------------------------" | tee -a $LOG_FILE
+
 #
 # Set path of files on local server
 # Make parent directories as needed

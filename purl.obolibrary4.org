@@ -1,1 +1,0 @@
-http://purl.obolibrary.org/obo/eco/eco.obo purl.obolibrary4.org

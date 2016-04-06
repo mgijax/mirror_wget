@@ -7,18 +7,18 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="GO obo file"
+comment="cl-basic obo file"
 # This will be used in the naming the log file
-ANNOTATIONS=go-basic.obo
+ANNOTATIONS=cl-basic.obo
 #
 # set path of files on remote server
 REMOTE_SITE=purl.obolibrary.org
 #url to remote site
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/obo/go
+REMOTE_DIR=/obo/cl
 # The above is redirecting to Current path:
 # REMOTE_SITE=www.berkeleybop.org
-# REMOTE_DIR=/ontologies/go
+# REMOTE_DIR=/ontologies/cl
 
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 ##if not set, local_dir will be relative to /data/downloads/
@@ -28,7 +28,7 @@ LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 #
 ## List of files to download
 #
-REMOTE_FILES="go-basic.obo"
+REMOTE_FILES="cl-basic.obo"
 #
 # wget options
 # Log in as anonymous and give email as password

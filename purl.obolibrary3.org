@@ -1,1 +1,0 @@
-http://purl.obolibrary.org/obo/emap/emap.obo purl.obolibrary3.org

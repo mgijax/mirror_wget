@@ -16,38 +16,32 @@ cd `dirname $0` && source ./Configuration
 date
 setenv LOG_FILES ""
 
-foreach i (\
-www.genetrap.org \
-www.sequenceontology.org \
-purl.obolibrary1.org \
-purl.obolibrary2.org \
-purl.obolibrary3.org \
-purl.obolibrary4.org \
-purl.obolibrary5.org \
-purl.obolibrary6.org \
-build.berkeleybop.org \
-)
-set URL=`cut -f1 $i`
-set LOG=`cut -f2 $i`
-echo $i
-runwget.csh ${URL} ${LOG}
+#foreach i (\
+#www.genetrap.org \
+#www.sequenceontology.org \
+#build.berkeleybop.org \
+#)
+#set URL=`cut -f1 $i`
+#set LOG=`cut -f2 $i`
+#echo $i
+#runwget.csh ${URL} ${LOG}
 #setenv LOG_FILES "$LOG_FILES $LOG"
-end
+#end
 
-# standalone scripts
-foreach i (\
+# Run 
+foreach package (\
 purl.obolibrary.org.go-basic.obo \
+purl.obolibrary.org.cl-basic.obo \
+purl.obolibrary.org.ma.obo \
+purl.obolibrary.org.emap.obo \
+purl.obolibrary.org.eco.obo \
+purl.obolibrary.org.mod.obo \
+purl.obolibrary.org.uberon.obo \
 www.gensat.org.EntrezGeneIds \
 ftp.ebi.ac.uk.goa \
 ftp.ebi.ac.uk.interpro \
-ftp.ebi.ac.uk_arrayexpress \
-)
-echo $i
-$i
-end
-
-# From ftp mirrors daily
-foreach package (\
+ftp.ebi.ac.uk.arrayexpress \
+# From ftp mirrors daily\
 ftp.hgu.mrc.ac.uk.emage \
 ftp.sanger.ac.uk.vega_prot \
 ftp.sanger.ac.uk.vega_cdna \
