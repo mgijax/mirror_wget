@@ -165,4 +165,5 @@ echo "Running 'mirror_lock unlock mirror_wget' command from `pwd`"
 mirror_lock unlock mirror_wget ${LOCK_DIR}  2>&1 | tee -a  ${LOG_FILE}
 echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded" | tee -a  ${LOG_FILE}
 echo "Program complete"| tee -a  ${LOG_FILE}
+echo "================================="| tee -a  ${LOG_FILE}
 exit 0

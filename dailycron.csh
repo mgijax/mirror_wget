@@ -16,20 +16,11 @@ cd `dirname $0` && source ./Configuration
 date
 setenv LOG_FILES ""
 
-#foreach i (\
-#www.genetrap.org \
-#www.sequenceontology.org \
-#build.berkeleybop.org \
-#)
-#set URL=`cut -f1 $i`
-#set LOG=`cut -f2 $i`
-#echo $i
-#runwget.csh ${URL} ${LOG}
-#setenv LOG_FILES "$LOG_FILES $LOG"
-#end
-
 # Run 
 foreach package (\
+www.sequenceontology.org.current_release.obo \
+www.genetrap.org.igtc  \
+build.berkeleybop.org.gaf-check-mgi \
 purl.obolibrary.org.go-basic.obo \
 purl.obolibrary.org.cl-basic.obo \
 purl.obolibrary.org.ma.obo \

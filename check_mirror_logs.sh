@@ -26,10 +26,18 @@ fi
 log_report=$1
 LOG_FILES=$2
 
+ERROR_TERMS="ERROR
+error
+Fatal
+Failure
+Cannot
+failed
+timed out
+No such"
 function getLogStatus() {
   log=$1
   fail=0
-  for error_term in `echo "ERROR error Fatal Failure Cannot failed 'timed out' 'No such'"`
+  for error_term in $ERROR_TERMS
   do
        error_found=`cat $log | grep "$error_term"`
        if [ "$error_found" != "" ]
@@ -56,7 +64,7 @@ do
    fi
    echo "--------------------------------------- " | tee -a $log_report
    echo "Sanity Check on : $log " | tee -a $log_report
-   getLogStatus $log
+   getLogStatus $log | tee -a $log_report
    if [ $? -gt 0 ]
    then
        echo "ERROR: $log contains errors" | tee -a $log_report
