@@ -52,6 +52,7 @@ function getLogStatus() {
 rm -rf $log_report
 touch $log_report
 date | tee -a $log_report
+run_status=""
 for log in $LOG_FILES
 do
   if [ ! -f $log ]
@@ -69,6 +70,7 @@ do
    then
        echo "ERROR: $log contains errors" | tee -a $log_report
        echo "Status: Failed " | tee -a $log_report
+       run_status="Failed"
    else
        echo "Clean: $log" | tee -a $log_report
        echo "Status: Success " | tee -a $log_report
@@ -77,6 +79,12 @@ do
 done
 echo "Logs check done " | tee -a $log_report
 date | tee -a $log_report
-
 mailx -s "MIRROR: $log_report" mgiadmin < $log_report
+
+if [ "$run_status" != "Failed" ]
+then
+   exit 0
+else
+  exit 1
+fi 
 
