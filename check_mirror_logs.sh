@@ -32,8 +32,8 @@ Fatal
 Failure
 Cannot
 failed
-timed out
-No such"
+'timed out'
+'No such'"
 function getLogStatus() {
   log=$1
   fail=0
