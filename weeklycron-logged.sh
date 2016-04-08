@@ -43,7 +43,7 @@ echo "Running sanity check on $LOG_FILES"
 log_report=$MIRRORLOG/$SCRIPT_NAME.log
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 
-if [ $? -ne 0 ]
+if [ $? -gt 0 ]
 then
    echo "Mirror failed"
    exit 1
@@ -52,7 +52,6 @@ fi
 ${RADAR_DBUTILS}/bin/logFileToProcessByDir.csh ${RADAR_DBSCHEMADIR} ${DATADOWNLOADS}/genbank_daily ${DATADOWNLOADS}/genbank_daily GenBank_preprocess
 ${RADAR_DBUTILS}/bin/logFileToProcessByDir.csh ${RADAR_DBSCHEMADIR} ${DATADOWNLOADS}/ftp.ncbi.nih.gov/refseq/daily ${DATADOWNLOADS}/ftp.ncbi.nih.gov/refseq/daily RefSeq_preprocess
 ${RADAR_DBUTILS}/bin/logFileToProcessByDir.csh ${RADAR_DBSCHEMADIR} ${DATADOWNLOADS}/grendel.jax.org/TPA/non-cumulative ${DATADOWNLOADS}/grendel.jax.org/TPA/non-cumulative GenBank_preprocess
-
 
 date 
 
