@@ -32,14 +32,14 @@ Fatal
 Failure
 Cannot
 failed
-'timed out'
-'No such'"
+'timed out'"
+#'No such file or directory'"
 function getLogStatus() {
   log=$1
   fail=0
   for error_term in $ERROR_TERMS
   do
-       error_found=`cat $log | grep "$error_term"`
+       error_found=`grep -i $error_term $log `
        if [ "$error_found" != "" ]
        then
             let "fail+=1"
