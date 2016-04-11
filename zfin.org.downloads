@@ -18,7 +18,8 @@ REMOTE_DIR=/downloads
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 ## List of files to download
 #
-REMOTE_FILES="gene.txt mouse_orthos.txt xpat_fish.txt"
+##REMOTE_FILES="gene.txt mouse_orthos.txt xpat_fish.txt"
+REMOTE_FILES="gene.txt mouse_orthos.txt"
 # Note: the xpat.txt file does not exist 
 #  on remote site. This file hasn't been updated since Aug 2015
 #  It turned out the file name has changed from xpat.txt to xpat_fish.txt
