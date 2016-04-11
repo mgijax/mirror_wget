@@ -26,27 +26,31 @@ fi
 log_report=$1
 LOG_FILES=$2
 
-ERROR_TERMS="ERROR
-error
-Fatal
-Failure
-Cannot
-failed
-'timed out'"
+ERROR_TERMS=("ERROR" 
+"Fatal"
+"Failure"
+"failed"
+"ERROR 404: Not Found"
+"timed out"
+"No such file or directory")
+
+IFS=""
 #'No such file or directory'"
 function getLogStatus() {
   log=$1
-  fail=0
-  for error_term in $ERROR_TERMS
+  rstatus="Success"
+  for ((i = 0; i < ${#ERROR_TERMS[@]}; i++))
   do
+       error_term=${ERROR_TERMS[$i]}
        error_found=`grep -i $error_term $log `
        if [ "$error_found" != "" ]
        then
-            let "fail+=1"
-            echo "$error_found "
+            rstatus="Failed"
+            echo "Found: \"$error_found\" "
+            
         fi
   done
-  return $fail
+  echo "Status: $rstatus" 
 }
 
 rm -rf $log_report
@@ -65,26 +69,11 @@ do
    fi
    echo "--------------------------------------- " | tee -a $log_report
    echo "Sanity Check on : $log " | tee -a $log_report
+   echo "**************************************"| tee -a $log_report
    getLogStatus $log | tee -a $log_report
-   if [ $? -gt 0 ]
-   then
-       echo "ERROR: $log contains errors" | tee -a $log_report
-       echo "Status: Failed " | tee -a $log_report
-       run_status="Failed"
-   else
-       echo "Clean: $log" | tee -a $log_report
-       echo "Status: Success " | tee -a $log_report
-   fi
    echo "--------------------------------------- " | tee -a $log_report
 done
 echo "Logs check done " | tee -a $log_report
 date | tee -a $log_report
 mailx -s "MIRROR: $log_report" mgiadmin < $log_report
-
-if [ "$run_status" != "Failed" ]
-then
-   exit 0
-else
-  exit 1
-fi 
 
