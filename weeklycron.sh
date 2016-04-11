@@ -55,7 +55,10 @@ ftp.ncbi.nih.gov.mapview
 ftp.ensembl.org.mouse_ncrna
 ftp.ensembl.org.mouse_cdna
 ftp.ensembl.org.mouse_prot
-ftp.ensembl.org.mouse_gtf"
+ftp.ensembl.org.mouse_gtf
+www.findmice.org.imsrwi
+zfin.org.downloads
+"
 
 LOG_FILES=""
 for package in $FILES

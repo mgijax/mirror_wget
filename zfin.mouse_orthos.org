@@ -1,1 +1,0 @@
-http://zfin.org/downloads/mouse_orthos.txt zfin.mouse_orthos.org

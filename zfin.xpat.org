@@ -1,1 +1,0 @@
-http://zfin.org/downloads/xpat.txt	zfin.xpat.org
