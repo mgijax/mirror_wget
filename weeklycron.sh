@@ -57,8 +57,7 @@ ftp.ensembl.org.mouse_cdna
 ftp.ensembl.org.mouse_prot
 ftp.ensembl.org.mouse_gtf
 www.findmice.org.imsrwi
-zfin.org.downloads
-"
+zfin.org.downloads"
 
 LOG_FILES=""
 for package in $FILES
