@@ -59,12 +59,12 @@ LOG_FILES=""
 for package in $FILES
 do 
     echo "Downloading  $package"
-    LOG_FILES="$LOG_FILES $MIRRORLOG/$package.log"
+    LOG_FILES="$LOG_FILES  $MIRRORLOG/$package.log"
     ./download_package $package
 done
 
 #Check logs for errors
-echo "Running sanity check on $LOG_FILES"
+echo "Starting sanity check on"
 log_report=$MIRRORLOG/$SCRIPT_NAME.log
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 date 

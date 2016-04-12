@@ -34,10 +34,10 @@ ERROR_TERMS=("ERROR"
 "timed out"
 "No such file or directory")
 
-IFS=""
 #'No such file or directory'"
 function getLogStatus() {
   log=$1
+  IFS=""
   rstatus="Success"
   for ((i = 0; i < ${#ERROR_TERMS[@]}; i++))
   do

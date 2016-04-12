@@ -57,7 +57,9 @@ ftp.ensembl.org.mouse_cdna
 ftp.ensembl.org.mouse_prot
 ftp.ensembl.org.mouse_gtf
 www.findmice.org.imsrwi
-zfin.org.downloads"
+zfin.org.downloads
+geisha.arizona.edu.geisha
+compbio.charite.de.phenotype_annotation"
 
 LOG_FILES=""
 for package in $FILES
@@ -67,6 +69,7 @@ do
     ./download_package $package
 done
 
+date
 #Check logs for errors
 echo "Running sanity check on $LOG_FILES"
 log_report=$MIRRORLOG/$SCRIPT_NAME.log
