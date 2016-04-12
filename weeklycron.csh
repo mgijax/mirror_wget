@@ -84,9 +84,9 @@ end
 foreach i (\
 emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
+
 www.mousephenotype.org \
 www.ebi.ac.uk \
-
 ftp.ebi.ac.uk \
 ftp.xenbase.org \
 mygene.info \
