@@ -60,6 +60,7 @@ www.findmice.org.imsrwi
 zfin.org.downloads
 geisha.arizona.edu.geisha
 compbio.charite.de.phenotype_annotation
+mygene.info.wikipedia
 data.omim.org.omim
 purl.obolibrary.org.hp.obo"
 
