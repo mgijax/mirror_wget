@@ -59,7 +59,9 @@ ftp.ensembl.org.mouse_gtf
 www.findmice.org.imsrwi
 zfin.org.downloads
 geisha.arizona.edu.geisha
-compbio.charite.de.phenotype_annotation"
+compbio.charite.de.phenotype_annotation
+data.omim.org.omim
+purl.obolibrary.org.hp.obo"
 
 LOG_FILES=""
 for package in $FILES

@@ -17,7 +17,7 @@ REMOTE_SITE=data.omim.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/downloads/7czWx_PqSx-QX7T4SYkfoQ
 
-LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+LOCAL_DIR=$REMOTE_SITE
 ##if not set, local_dir will be relative to /data/downloads/
 ## otherwise local_dir is absolute
 ## 
