@@ -46,7 +46,6 @@ ftp.hgu.mrc.ac.uk.emage
 ftp.sanger.ac.uk.vega_prot 
 ftp.sanger.ac.uk.vega_cdna 
 ftp.sanger.ac.uk.vega_gtf 
-ftp.mirbase.org.mirbase 
 ftp.pir.georgetown.edu.iproclass 
 ftp.pir.georgetown.edu.pro_ids 
 ftp.ncbi.nih.gov.unigene 
