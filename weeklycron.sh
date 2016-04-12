@@ -60,6 +60,8 @@ www.findmice.org.imsrwi
 zfin.org.downloads
 geisha.arizona.edu.geisha
 compbio.charite.de.phenotype_annotation
+ftp.ebi.ac.uk.sprot
+ftp.ebi.ac.uk.trembl
 ftp.xenbase.org.downloads
 mygene.info.wikipedia
 data.omim.org.omim

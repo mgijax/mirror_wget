@@ -86,9 +86,8 @@ emnet.informatics.jax.org3 \
 www.genenames_hgnc.org \
 www.mousephenotype.org \
 www.ebi.ac.uk \
-ikmc.vm.bytemark.co.uk \
-ftp.ebi.ac.uk \
 
+ftp.ebi.ac.uk \
 ftp.xenbase.org \
 mygene.info \
 data.omim.org \
