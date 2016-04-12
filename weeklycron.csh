@@ -88,8 +88,8 @@ www.mousephenotype.org \
 www.ebi.ac.uk \
 ikmc.vm.bytemark.co.uk \
 ftp.ebi.ac.uk \
-ftp.xenbase.org \
 
+ftp.xenbase.org \
 mygene.info \
 data.omim.org \
 purl.obolibrary7.org \
