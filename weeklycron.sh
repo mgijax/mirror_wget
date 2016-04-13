@@ -60,6 +60,8 @@ www.findmice.org.imsrwi
 zfin.org.downloads
 geisha.arizona.edu.geisha
 compbio.charite.de.phenotype_annotation
+emnet.informatics.jax.org.imsr_allStrains
+www.mousephenotype.org.reports
 www.ebi.ac.uk.impc.json
 ftp.ebi.ac.uk.sprot
 ftp.ebi.ac.uk.trembl
@@ -67,7 +69,10 @@ ftp.xenbase.org.downloads
 mygene.info.wikipedia
 data.omim.org.omim
 purl.obolibrary.org.hp.obo"
-
+#
+#disabled
+#www.genenames.org.hgnc
+#
 LOG_FILES=""
 for package in $FILES
 do 
@@ -79,7 +84,7 @@ done
 date
 #Check logs for errors
 echo "Running sanity check on $LOG_FILES"
-log_report=$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log
+log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 date 
 
