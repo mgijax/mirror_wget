@@ -64,7 +64,7 @@ done
 
 #Check logs for errors
 echo "Starting sanity check on"
-log_report=$MIRRORLOG/$SCRIPT_NAME.log
+log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 date 
 

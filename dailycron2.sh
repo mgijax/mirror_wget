@@ -49,7 +49,7 @@ done
 
 #Check logs for errors
 echo "Running sanity check on $LOG_FILES"
-log_report=$MIRRORLOG/$SCRIPT_NAME.log
+log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 date 
 
