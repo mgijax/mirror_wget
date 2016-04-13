@@ -1,3 +1,14 @@
+TAG: mirror_wget-6-0-3-2
+DATE: 04/13/2016
+STAFF: lnh
+CHANGES: TR12266 - Retire mirror_ftp
+1) Migrated all mirror_ftp packages to mirror_wget
+2) Converted mirror_wget daily and weekly packages to the new format
+3) Wrote mirror_check_log script and scheduled it to be called by
+   daily and weekly mirrors wrapper scripts
+4) Converted all the wraper scripts to sh shell
+5) Removed obsolete packages as needed
+
 TAG: mirror_wget-6-0-3-1
 DATE: 03/31/2016
 STAFF: lec
