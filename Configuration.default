@@ -1,15 +1,11 @@
-#!/bin/csh -f
+#!/bin/sh 
 
 #
 # Configuration file
 #
 
-if ( ${?MGICONFIG} == 0 ) then
-	setenv MGICONFIG /usr/local/mgi/live/mgiconfig
-endif
-
-source ${MGICONFIG}/master.config.csh
-
+# full path to data downloads base directory
+DATADOWNLOADS=/data/downloads
 # full path to mirror log directory
-setenv MIRRORLOG	${DATADOWNLOADS}/mirror_wget_logs
+MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
 

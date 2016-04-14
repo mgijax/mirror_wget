@@ -20,67 +20,62 @@
 # Usage : ./download_package package.config
 # 
 # Assumption: 
-# 1) remote_dir path is set the same on local server
-# 2) MIRRORLOG directory is set on local server
+# 1) DATADOWNLOADS path  is set in Configuration file
+# 2) MIRRORLOG directory is set in Configuration file
 #
 # What it does:
-# 1) source the Configuration file to access mgiconfig global environment variables
-# 2) setup path to files locally and remotely
-# 3) if local_directory path does not exist create it
-# 4) foreach file on the list, downloads a local copy
-# 5) Reports any error
-# 6) exit
+# 1) source the Configuration file 
+# 2) source the Package specific Configuration file to access global environment variables
+# 3) setup path to files locally and remotely
+# 4) if local_directory path does not exist create it
+# 5) Create a mirror_lock for this package
+# 6) foreach file on the list, downloads a local copy
+# 7) Write a log report
+# 8) Remove the mirror_lock
+# 9) exit
 #
 # Date: 2/25/2016
 #
-mirror_servers="bhmgiapp01 bhmgidevapp01"
 WGET=`which wget`
 
 if [ $# -lt 1 ]
 then
+   echo "-----------------------------------------------"
+   echo ""
    echo "Usage: ./download_package annotation_config_file"
-   echo "Note: This program should only run on one of these servers:$mirror_servers"
+   echo ""
+   echo "------------------------------------------------"
    exit 1
 fi
 cd `dirname $0`
 WORKING_DIR=`pwd`
 THIS_CONFIG_FILE=$1
+SCRIPT_NAME=`basename $0`
+SERVER_NAME=`hostname -a`
+#
+# Check if package config file exists
+#
 if [ ! -f $THIS_CONFIG_FILE ]
 then
   echo "The Configuration file $THIS_CONFIG_FILE is missing from $WORKING_DIR"
   exit 1
 fi
 #
-# Source mgiconfig master config file
-MGICONFIG=/usr/local/mgi/live/mgiconfig
-if [ ! -f $MGICONFIG/master.config.sh ]
+# Check if the main config file exists
+#
+if [ ! -f Configuration ]
 then
-  echo "$MGICONFIG/master.config.sh main Configuration file is missing"
+  echo "The main Configuration file is missing from $WORKING_DIR"
+  echo "Run the Install script "
   exit 1
 fi
-. $MGICONFIG/master.config.sh
-SCRIPT_NAME=`basename $0`
-MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
+
+# source the main config file
+. Configuration
 
 #source the config file specific to these annotations
 . $THIS_CONFIG_FILE
-
-#Check if this server is one of the assigned servers to run the mirrors
 #
-is_mirror_server=0
-for server in `echo $mirror_servers`
-do
-   if [ "$server" = $SERVER_NAME ]
-   then
-      is_mirror_server=1
-   fi
-done
-if [ $is_mirror_server -eq 0 ]
-then
-    echo "$SERVER_NAME is not the designated server to run mirror_wget ... exiting" | tee -a ${LOG_FILE}
-    date | tee -a ${LOG_FILE}
-    exit 1
-fi
 # Set path of files on local server
 #
 if [ "$LOCAL_DIR" = "" ]
