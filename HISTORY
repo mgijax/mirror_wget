@@ -1,3 +1,12 @@
+TAG: mirror_wget-6-0-3-3
+DATE: 04/14/2016
+STAFF: lnh
+CHANGES: TR12266 - Retire mirror_ftp
+1) Added an Install script to create the Configuration file
+2) Configuration.default:
+    Moved the DATADOWNLOADS and MIRRORLOG setting in the Configuration file
+3) download_package script: Removed the host server restriction
+
 TAG: mirror_wget-6-0-3-2
 DATE: 04/13/2016
 STAFF: lnh
