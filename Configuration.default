@@ -26,3 +26,7 @@ fi
 # full path to mirror log directory
 MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
 
+# Set email recipient - mgiadmin is the default recipient
+#
+EMAIL_TO=mgiadmin
+
