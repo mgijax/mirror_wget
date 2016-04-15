@@ -31,18 +31,22 @@
 #
 
 cd `dirname $0` 
-
 #
-# Source mgiconfig master config file
-MGICONFIG=/usr/local/mgi/live/mgiconfig
-if [ ! -f $MGICONFIG/master.config.sh ]
+WORKING_DIR=`pwd`
+SCRIPT_NAME=`basename $0`
+#
+# Check if the main config file exists
+#
+MAIN_CONFIG=$WORKING_DIR/Configuration
+
+if [ ! -r $MAIN_CONFIG ]
 then
-  echo "$MGICONFIG/master.config.sh main Configuration file is missing"
+  echo "The main Configuration file is missing from $WORKING_DIR"
+  echo "Run the Install script "
   exit 1
 fi
-. $MGICONFIG/master.config.sh
-SCRIPT_NAME=`basename $0`
-MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
+# source the main config file
+. ${MAIN_CONFIG}
 
 date
 
