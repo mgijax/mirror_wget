@@ -61,17 +61,19 @@ then
   exit 1
 fi
 #
+#
 # Check if the main config file exists
 #
-if [ ! -f Configuration ]
+MAIN_CONFIG=$WORKING_DIR/Configuration
+
+if [ ! -r $MAIN_CONFIG ]
 then
   echo "The main Configuration file is missing from $WORKING_DIR"
   echo "Run the Install script "
   exit 1
 fi
-
 # source the main config file
-. Configuration
+. ${MAIN_CONFIG}
 
 #source the config file specific to these annotations
 . $THIS_CONFIG_FILE
