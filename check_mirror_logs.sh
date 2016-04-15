@@ -22,6 +22,25 @@ then
    echo "Usage: ./check_mirror_log.sh report_out_file list_of_log_files "
    exit 1
 fi
+# Source mgiconfig master config file
+cd `dirname $0`
+WORKING_DIR=`pwd`
+#
+# Check if the main config file exists
+#
+MAIN_CONFIG=$WORKING_DIR/Configuration
+
+if [ ! -r $MAIN_CONFIG ]
+then
+  echo "The main Configuration file is missing from $WORKING_DIR"
+  echo "Run the Install script "
+  exit 1
+fi
+# source the main config file
+. ${MAIN_CONFIG}
+
+date
+
 
 log_report=$1
 LOG_FILES=$2
@@ -75,5 +94,6 @@ do
 done
 echo "Logs check done " | tee -a $log_report
 date | tee -a $log_report
-mailx -s "MIRROR: $log_report" mgiadmin < $log_report
+
+mailx -s "MIRROR: $log_report" $EMAIL_TO < $log_report
 
