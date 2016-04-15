@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-3-5
+DATE: 04/15/2016
+STAFF: lnh
+CHANGES:
+1) check_mirror_logs.sh: Added support the email recipient modification - EMAIL_TO
+1) Configuration.default: Added the email recipient variable - EMAIL_TO
+
 TAG: mirror_wget-6-0-3-4
 DATE: 04/15/2016
 STAFF: lnh
