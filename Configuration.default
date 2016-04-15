@@ -3,9 +3,19 @@
 #
 # Configuration file
 #
+#
+#  If the MGICONFIG environment variable does not have a local override,
+#  use the default "live" settings.
+#
+if [ "${MGICONFIG}" = "" ]
+then
+    MGICONFIG=/usr/local/mgi/live/mgiconfig
+    export MGICONFIG
+fi
 
+. ${MGICONFIG}/master.config.sh
 # full path to data downloads base directory
-DATADOWNLOADS=/data/downloads
+#DATADOWNLOADS=/data/downloads
 # full path to mirror log directory
 MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
 
