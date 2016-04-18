@@ -29,7 +29,6 @@ endif
 
 # Set Configuration
 cd `dirname $0`
-source ./Configuration
 
 # If this is an unlock then go ahead and remove files and exit program
 
