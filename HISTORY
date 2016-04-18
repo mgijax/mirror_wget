@@ -2,7 +2,7 @@ TAG: mirror_wget-6-0-3-6
 DATE: 04/18/2016
 STAFF: lnh
 CHANGES: TR 12327
-1) mirror_lock: Removed step that souces th Configuration 
+1) mirror_lock: Removed step that sources th Configuration 
 2) ftp.sanger.ac.uk.vega_ncrna: Added VEGA ncrna package
 
 TAG: mirror_wget-6-0-3-5
