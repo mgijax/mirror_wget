@@ -11,14 +11,6 @@ if [ "${MGICONFIG}" = "" ]
 then
     MGICONFIG=/usr/local/mgi/live/mgiconfig
 fi
-#
-# set Configuration script to read master.config from live mgiconfig
-# if not found in default path
-# 
-if [ ! -r ${MGICONFIG}/master.config.sh ]
-then
-   MGICONFIG=/usr/local/mgi/live/mgiconfig
-fi
 
 . ${MGICONFIG}/master.config.sh
 # full path to data downloads base directory
