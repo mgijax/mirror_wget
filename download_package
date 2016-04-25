@@ -148,12 +148,16 @@ then
    rm -f *
 fi
 echo "Running wget command from `pwd`"
-for remote_file in `echo $REMOTE_FILES`
+(
+set -f
+for remote_file in ${REMOTE_FILES}
 do
+   echo "$remote_file"
    target_file="$REMOTE_SITE_URL$REMOTE_DIR/$remote_file"
    echo "$WGET $WGET_OPTIONS $target_file" | tee -a  ${LOG_FILE}
    $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file" 
 done
+)
 #
 #Un lock mirrors
 #
