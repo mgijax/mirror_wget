@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # Program: ftp.ncbi.nih.gov.refseqRel
@@ -7,7 +7,7 @@
 #
 # Purpose:
 #
-#	Download the refseq release *.rna.gbff.* and *.protein.gpff.*
+#       Download the refseq release *.rna.gbff.* and *.protein.gpff.*
 #
 #HISTORY
 #
@@ -17,36 +17,29 @@
 #    Added a step to also download the release*.removed-records.gz file
 #    Added a step to also download the release Number file
 #   
-
-cd `dirname $0` && source ./Configuration
-setenv SCRIPT_NAME `basename $0`
-setenv LOG ${MIRRORLOG}/${SCRIPT_NAME}.log
-rm -f ${LOG}
-touch ${LOG}
-echo "$0" >> ${LOG}
-echo `date` >> ${LOG}
-
-setenv refseq_deletes ${DATADOWNLOADS}/refseq/refseq_deletes
-cd ${DATADOWNLOADS}/refseq/complete
-# Full URL of gbff files
-#setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*rna.gbff*'
-setenv URL1 'ftp://ftp.ncbi.nih.gov/refseq/release/complete/*rna.gbff*'
-
-# Full URL of gpff files
-#setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/vertebrate_mammalian/*.gpff*'
-setenv URL2 'ftp://ftp.ncbi.nih.gov/refseq/release/complete/*protein.gpff*'
-
-# Full URL of depracated ACCECCION  
+comment="Refseq Release updates"
+# This will be used in the naming the log file
+ANNOTATIONS=refseqRel
 #
-setenv URL3 'ftp://ftp.ncbi.nih.gov/refseq/release/release-catalog/release*.removed-records.gz' 
-
-#Full path to the release number
+# set path of files on remote server
+REMOTE_SITE=ftp.ncbi.nih.gov
+#url to remote site
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/refseq/release
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+## List of files to download
 #
-setenv URL4 'ftp://ftp.ncbi.nih.gov/refseq/release/RELEASE_NUMBER' 
+REMOTE_FILES="complete/*rna.gbff*
+complete/*protein.gpff*
+release-catalog/release*.removed-records.gz
+RELEASE_NUMBER"
 
-# full path to log files
-setenv LOGFILE1	${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gbff.log
-setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
+#wget options
+#
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+
+WGET_OPTIONS="--user=$remote_user --password=$remote_password  --no-parent -nd -S -t 10 -m"
 
 #
 # wget
@@ -56,21 +49,15 @@ setenv LOGFILE2 ${MIRRORLOG}/ftp.ncbi.nih.gov.refseqRel.gpff.log
 # -t = number of retries
 # -r = reverse
 # -k 7 = sort by the 7th column
+# -nd = don't create directories
 # -m = Turn on options suitable for mirroring. This option turns on recursion 
 #    and time-stamping, sets infinite recursion depth and keeps FTP 
 #    directory listings. It is currently equivalent to .-r -N -l 
 #    inf --no-remove-listing.. 
 
-rm *
-wget -o ${LOGFILE1} -S -t 10 -nd -m "${URL1}"
-wget -o ${LOGFILE2} -S -t 10 -nd -m "${URL2}"
-wget -S -t 10 -nd -m "${URL4}" >> ${LOG}
+#******** Optional *************
+# Do not download any files if local directories do not exist
+local_dir_check=true
+# Remove any files in local directory that are not in remote directory
+do_deletes=false
 
-cat ${LOGFILE1} >> ${LOG}
-cat ${LOGFILE2} >> ${LOG}
-#download the release*.removed-records.gz file
-cd ${refseq_deletes}
-wget -S -t 10 -nd -m "${URL3}" >> ${LOG}
-
-echo `date` >> ${LOG}
-echo "Program complete" >> ${LOG}
