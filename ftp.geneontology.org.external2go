@@ -1,15 +1,13 @@
 #!/bin/sh
 
 
-comment="GO Translations"
-# This will be used in the naming the log file
-ANNOTATIONS=external2go
+comment="external2go:uniprotload/uniprogload.config"
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.geneontology.org
 #url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/go/$ANNOTATIONS
+REMOTE_DIR=/pub/go/external2go
 ## List of files to download
 #
 REMOTE_FILES="ec2go interpro2go uniprotkb_kw2go uniprotkb_sl2go"

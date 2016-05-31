@@ -1,12 +1,11 @@
 #!/bin/sh
 
 ##
-comment="Geisha Downloads"
+comment="homologyload/geishaload.config"
 # Combined two packages (geisha.arizona.expr.edu,geisha.arizona.orthos.edu)
 # into one since all three packeges shared the same local and remote path
 #
 # This will be used in the naming the log file
-ANNOTATIONS=geisha
 #
 # set path of files on remote server
 REMOTE_SITE=geisha.arizona.edu

@@ -16,9 +16,8 @@
 #
 
 #
-comment="Interpro vocab and GO mapping"
+comment="uniprotload,vocload/IP.config"
 # This will be used in the naming the log file
-ANNOTATIONS=interpro
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ebi.ac.uk

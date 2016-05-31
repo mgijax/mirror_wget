@@ -1,15 +1,19 @@
 #!/bin/sh
 
+#
+# HISTORY
+#
+# 05/10/2016	lec
+#	TR12340/gene_assocation.goa_human.gz changed to goa_human.gaf.gz
+#
 
-comment="GO Annotations"
-# This will be used in the naming the log file
-ANNOTATIONS=gene-associations
+comment="goahumanload,goratload"
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.geneontology.org
 #url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/go/$ANNOTATIONS
+REMOTE_DIR=/pub/go/gene-associations
 ## List of files to download
 #
 REMOTE_FILES="gene_association.rgd.gz gene_association.goa_human.gz"

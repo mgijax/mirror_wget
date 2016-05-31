@@ -11,8 +11,7 @@
 #       Taking advantage of the structure already in place, it makes sense
 #       we implement one script that can handle the download of any external package.
 #       Each package will have its configuration file with the following global variables:
-#       1) ANNOTATIONS  - used to name the log file
-#       2) REMOTE_SITE  - package host
+#       1) REMOTE_SITE  - package host
 #       2) REMOTE_SITE_URL  - package site url (ftp://$REMOTE_SITE, or htp://$REMOTE_SITE)
 #       3) REMOTE_DIR   - path to package on host
 #       4) REMOTE_FILES - list of packages
@@ -111,11 +110,11 @@ echo "***** Local setting *****" | tee -a $LOG_FILE
 echo "------------------------------" | tee -a $LOG_FILE
 echo "Working directory is:$WORKING_DIR" | tee -a $LOG_FILE
 echo "Running $SCRIPT_NAME on Server :$SERVER_NAME" | tee -a $LOG_FILE
-echo "Annotation Config file used: $THIS_CONFIG_FILE" | tee -a $LOG_FILE
-echo "Annotation download directory: $LOCAL_DOWNLOAD_BASE" | tee -a $LOG_FILE
-echo "Annotation locks directory: $LOCK_DIR" | tee -a $LOG_FILE
+echo "Config file used: $THIS_CONFIG_FILE" | tee -a $LOG_FILE
+echo "download directory: $LOCAL_DOWNLOAD_BASE" | tee -a $LOG_FILE
+echo "locks directory: $LOCK_DIR" | tee -a $LOG_FILE
 echo "mirror logs directory: $MIRRORLOG" | tee -a $LOG_FILE
-echo "Annotions log: $LOG_FILE" | tee -a $LOG_FILE
+echo "log: $LOG_FILE" | tee -a $LOG_FILE
 echo "------------------------------" | tee -a $LOG_FILE
 
 #
@@ -133,58 +132,33 @@ echo "Working directory is:$SERVER_NAME:`pwd`"
 mirror_lock wlock mirror_wget ${LOCK_DIR} 2>&1 | tee -a  ${LOG_FILE}
 if [ $? -ne 0 ] 
 then
-  echo "Run status= Failed - could not set mirror_lock.$REMOTE_SITE $ANNOTATIONS " | tee -a  ${LOG_FILE}
   echo "See logs at ${LOG_FILE}" | tee -a  ${LOG_FILE}
   echo "Stop Time: `date`" | tee -a  ${LOG_FILE}
   exit 1
 fi
 # cd to LOCAL_DOWNLOAD_BASE and run wget command 
-##cd ${LOCAL_DOWNLOAD_BASE}
+cd ${LOCAL_DOWNLOAD_BASE}
 # delete local files as needed
-##if [ "$do_deletes" = true ]
-##then
-##   echo "Current files: "
-##   echo `ls -lh `
-##   rm -f *
-##fi
-##echo "Running wget command from `pwd`"
-(
-set -f
-for remote_file in ${REMOTE_FILES}
+if [ "$do_deletes" = true ]
+then
+   echo "Current files: "
+   echo `ls -lh `
+   rm -f *
+fi
+echo "Running wget command from `pwd`"
+for remote_file in `echo $REMOTE_FILES`
 do
-   echo "$remote_file"
    target_file="$REMOTE_SITE_URL$REMOTE_DIR/$remote_file"
    echo "$WGET $WGET_OPTIONS $target_file" | tee -a  ${LOG_FILE}
-   ## get the directory part from the remote_file name
-   target_local_dir=`dirname $remote_file`
-   echo "Creating new directory $target_local_dir"
-   #
-   # Make parent directories as needed
-   if [ "$target_local_dir" != "" ]
-   then
-      if [ ! -d ${LOCAL_DOWNLOAD_BASE}/$target_local_dir ]
-      then
-          echo "Creating new directory ${LOCAL_DOWNLOAD_BASE}/$target_local_dir"
-          mkdir -p ${LOCAL_DOWNLOAD_BASE}/$target_local_dir
-      fi
-   fi
-   #cd to LOCAL_DOWNLOAD_BASE and run wget command 
-   cd ${LOCAL_DOWNLOAD_BASE}/$target_local_dir 
-   # delete local files as needed
-   if [ "$do_deletes" = true ]
-   then
-       rm -f $remote_file
-   fi
    $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file" 
 done
-)
 #
 #Un lock mirrors
 #
 cd $WORKING_DIR
 echo "Running 'mirror_lock unlock mirror_wget' command from `pwd`"
 mirror_lock unlock mirror_wget ${LOCK_DIR}  2>&1 | tee -a  ${LOG_FILE}
-echo "$REMOTE_SITE $ANNOTATIONS annotations downloaded" | tee -a  ${LOG_FILE}
+echo "$REMOTE_SITE downloaded" | tee -a  ${LOG_FILE}
 echo "Program complete"| tee -a  ${LOG_FILE}
 echo "================================="| tee -a  ${LOG_FILE}
 exit 0

@@ -1,8 +1,7 @@
 #!/bin/sh
 
-comment="All Consensus CDS Files"
+comment="ccdsload"
 # This will be used in the naming the log file
-ANNOTATIONS=ccds
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ncbi.nih.gov

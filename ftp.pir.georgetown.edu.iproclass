@@ -1,8 +1,7 @@
 #!/bin/sh
 
-comment="xml file for pir superfamilies"
+comment="pirsfload"
 # This will be used in the naming the log file
-ANNOTATIONS=iproclass
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.pir.georgetown.edu

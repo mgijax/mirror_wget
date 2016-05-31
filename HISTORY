@@ -1,20 +1,11 @@
-TAG: mirror_wget-tr12317-BP
-DATE: 05/11/2016
-STAFF: sc
-CHANGES: Branch Point Tag TR12317 IMPC ri data
-
-TAG: mirror_wget-6-0-3-10
-DATE: 05/05/2016
-STAFF: lnh
-CHANGES:
-1) Converted paackages: ftp.ncbi.nih.gov.refseqRel and  ftp.ncbi.nih.gov.gbRel
-
-
-TAG: mirror_wget-6-0-3-9
-DATE: 05/04/2016
-STAFF: lnh
-CHANGES: 
-1) Converted paackage www.ebi.ac.uk2  to www.ebi.ac.uk.impc_lacz.json
+TAG: mirror_wget-6-0-4-1
+DATE: 05/31/2016
+STAFF: lec
+CHANGES: TR12340/GOA file name changes
+1) ftp.geneontology.org.gene-associations 
+2) ftp.ebi.ac.uk.goa
+3) removing ANNOTATIONS variable
+4) adding github repository name (load name) to "comment" variable
 
 TAG: mirror_wget-6-0-3-7
 DATE: 04/19/2016
@@ -708,4 +699,3 @@ TAG: mirror_wget-1-0-0
 DATE: 01/08/2004
 STAFF: lec
 CHANGES:
-

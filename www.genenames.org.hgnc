@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="Download HGNC Homology data"
+comment="homologyload/hgncload.config"
 # This will be used in the naming the log file
-ANNOTATIONS=hgnc
 #
 # set path of files on remote server
 REMOTE_SITE=www.genenames.org

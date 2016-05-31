@@ -2,9 +2,8 @@
 
 ## Do we still need this package?
 ##
-comment="UniSTS"
+comment="unistsload"
 # This will be used in the naming the log file
-ANNOTATIONS=unists
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ncbi.nih.gov

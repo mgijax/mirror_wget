@@ -9,7 +9,6 @@
 #
 comment="Current Release obo files"
 # This will be used in the naming the log file
-ANNOTATIONS=current_release.obo
 #
 # set path of files on remote server
 REMOTE_SITE=www.sequenceontology.org

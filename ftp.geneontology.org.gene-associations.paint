@@ -8,9 +8,8 @@
 # package to its own script and run it after ftp.geneontology.org from
 # the dailycron2.csh script.
 #
-comment="GO RefGenome"
+comment="gorefgenload"
 # This will be used in the naming the log file
-ANNOTATIONS=gene-associations.paint
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.geneontology.org

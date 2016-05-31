@@ -16,9 +16,8 @@
 #
 
 #
-comment="Download the  uniprot release (trembl)"
+comment="Download the uniprot release (trembl)"
 # This will be used in the naming the log file
-ANNOTATIONS=trembl
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ebi.ac.uk

@@ -1,9 +1,8 @@
 #!/bin/sh
 
 
-comment="EMAGE"
+comment="emageload"
 # This will be used in the naming the log file
-ANNOTATIONS=emage
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.hgu.mrc.ac.uk

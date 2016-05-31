@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="Artifacts of gaf-check-mgi"
+comment="gocfpload"
 # This will be used in the naming the log file
-ANNOTATIONS=gaf-check-mgi
 #
 # set path of files on remote server
 REMOTE_SITE=build.berkeleybop.org

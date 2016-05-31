@@ -11,7 +11,6 @@
 #
 comment="Fetch IMSR allStrains.csv file from Solr"
 # This will be used in the naming the log file
-ANNOTATIONS=imsr_allStrains
 #
 # set path of files on remote server
 REMOTE_SITE=emnet.informatics.jax.org

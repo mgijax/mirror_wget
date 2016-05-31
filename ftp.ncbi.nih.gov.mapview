@@ -1,8 +1,7 @@
 #!/bin/sh
 
-comment="MapView"
+comment="mapviewload"
 # This will be used in the naming the log file
-ANNOTATIONS=mapview
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ncbi.nih.gov

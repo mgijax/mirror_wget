@@ -3,7 +3,6 @@
 
 comment="Vega Gtf File"
 # This will be used in the naming the log file
-ANNOTATIONS=vega_gtf
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.sanger.ac.uk

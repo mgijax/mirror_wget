@@ -9,7 +9,6 @@
 #
 comment="IMSR Data Provider submission files"
 # This will be used in the naming the log file
-ANNOTATIONS=imsr
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.informatics.jax.org

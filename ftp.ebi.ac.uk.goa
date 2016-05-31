@@ -14,6 +14,11 @@
 #
 #       Download GOA Mouse Annotations
 #
+# HISTORY
+#
+# 05/10/2016	lec
+#	- TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
+#
 # Modified by: lnh
 # Date: 2/25/2016
 # Changes: Changed URL_GOA from ../gene_association.goa_mouse.gz to ../*.goa_mouse.gz 
@@ -21,9 +26,8 @@
 #
 
 #
-comment="GOA Mouse Annotations"
+comment="goaload"
 # This will be used in the naming the log file
-ANNOTATIONS=goa
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ebi.ac.uk
@@ -38,7 +42,7 @@ LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 #
 ## List of files to download
 #
-REMOTE_FILES="*.goa_mouse.gz"
+REMOTE_FILES="gene_association.goa_mouse.gz gp_association.goa_mouse.gz gp_information.goa_mouse.gz"
 #
 # wget options
 # Log in as anonymous and give email as password
