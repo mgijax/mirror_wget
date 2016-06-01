@@ -34,8 +34,7 @@ fi
 
 date
 
-FILES="www.sequenceontology.org.current_release.obo 
-www.genetrap.org.igtc  
+FILES="www.genetrap.org.igtc  
 build.berkeleybop.org.gaf-check-mgi 
 purl.obolibrary.org.go-basic.obo 
 purl.obolibrary.org.cl-basic.obo 
