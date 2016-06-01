@@ -34,8 +34,7 @@ fi
 
 date
 
-FILES="www.genetrap.org.igtc  
-build.berkeleybop.org.gaf-check-mgi 
+FILES="build.berkeleybop.org.gaf-check-mgi 
 purl.obolibrary.org.go-basic.obo 
 purl.obolibrary.org.cl-basic.obo 
 purl.obolibrary.org.ma.obo 
