@@ -37,10 +37,7 @@ date
 FILES="build.berkeleybop.org.gaf-check-mgi 
 purl.obolibrary.org.go-basic.obo 
 purl.obolibrary.org.cl-basic.obo 
-purl.obolibrary.org.ma.obo 
-purl.obolibrary.org.emap.obo 
 purl.obolibrary.org.eco.obo 
-purl.obolibrary.org.mod.obo 
 purl.obolibrary.org.uberon.obo 
 www.gensat.org.EntrezGeneIds 
 ftp.ebi.ac.uk.goa 
