@@ -50,11 +50,8 @@ ftp.sanger.ac.uk.vega_gtf
 ftp.sanger.ac.uk.vega_ncrna
 ftp.pir.georgetown.edu.iproclass 
 ftp.pir.georgetown.edu.pro_ids 
-ftp.ncbi.nih.gov.unigene 
 ftp.ncbi.nih.gov.entrez_gene 
-ftp.ncbi.nih.gov.homologene 
-ftp.ncbi.nih.gov.ccds 
-ftp.ncbi.nih.gov.mapview"
+ftp.ncbi.nih.gov.homologene"
 
 LOG_FILES=""
 for package in $FILES

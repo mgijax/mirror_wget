@@ -51,7 +51,6 @@ fi
 date
 
 FILES="ftp.nextprot.org.nextprot 
-ftp.ncbi.nih.gov.unigene
 ftp.ncbi.nih.gov.entrez_gene
 ftp.ncbi.nih.gov.homologene
 ftp.ncbi.nih.gov.ccds
