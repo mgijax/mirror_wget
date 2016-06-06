@@ -7,15 +7,18 @@
 # TR: 12266
 # Date: March 2016
 #
-comment="IMSR Data Provider submission files"
+
+comment="github repository name"
+
 # This will be used in the naming the log file
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.informatics.jax.org
+
 #url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE/
 REMOTE_DIR=/export/gondor/ftp/private/imsr/incoming
-LOCAL_DIR=$REMOTE_SITE/private/imsr/incoming
+
 ##if not set, local_dir will be relative to /data/downloads/
 ## otherwise local_dir is absolute
 ## 
@@ -24,12 +27,13 @@ LOCAL_DIR=$REMOTE_SITE/private/imsr/incoming
 ## List of files to download
 #
 REMOTE_FILES="*.dat *.txt"
+
 #
 # wget options
 # Log in as anonymous and give email as password
 remote_user=imsr
 remote_password=1f0und1t
-#
+
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
 #
 # wget
@@ -53,6 +57,7 @@ WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 
 #******** Optional *************
 # Do not download any files if local directories do not exist
 local_dir_check=true
+
 # Remove any files in local directory that are not in remote directory
 do_deletes=false
 recursive=false
