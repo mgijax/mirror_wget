@@ -110,11 +110,11 @@ echo "***** Local setting *****" | tee -a $LOG_FILE
 echo "------------------------------" | tee -a $LOG_FILE
 echo "Working directory is:$WORKING_DIR" | tee -a $LOG_FILE
 echo "Running $SCRIPT_NAME on Server :$SERVER_NAME" | tee -a $LOG_FILE
-echo "Annotation Config file used: $THIS_CONFIG_FILE" | tee -a $LOG_FILE
-echo "Annotation download directory: $LOCAL_DOWNLOAD_BASE" | tee -a $LOG_FILE
-echo "Annotation locks directory: $LOCK_DIR" | tee -a $LOG_FILE
+echo "config file used: $THIS_CONFIG_FILE" | tee -a $LOG_FILE
+echo "download directory: $LOCAL_DOWNLOAD_BASE" | tee -a $LOG_FILE
+echo "locks directory: $LOCK_DIR" | tee -a $LOG_FILE
 echo "mirror logs directory: $MIRRORLOG" | tee -a $LOG_FILE
-echo "Annotions log: $LOG_FILE" | tee -a $LOG_FILE
+echo "log: $LOG_FILE" | tee -a $LOG_FILE
 echo "------------------------------" | tee -a $LOG_FILE
 
 #
