@@ -9,11 +9,11 @@
 #       - TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
 #
 
-comment="goahumanload,goratload"
+comment="goload:goahuman/goarat/goarefgen"
 REMOTE_SITE=ftp.geneontology.org
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/go/gene-associations
-REMOTE_FILES="gene_association.rgd.gz goa_human.gaf.gz"
+REMOTE_FILES="gene_association.rgd.gz goa_human.gaf.gz submission/paint/pre-submission/gene_association.paint_mgi.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"

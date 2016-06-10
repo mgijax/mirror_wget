@@ -9,7 +9,7 @@
 #	- TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
 #
 
-comment="goaload"
+comment="goload:goamouse"
 REMOTE_SITE=ftp.ebi.ac.uk
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/databases/GO/goa/MOUSE
