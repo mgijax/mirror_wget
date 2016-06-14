@@ -1,5 +1,4 @@
 #!/bin/sh 
-
 #
 # This is the main script to run daily mirror downloads.
 #
@@ -14,6 +13,7 @@
 #       - TR 5310; new
 #
 #
+
 # Source mgiconfig master config file
 cd `dirname $0`
 WORKING_DIR=`pwd`
@@ -51,7 +51,10 @@ ftp.sanger.ac.uk.vega_ncrna
 ftp.pir.georgetown.edu.iproclass 
 ftp.pir.georgetown.edu.pro_ids 
 ftp.ncbi.nih.gov.entrez_gene 
-ftp.ncbi.nih.gov.homologene"
+ftp.ncbi.nih.gov.homologene
+ftp.geneontology.org.external2go 
+ftp.geneontology.org.goload
+ftp.geneontology.org.goload.paint"
 
 LOG_FILES=""
 for package in $FILES
