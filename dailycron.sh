@@ -34,13 +34,13 @@ fi
 
 date
 
-FILES="build.berkeleybop.org.gaf-check-mgi 
+FILES="build.berkeleybop.org.goload
 purl.obolibrary.org.go-basic.obo 
 purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.eco.obo 
 purl.obolibrary.org.uberon.obo 
 www.gensat.org.EntrezGeneIds 
-ftp.ebi.ac.uk.goa 
+ftp.ebi.ac.uk.goload
 ftp.ebi.ac.uk.interpro 
 ftp.ebi.ac.uk.arrayexpress 
 ftp.hgu.mrc.ac.uk.emage 
@@ -53,8 +53,7 @@ ftp.pir.georgetown.edu.pro_ids
 ftp.ncbi.nih.gov.entrez_gene 
 ftp.ncbi.nih.gov.homologene
 ftp.geneontology.org.external2go 
-ftp.geneontology.org.goload
-ftp.geneontology.org.goload.paint"
+ftp.geneontology.org.goload"
 
 LOG_FILES=""
 for package in $FILES

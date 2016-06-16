@@ -1,6 +1,7 @@
+TAG: mirror_wget-6-0-4-8
 TAG: mirror_wget-6-0-4-7
 TAG: mirror_wget-6-0-4-6
-DATE: 06/14/2016
+DATE: 06/14/2016, 06/16/2016
 STAFF: lec
 CHANGES: TR12340/GOA file name changes
 1) ftp.geneontology.org.gene-associations  -> ftp.geneontology.org.goload
