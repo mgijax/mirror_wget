@@ -23,9 +23,9 @@ comment="uniprotload,vocload/IP.config"
 REMOTE_SITE=ftp.ebi.ac.uk
 #url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/databases/interpro/Current
+REMOTE_DIR=/pub/databases/interpro/current
 ## Remote directory path changed from 
-## /pub/databases/interpro to /pub/databases/interpro/Current
+## /pub/databases/interpro to /pub/databases/interpro/current
 ##
 LOCAL_DIR=$REMOTE_SITE/pub/databases/interpro
 ##if not set, local_dir will be relative to /data/downloads/
