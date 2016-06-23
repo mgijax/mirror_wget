@@ -3,6 +3,11 @@
 # Purpose:
 #       download GOA human/rat GAF file
 #
+# full url:
+# ftp://ftp.geneontology.org/pub/go/gene-associations/gene_association.rgd.gz 
+# ftp://ftp.geneontology.org/pub/go/gene-associations/goa_human.gaf.gz 
+# ftp://ftp.geneontology.org/pub/go/gene-associations/submission/paint/pre-submission/gene_association.paint_mgi.gz
+#
 # HISTORY
 #
 # 06/06/2016    lec 
