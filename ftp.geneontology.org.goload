@@ -8,6 +8,9 @@
 # ftp://ftp.geneontology.org/pub/go/gene-associations/goa_human.gaf.gz 
 # ftp://ftp.geneontology.org/pub/go/gene-associations/submission/paint/pre-submission/gene_association.paint_mgi.gz
 #
+# products:
+#	goload:goahuman/goarat/goarefgen
+#
 # HISTORY
 #
 # 06/06/2016    lec 
