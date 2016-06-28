@@ -1,3 +1,29 @@
+TAG: mirror_wget-6-0-4-?
+DATE: 06/24/2016
+STAFF: lec
+CHANGES:
+
+for new proisoformload:
+1) ftp.pir.georgetown.edu.proisoform
+2) pir.georgetown.edu.proisoform
+
+for proload/documentation
+rename:
+ftp.pir.georgetown.edu.pro_ids
+to
+ftp.pir.georgetown.edu.proload
+and moved to weeklycron.sh
+
+for pirsfload:
+rename:
+ftp.pir.georgetown.edu.iproclass
+to:
+ftp.pir.georgetown.edu.pirsfload
+and moved to weeklycron.sh
+
+for new ecoevidenceload:
+1) raw.githubusercontent.com.evidenceontology
+
 TAG: mirror_wget-6-0-4-9
 DATE: 06/16/2016
 STAFF: dbm
