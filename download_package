@@ -146,7 +146,14 @@ fi
 ##   echo `ls -lh `
 ##   rm -f *
 ##fi
-##echo "Running wget command from `pwd`"
+if [ $is_xml_query ]
+then
+   ##don't do the loop if this is a xml query string
+   target_file="$REMOTE_SITE_URL$REMOTE_DIR/${REMOTE_FILES}"
+   echo "---- $WGET $WGET_OPTIONS $target_file" | tee -a  ${LOG_FILE}
+   cd ${LOCAL_DOWNLOAD_BASE}
+   $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file"
+else
 (
 set -f
 for remote_file in ${REMOTE_FILES}
@@ -177,6 +184,7 @@ do
    $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file" 
 done
 )
+fi
 #
 #Un lock mirrors
 #
