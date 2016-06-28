@@ -1,3 +1,4 @@
+TAG: mirror_wget-6-0-4-13
 TAG: mirror_wget-6-0-4-12
 TAG: mirror_wget-6-0-4-11
 DATE: 06/28/2016
@@ -5,6 +6,7 @@ STAFF: lnh
 CHANGES:
 1) www.genenames.org.hgnc: Added a new variable 'is_xml_query'
 2) download_package: Added a check for 'is_xml_query' variable 
+3) weeklycron.sh: Scheduled the www.genenames.org.hgnc package 
 
 TAG: mirror_wget-6-0-4-10
 DATE: 06/28/2016
