@@ -71,7 +71,9 @@ ftp.ebi.ac.uk.trembl
 ftp.xenbase.org.downloads
 mygene.info.wikipedia
 data.omim.org.omim
-purl.obolibrary.org.hp.obo"
+purl.obolibrary.org.hp.obo
+ftp.pir.georgetown.edu.pirsfload
+ftp.pir.georgetown.edu.proload"
 #
 #disabled
 #www.genenames.org.hgnc
