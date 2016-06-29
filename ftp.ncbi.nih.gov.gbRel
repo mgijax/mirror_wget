@@ -63,4 +63,3 @@ local_dir_check=true
 
 # Remove any files in local directory that are not in remote directory
 do_deletes=true
-recursive=false
