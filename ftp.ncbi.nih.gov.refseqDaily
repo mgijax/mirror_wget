@@ -2,7 +2,6 @@
 
 comment="Refseq daily updates"
 # This will be used in the naming the log file
-ANNOTATIONS=refseqDaily
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ncbi.nih.gov

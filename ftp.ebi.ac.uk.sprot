@@ -16,9 +16,8 @@
 #
 
 #
-comment="Download the  uniprot release (swissprot)"
+comment="Download the uniprot release (swissprot)"
 # This will be used in the naming the log file
-ANNOTATIONS=sprot
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ebi.ac.uk

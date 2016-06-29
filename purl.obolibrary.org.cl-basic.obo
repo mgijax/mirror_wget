@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="cl-basic obo file"
+comment="vocload/CL.config/CL.rcd"
 # This will be used in the naming the log file
-ANNOTATIONS=cl-basic.obo
 #
 # set path of files on remote server
 REMOTE_SITE=purl.obolibrary.org

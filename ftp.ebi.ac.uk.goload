@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Purpose:
+#       download GOA mouse GAF file
+#
+# full url:
+# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gaf.gz
+#
+# products:
+#	goload:goamouse
+#
+# HISTORY
+#
+# 06/06/2016	lec
+#	- TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
+#
+
+comment="goload:goamouse"
+REMOTE_SITE=ftp.ebi.ac.uk
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/pub/databases/GO/goa/MOUSE
+REMOTE_FILES="goa_mouse.gaf.gz"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false

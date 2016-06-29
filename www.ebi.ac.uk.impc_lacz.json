@@ -5,35 +5,16 @@
 #
 # Author: lnh
 # TR: 12266
-# Date: May 2016
+# Date: April 2016
 #
-# Original Author: sc
-#
-# Purpose:
-#
-#       Download the IMPC LacZdata
-#
-# Modification History:
-#
-# 02 /01/2016    sc
-#       - 
-#
-# Upon a new release, plug this into a browser to get the number of rows in the release and then update
-# rows= in the URL in necessary: 
-# "http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ALZ_001"
-#
-# Look for <result name="response" numFound="24556" start="0">
-# Where 'numFound' specifies the number of records in the release
-
-comment="Download the IMPC Lacz data"
+comment="htmpload"
 # This will be used in the naming the log file
-ANNOTATIONS=impc_lacz.json
 #
 # set path of files on remote server
 REMOTE_SITE=www.ebi.ac.uk
 #url to remote site
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/mi/impc/solr/impc_images
+REMOTE_DIR=/mi/impc/solr/genotype-phenotype
 LOCAL_DIR=$REMOTE_SITE
 ##if not set, local_dir will be relative to /data/downloads/
 ## otherwise local_dir is absolute
@@ -42,9 +23,9 @@ LOCAL_DIR=$REMOTE_SITE
 #
 ## List of files to download
 #
-REMOTE_FILES="select?q=procedure_stable_id:IMPC_ALZ_001%20OR%20procedure_stable_id:IMPC_ELZ_001&wt=json&rows=30000"
+REMOTE_FILES="select?q=resource_name:"IMPC"&fl=phenotyping_center,marker_symbol,sex,strain_name,strain_accession_id,marker_accession_id,allele_symbol,allele_accession_id,resource_name,zygosity,mp_term_id,mp_term_name,colony_id&rows=100000&wt=json&indent=true"
 
-LOCAL_FILES="impc_lacz.json"
+LOCAL_FILES="impc.json"
 #
 # wget options
 # Log in as anonymous and give email as password

@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="Uberon obo file"
+comment="goaload"
 # This will be used in the naming the log file
-ANNOTATIONS=uberon.obo
 #
 # set path of files on remote server
 REMOTE_SITE=purl.obolibrary.org

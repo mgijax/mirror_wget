@@ -1,5 +1,4 @@
 #!/bin/sh 
-
 #
 # This is the main script to run daily mirror downloads.
 #
@@ -14,6 +13,7 @@
 #       - TR 5310; new
 #
 #
+
 # Source mgiconfig master config file
 cd `dirname $0`
 WORKING_DIR=`pwd`
@@ -34,18 +34,13 @@ fi
 
 date
 
-FILES="www.sequenceontology.org.current_release.obo 
-www.genetrap.org.igtc  
-build.berkeleybop.org.gaf-check-mgi 
+FILES="build.berkeleybop.org.goload
 purl.obolibrary.org.go-basic.obo 
-purl.obolibrary.org.cl-basic.obo 
-purl.obolibrary.org.ma.obo 
-purl.obolibrary.org.emap.obo 
+purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.eco.obo 
-purl.obolibrary.org.mod.obo 
 purl.obolibrary.org.uberon.obo 
 www.gensat.org.EntrezGeneIds 
-ftp.ebi.ac.uk.goa 
+ftp.ebi.ac.uk.goload
 ftp.ebi.ac.uk.interpro 
 ftp.ebi.ac.uk.arrayexpress 
 ftp.hgu.mrc.ac.uk.emage 
@@ -53,13 +48,10 @@ ftp.sanger.ac.uk.vega_prot
 ftp.sanger.ac.uk.vega_cdna 
 ftp.sanger.ac.uk.vega_gtf 
 ftp.sanger.ac.uk.vega_ncrna
-ftp.pir.georgetown.edu.iproclass 
-ftp.pir.georgetown.edu.pro_ids 
-ftp.ncbi.nih.gov.unigene 
 ftp.ncbi.nih.gov.entrez_gene 
-ftp.ncbi.nih.gov.homologene 
-ftp.ncbi.nih.gov.ccds 
-ftp.ncbi.nih.gov.mapview"
+ftp.ncbi.nih.gov.homologene
+ftp.geneontology.org.external2go 
+ftp.geneontology.org.goload"
 
 LOG_FILES=""
 for package in $FILES
@@ -75,4 +67,3 @@ log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 
 date 
-

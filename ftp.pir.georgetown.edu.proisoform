@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download PIR/PRO isoform monthly pro.obo
+#
+# full url: 
+# ftp://ftp.pir.georgetown.edu/databases/ontology/pro_obo/pro.obo
+#
+# products:
+#       proisoformload
+#	also uses pir.georgetown.edu.proisoform
+#
+# HISTORY
+#
+# 06/24/2016
+#       - TR12345/new package
+#
+
+comment="proisoformload"
+REMOTE_SITE=ftp.pir.georgetown.edu
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/databases/ontology/pro_obo
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="pro.obo"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true

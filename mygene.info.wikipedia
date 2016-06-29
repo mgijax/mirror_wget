@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="Download the Textual Gene Summary wiki data "
+comment="genesummaryload"
 # This will be used in the naming the log file
-ANNOTATIONS=wikipedia
 #
 # set path of files on remote server
 REMOTE_SITE=mygene.info

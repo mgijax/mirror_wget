@@ -1,9 +1,8 @@
 #!/bin/sh
 
 
-comment="IMSR WI"
+comment="imsrwi"
 # This will be used in the naming the log file
-ANNOTATIONS=imsrwi
 #
 # set path of files on remote server
 #REMOTE_SITE=emnet.informatics.jax.org:48080

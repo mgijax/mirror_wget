@@ -17,9 +17,8 @@
 #
 
 #
-comment="ArrayExpress IDs"
+comment="arrayexpload"
 # This will be used in the naming the log file
-ANNOTATIONS=arrayexpress
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ebi.ac.uk

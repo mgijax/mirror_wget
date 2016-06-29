@@ -7,9 +7,12 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="Current Release obo files"
+# 06/01/2016    lec
+#       - seems obsolete
+#
+
+comment="mcvload?"
 # This will be used in the naming the log file
-ANNOTATIONS=current_release.obo
 #
 # set path of files on remote server
 REMOTE_SITE=www.sequenceontology.org

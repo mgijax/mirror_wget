@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Purpose:
+#       download PIRSF input file
+#
+# full url: 
+# ftp://ftp.pir.georgetown.edu/databases/iproclass/more_xml_files/m_musculus.xml.gz
+#
+# products:
+#       pirsfload
+#
+# HISTORY
+#
+# 06/27/2016
+#       - rename package/add documentation
+#
+
+comment="pirsfload"
+REMOTE_SITE=ftp.pir.georgetown.edu
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/databases/iproclass/more_xml_files
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="m_musculus.xml.gz"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true

@@ -56,4 +56,3 @@ ${RADAR_DBUTILS}/bin/logFileToProcessByDir.csh ${RADAR_DBSCHEMADIR} ${DATADOWNLO
 ${RADAR_DBUTILS}/bin/logFileToProcessByDir.csh ${RADAR_DBSCHEMADIR} ${DATADOWNLOADS}/grendel.jax.org/TPA/non-cumulative ${DATADOWNLOADS}/grendel.jax.org/TPA/non-cumulative GenBank_preprocess
 
 date 
-

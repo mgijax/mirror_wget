@@ -51,7 +51,6 @@ fi
 date
 
 FILES="ftp.nextprot.org.nextprot 
-ftp.ncbi.nih.gov.unigene
 ftp.ncbi.nih.gov.entrez_gene
 ftp.ncbi.nih.gov.homologene
 ftp.ncbi.nih.gov.ccds
@@ -72,10 +71,13 @@ ftp.ebi.ac.uk.trembl
 ftp.xenbase.org.downloads
 mygene.info.wikipedia
 data.omim.org.omim
-purl.obolibrary.org.hp.obo"
+www.genenames.org.hgnc
+purl.obolibrary.org.hp.obo
+ftp.pir.georgetown.edu.pirsfload
+ftp.pir.georgetown.edu.proload"
 #
 #disabled
-#www.genenames.org.hgnc
+#
 #
 LOG_FILES=""
 for package in $FILES
@@ -91,4 +93,3 @@ echo "Running sanity check on $LOG_FILES"
 log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
 ./check_mirror_logs.sh $log_report "$LOG_FILES"
 date 
-

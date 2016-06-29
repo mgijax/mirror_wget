@@ -1,10 +1,9 @@
 #!/bin/sh
 
 ##
-comment="Download the xenbase homology and gene expression files"
+comment="homologyload/xenbaseload.config"
 #
 # This will be used in the naming the log file
-ANNOTATIONS=GenePageReports
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.xenbase.org

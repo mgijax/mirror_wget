@@ -3,7 +3,6 @@
 
 comment="Ensembl mouse protein"
 # This will be used in the naming the log file
-ANNOTATIONS=mouse_prot
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ensembl.org

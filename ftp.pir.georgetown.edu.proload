@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download PIR/Protein Ontology
+#
+# full url: 
+# ftp://ftp.pir.georgetown.edu/databases/pro/pro_obo/PRO_mappings/more/PRO_mappings
+#
+# products:
+#       proload
+#
+# HISTORY
+#
+# 06/24/2016
+#       - TR12345/new documentation
+#
+
+
+comment="proload"
+REMOTE_SITE=ftp.pir.georgetown.edu
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/databases/pro/pro_obo/PRO_mappings/more
+LOCAL_DIR=$REMOTE_SITE/pro/pro_obo/PRO_mappings
+REMOTE_FILES="PRO_mgi.txt"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true

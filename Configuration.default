@@ -12,13 +12,20 @@ then
     MGICONFIG=/usr/local/mgi/live/mgiconfig
 fi
 
+#
+# set Configuration script to read master.config from live mgiconfig
+# if not found in default path
+# 
+if [ ! -r ${MGICONFIG}/master.config.sh ]
+then
+   MGICONFIG=/usr/local/mgi/live/mgiconfig
+fi
+
 . ${MGICONFIG}/master.config.sh
-# full path to data downloads base directory
-#DATADOWNLOADS=/data/downloads
+
 # full path to mirror log directory
 MIRRORLOG=${DATADOWNLOADS}/mirror_wget_logs
 
 # Set email recipient - mgiadmin is the default recipient
 #
 EMAIL_TO=mgiadmin
-

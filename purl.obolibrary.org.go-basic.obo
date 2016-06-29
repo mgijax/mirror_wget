@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="GO obo file"
+comment="vocload/GO.config"
 # This will be used in the naming the log file
-ANNOTATIONS=go-basic.obo
 #
 # set path of files on remote server
 REMOTE_SITE=purl.obolibrary.org

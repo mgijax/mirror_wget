@@ -8,18 +8,85 @@ DATE: 05/11/2016
 STAFF: sc
 CHANGES: Branch Point Tag TR12317 IMPC ri data
 
-TAG: mirror_wget-6-0-3-10
-DATE: 05/05/2016
+TAG: mirror_wget-6-0-4-13
+TAG: mirror_wget-6-0-4-12
+TAG: mirror_wget-6-0-4-11
+DATE: 06/28/2016
 STAFF: lnh
 CHANGES:
-1) Converted paackages: ftp.ncbi.nih.gov.refseqRel and  ftp.ncbi.nih.gov.gbRel
+1) www.genenames.org.hgnc: Added a new variable 'is_xml_query'
+2) download_package: Added a check for 'is_xml_query' variable 
+3) weeklycron.sh: Scheduled the www.genenames.org.hgnc package 
 
+TAG: mirror_wget-6-0-4-10
+DATE: 06/28/2016
+STAFF: lec
+CHANGES:
 
-TAG: mirror_wget-6-0-3-9
-DATE: 05/04/2016
-STAFF: lnh
+for new proisoformload:
+1) ftp.pir.georgetown.edu.proisoform
+2) pir.georgetown.edu.proisoform
+
+for proload/documentation
+rename:
+ftp.pir.georgetown.edu.pro_ids
+to
+ftp.pir.georgetown.edu.proload
+and moved to weeklycron.sh
+
+for pirsfload:
+rename:
+ftp.pir.georgetown.edu.iproclass
+to:
+ftp.pir.georgetown.edu.pirsfload
+and moved to weeklycron.sh
+
+for new ecoevidenceload:
+1) raw.githubusercontent.com.evidenceontology
+
+TAG: mirror_wget-6-0-4-9
+DATE: 06/16/2016
+STAFF: dbm
+CHANGES:
+1) ftp.ebi.ac.uk.interpro: remote directory changed from "Current" to "current"
+
+TAG: mirror_wget-6-0-4-8
+TAG: mirror_wget-6-0-4-7
+TAG: mirror_wget-6-0-4-6
+DATE: 06/14/2016, 06/16/2016
+STAFF: lec
+CHANGES: TR12340/GOA file name changes
+1) ftp.geneontology.org.gene-associations  -> ftp.geneontology.org.goload
+2) ftp.geneontology.org.gene-associations.paint  -> ftp.geneontology.org.goload
+3) dailycron2.sh merged into dailycron.sh
+
+TAG: mirror_wget-6-0-4-5
+TAG: mirror_wget-6-0-4-4
+TAG: mirror_wget-6-0-4-3
+TAG: mirror_wget-6-0-4-2
+DATE: 06/01/2016
+STAFF: lec
 CHANGES: 
-1) Converted paackage www.ebi.ac.uk2  to www.ebi.ac.uk.impc_lacz.json
+
+removed from dailycron.sh (obsolete):
+www.sequenceontology.org.current_release.obo
+www.genetrap.igtc
+purl.obolibrary.org.emap.obo purl.obolibrary.org.ma.obo purl.obolibrary.org.mod.obo
+
+removed from dailycron.sh/weeklycron.sh : on demand only:
+ftp.ncbi.nih.gov.unigene
+
+removed:
+purl.obolibrary.org.emap.obo
+
+TAG: mirror_wget-6-0-4-1
+DATE: 05/31/2016
+STAFF: lec
+CHANGES: TR12340/GOA file name changes
+1) ftp.geneontology.org.gene-associations 
+2) ftp.ebi.ac.uk.goa
+3) removing ANNOTATIONS variable
+4) adding github repository name (load name) to "comment" variable
 
 TAG: mirror_wget-6-0-3-7
 DATE: 04/19/2016
@@ -713,4 +780,3 @@ TAG: mirror_wget-1-0-0
 DATE: 01/08/2004
 STAFF: lec
 CHANGES:
-

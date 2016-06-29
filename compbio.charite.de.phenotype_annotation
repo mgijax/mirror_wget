@@ -4,7 +4,6 @@
 comment="Compbio Downloads"
 #
 # This will be used in the naming the log file
-ANNOTATIONS=phenotype_annotation
 #
 # set path of files on remote server
 REMOTE_SITE=compbio.charite.de

@@ -7,9 +7,8 @@
 # TR: 12266
 # Date: April 2016
 #
-comment="Download the IMPC data"
+comment="htmpload"
 # This will be used in the naming the log file
-ANNOTATIONS=impc.json
 #
 # set path of files on remote server
 REMOTE_SITE=www.ebi.ac.uk

@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download PIR/PRO isoform : daily updates
+#
+# full url: 
+# http://pir.georgetown.edu/projects/pro/pro_wv.obo
+#
+# products:
+#       proisoformload
+#	also uses ftp.pir.georgetown.edu.proisoform
+#
+# HISTORY
+#
+# 06/24/2016
+#       - TR12345/new package
+#
+
+comment="proisoformload"
+REMOTE_SITE=pir.georgetown.edu
+REMOTE_SITE_URL=http://$REMOTE_SITE
+REMOTE_DIR=/projects/pro
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="pro_wv.obo"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true
