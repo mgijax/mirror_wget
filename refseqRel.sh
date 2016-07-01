@@ -44,6 +44,15 @@ if [ $? -ne 0]
    echo "./download_package $package failed"
    exit 1
 if
+#move the deleted records file under refseq_deletes
+local_delete=${DATADOWNLOADS}/refseq/refseq_deletes
+temp_delete_dir=${DATADOWNLOADS}/refseq/release/release-catalog
+if [ -d $temp_delete_dir ]
+    mv -f $temp_delete_dir/* $local_delete/
+    cd ${DATADOWNLOADS}/refseq/release/
+    rm -rf release-catalog
+    cd $WORKING_DIR
+fi
 #Check logs for errors
 echo "Starting sanity check on $LOG_FILES"
 log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
