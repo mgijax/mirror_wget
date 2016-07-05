@@ -41,6 +41,7 @@ echo "Downloading  $package"
 ./download_package $package
 
 if [ $? -ne 0]
+then
    echo "./download_package $package failed"
    exit 1
 if
