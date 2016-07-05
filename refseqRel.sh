@@ -41,6 +41,7 @@ echo "Downloading  $package"
 ./download_package $package
 
 if [ $? -ne 0]
+then
    echo "./download_package $package failed"
    exit 1
 if
@@ -48,6 +49,7 @@ if
 local_delete=${DATADOWNLOADS}/refseq/refseq_deletes
 temp_delete_dir=${DATADOWNLOADS}/refseq/release/release-catalog
 if [ -d $temp_delete_dir ]
+then
     mv -f $temp_delete_dir/* $local_delete/
     cd ${DATADOWNLOADS}/refseq/release/
     rm -rf release-catalog
