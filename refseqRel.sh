@@ -44,7 +44,7 @@ if [ $? -ne 0]
 then
    echo "./download_package $package failed"
    exit 1
-if
+fi
 #move the deleted records file under refseq_deletes
 local_delete=${DATADOWNLOADS}/refseq/refseq_deletes
 temp_delete_dir=${DATADOWNLOADS}/refseq/release/release-catalog
