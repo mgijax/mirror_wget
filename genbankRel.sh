@@ -44,7 +44,7 @@ if [ $? -ne 0]
 then
    echo "./download_package $package failed"
    exit 1
-if
+fi
 #Check logs for errors
 echo "Starting sanity check on $LOG_FILES"
 log_report="$MIRRORLOG/$SCRIPT_NAME.check_mirror_logs.sh.log"
