@@ -45,8 +45,7 @@ date
 log_report=$1
 LOG_FILES=$2
 
-ERROR_TERMS=("ERROR" 
-"Fatal"
+ERROR_TERMS=("Fatal"
 "Failure"
 "failed"
 "ERROR 404: Not Found"
