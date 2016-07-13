@@ -1,8 +1,9 @@
-TAG: mirror_wget-6-0-5-1
+TAG: mirror_wget-6-0-5-4
 DATE: 07/13/2016
 STAFF: lec
 CHANGES:
-1) ftp.ebi.ac.uk.goload : added goa_mouse.gpi.gz
+1) ftp.ebi.ac.uk.goload
+there is not HISTORY for 6-0-5-1, 2, 3?
 
 TAG: mirror_wget-6-0-4-15
 TAG: mirror_wget-6-0-4-14
