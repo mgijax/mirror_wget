@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-5-1
+DATE: 07/13/2016
+STAFF: lec
+CHANGES:
+1) ftp.ebi.ac.uk.goload : added goa_mouse.gpi.gz
+
 TAG: mirror_wget-6-0-4-15
 TAG: mirror_wget-6-0-4-14
 DATE: 07/01/2016
@@ -7,7 +13,6 @@ CHANGES:
 2) ftp.ncbi.nih.gov.refseqRel: Converted it to new format
 3) Added wrapper scripts genbankRel.sh and refseqRel.sh 
    to run Genbank release and Refseq release packages
-
 
 TAG: mirror_wget-tr12317-1
 DATE: 05/11/2016

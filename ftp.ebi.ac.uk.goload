@@ -5,6 +5,7 @@
 #
 # full url:
 # ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gaf.gz
+# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gpi.gz
 #
 # products:
 #	goload:goamouse
@@ -15,11 +16,11 @@
 #	- TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
 #
 
-comment="goload:goamouse"
+comment="goload:goamouse,reports_db/daily/GO_gpi.py"
 REMOTE_SITE=ftp.ebi.ac.uk
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/databases/GO/goa/MOUSE
-REMOTE_FILES="goa_mouse.gaf.gz"
+REMOTE_FILES="goa_mouse.gaf.gz goa_mouse.gpi.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
