@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download GOA GPAD
+#
+# full url: 
+# http://build.berkeleybop.org/view/GO/job/export-lego-to-legacy/108/artifact/legacy/gpad/production/mgi.gpad
+#
+# products:
+#	goload:goamousenoctua
+#
+# HISTORY
+#
+# 07/27/2016    lec 
+#       - TR12345/GPAD/GPI/GO_Noctua
+#
+
+comment="goload:goamousenoctua"
+REMOTE_SITE=build.berkeleybop.org
+REMOTE_SITE_URL=http://$REMOTE_SITE
+REMOTE_DIR=/view/GO/job/export-lego-to-legacy/108/artifact/legacy/gpad/production
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="mgi.pgad"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false

@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-5-?
+DATE: 07/26/2016
+STAFF: lec
+CHANGES: TR12378/adding isoforms
+ftp.ebi.ac.uk.goload : add goa_mouse_isoform.gaf.gz
+ftp.geneontology.org.goload : add goa_human_isoform.gaf.gz
+
 TAG: mirror_wget-6-0-5-4
 DATE: 07/13/2016
 STAFF: lec
