@@ -6,16 +6,12 @@
 # full url:
 # ftp://ftp.geneontology.org/pub/go/gene-associations/gene_association.rgd.gz 
 # ftp://ftp.geneontology.org/pub/go/gene-associations/goa_human.gaf.gz 
-# ftp://ftp.geneontology.org/pub/go/gene-associations/goa_human_isoform.gaf.gz 
 # ftp://ftp.geneontology.org/pub/go/gene-associations/submission/paint/pre-submission/gene_association.paint_mgi.gz
 #
 # products:
 #	goload:goahuman/goarat/goarefgen
 #
 # HISTORY
-#
-# 07/26/2016	lec
-#	- TR12378/add goa_human_isoform.gaf.gz
 #
 # 06/06/2016    lec 
 #       - TR12340/gene_association.goa_human.gz changed to goa_human.gaf.gz
@@ -25,7 +21,7 @@ comment="goload:goahuman/goarat/goarefgen"
 REMOTE_SITE=ftp.geneontology.org
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/go/gene-associations
-REMOTE_FILES="gene_association.rgd.gz goa_human.gaf.gz goa_human_isoform.gaf.gz submission/paint/pre-submission/gene_association.paint_mgi.gz"
+REMOTE_FILES="gene_association.rgd.gz goa_human.gaf.gz submission/paint/pre-submission/gene_association.paint_mgi.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
