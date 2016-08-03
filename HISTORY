@@ -1,8 +1,8 @@
-TAG: mirror_wget-6-0-5-?
+TAG: mirror_wget-6-0-5-7
 DATE: 08/01/2016
 STAFF: lec
 CHANGES: TR12345/gpad, TR12378/adding isoforms
-new: ftp.ebi.ac.uk.human.goload : add goa_human.gaf.gz, goa_human_isoform.gaf.gz
+new: ftp.ebi.ac.uk.goload : add goa_human.gaf.gz, goa_human_isoform.gaf.gz
 
 TAG: mirror_wget-6-0-5-6
 TAG: mirror_wget-6-0-5-5
