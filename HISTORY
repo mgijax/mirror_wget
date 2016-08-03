@@ -1,9 +1,15 @@
+TAG: mirror_wget-6-0-5-?
+DATE: 08/01/2016
+STAFF: lec
+CHANGES: TR12345/gpad, TR12378/adding isoforms
+new: ftp.ebi.ac.uk.human.goload : add goa_human.gaf.gz, goa_human_isoform.gaf.gz
+
+TAG: mirror_wget-6-0-5-6
 TAG: mirror_wget-6-0-5-5
 DATE: 08/01/2016
 STAFF: lec
 CHANGES: TR12345/gpad, TR12378/adding isoforms
 ftp.ebi.ac.uk.goload : add goa_mouse_isoform.gaf.gz
-ftp.geneontology.org.goload : add goa_human_isoform.gaf.gz
 build.berkeleybop.org.gpad.goload : added for goload/goamousenoctua
 
 TAG: mirror_wget-6-0-5-4

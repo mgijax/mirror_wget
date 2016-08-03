@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download GOA human GAF files
+#
+# full url:
+# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human.gaf.gz
+# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human_isoform.gaf.gz
+#
+# products:
+#	goload:goahuman
+#
+# HISTORY
+#
+# 08/01/2016	lec
+#	- TR12378/add goa_human_isoform.gaf.gz/goa_human.gaf.gz/goa_human_isoform.gaf.gz
+#
+
+comment="goload:goahuman"
+REMOTE_SITE=ftp.ebi.ac.uk
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/pub/databases/GO/goa/HUMAN
+REMOTE_FILES="goa_human.gaf.gz goa_human_isoform.gaf.gz"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false
