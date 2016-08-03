@@ -2,14 +2,17 @@
 #
 # Purpose:
 #       download GOA mouse GAF files & GPI file
+#	download GOA human GAF files
 #
 # full url:
 # ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gaf.gz
 # ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gpi.gz
 # ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse_isoform.gaf.gz
+# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human.gaf.gz
+# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human_isoform.gaf.gz
 #
 # products:
-#	goload:goamouse
+#	goload:goamouse,goahuman
 #
 # HISTORY
 #
@@ -20,11 +23,11 @@
 #	- TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
 #
 
-comment="goload:goamouse,reports_db/daily/GO_gpi.py"
+comment="goload:goamouse,goahuman,reports_db/daily/GO_gpi.py"
 REMOTE_SITE=ftp.ebi.ac.uk
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/databases/GO/goa/MOUSE
-REMOTE_FILES="goa_mouse.gaf.gz goa_mouse.gpi.gz goa_mouse_isoform.gaf.gz"
+REMOTE_DIR=/pub/databases/GO/goa
+REMOTE_FILES="MOUSE/goa_mouse.gaf.gz MOUSE/goa_mouse.gpi.gz MOUSE/goa_mouse_isoform.gaf.gz HUMAN/goa_human.gaf.gz HUMAN/goa_human_isoform.gaf.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
