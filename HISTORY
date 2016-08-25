@@ -1,5 +1,11 @@
+TAG: mirror_wget-6-0-5-?
+DATE: 08/03/2016
+STAFF: lec
+CHANGES: TR12345/gpad, TR12378/adding isoforms
+remove human from ftp.geneontology.org.goload
+
 TAG: mirror_wget-6-0-5-7
-DATE: 08/01/2016
+DATE: 08/03/2016
 STAFF: lec
 CHANGES: TR12345/gpad, TR12378/adding isoforms
 new: ftp.ebi.ac.uk.goload : add goa_human.gaf.gz, goa_human_isoform.gaf.gz
