@@ -1,7 +1,8 @@
-TAG: mirror_wget-6-0-5-?
+TAG: mirror_wget-6-0-6-?
 DATE: 08/03/2016
 STAFF: lec
-CHANGES: TR12345/gpad, TR12378/adding isoforms
+CHANGES: TR12349/TR12345/gone-dor + more/gpad, 
+TR12378/adding isoforms
 remove human from ftp.geneontology.org.goload
 
 TAG: mirror_wget-6-0-5-7
@@ -77,9 +78,6 @@ ftp.pir.georgetown.edu.iproclass
 to:
 ftp.pir.georgetown.edu.pirsfload
 and moved to weeklycron.sh
-
-for new ecoevidenceload:
-1) raw.githubusercontent.com.evidenceontology
 
 TAG: mirror_wget-6-0-4-9
 DATE: 06/16/2016

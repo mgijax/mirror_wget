@@ -7,7 +7,7 @@
 # http://build.berkeleybop.org/job/gaf-check-mgi/lastBuild/artifact/gene_association.mgi.inf.gaf
 #
 # products:
-#	goload:goamouse/goacfp
+#	goload:gocfp
 #
 # HISTORY
 #
@@ -15,7 +15,7 @@
 #       - TR12340/renamed package
 #
 
-comment="goload:goamouse/goacfp"
+comment="goload:gocfp"
 REMOTE_SITE=build.berkeleybop.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/job/gaf-check-mgi/lastBuild/artifact
