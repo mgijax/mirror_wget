@@ -10,22 +10,24 @@
 
 comment="github repository name"
 
+# set is_xml_query=1 when specifying an xml or json URL that has spaces, this prevents 
+# download_package from looping through the URL tokens delimited by a space.
+is_xml_query=0
+
 # This will be used in the naming the log file
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.informatics.jax.org
 
-#url to remote site
+# url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE/
 REMOTE_DIR=/export/gondor/ftp/private/imsr/incoming
 
-##if not set, local_dir will be relative to /data/downloads/
-## otherwise local_dir is absolute
-## 
-##loca_dir_is_absolute=0 
-#
+# if not set, LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR; use to specify a custom output directory
+# relative to $DATA_DOWNLOADS
+# LOCAL_DIR=???
+
 ## List of files to download
-#
 REMOTE_FILES="*.dat *.txt"
 
 #
