@@ -74,7 +74,8 @@ data.omim.org.omim
 www.genenames.org.hgnc
 purl.obolibrary.org.hp.obo
 ftp.pir.georgetown.edu.pirsfload
-ftp.pir.georgetown.edu.proload"
+ftp.pir.georgetown.edu.proload
+www.ebi.ac.uk.arrayexpress.json"
 #
 #disabled
 #
