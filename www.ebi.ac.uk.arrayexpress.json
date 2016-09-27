@@ -26,7 +26,7 @@ REMOTE_DIR=arrayexpress/json/v2
 #REMOTE_FILES='experiments?organism=mus&exptype="RNA-seq of coding RNA"+OR+"RNA-seq of non coding RNA"+OR+"transcription profiling by array"+OR+"transcription profiling by tiling array"+OR+"microRNA profiling by array"+OR+"microRNA profiling by high-throughput sequencing"+OR+"tiling path by array"'
 
 # this gets a date range 
-SUBTRACT=56 # 8 weeks
+SUBTRACT=1460 # four years
 TODAY=`date`
 DATE_TO_END=`date +%Y-%m-%d`
 DATE_TO_BEGIN=`date -d "$TODAY - $SUBTRACT days" +%Y-%m-%d`
