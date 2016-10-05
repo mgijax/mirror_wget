@@ -66,6 +66,7 @@ compbio.charite.de.phenotype_annotation
 emnet.informatics.jax.org.imsr_allStrains
 www.mousephenotype.org.reports
 www.ebi.ac.uk.impc.json
+www.ebi.ac.uk.arrayexpress.json
 ftp.ebi.ac.uk.sprot
 ftp.ebi.ac.uk.trembl
 ftp.xenbase.org.downloads
@@ -75,7 +76,8 @@ www.genenames.org.hgnc
 purl.obolibrary.org.hp.obo
 ftp.pir.georgetown.edu.pirsfload
 ftp.pir.georgetown.edu.proload
-www.ebi.ac.uk.arrayexpress.json"
+raw.githubusercontent.com.diseaseontology"
+
 #
 #disabled
 #

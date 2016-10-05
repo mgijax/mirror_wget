@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Purpose:
+#       download diseae ontology
+#
+# full url:
+# https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid.obo
+#
+# products:
+#
+# HISTORY
+#
+# 09/22/2016	lec
+#	- Disease Ontology (DO)
+#
+
+comment=""
+REMOTE_SITE=raw.githubusercontent.com
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/DiseaseOntology/HumanDiseaseOntology/master/src/ontology
+REMOTE_FILES="doid.obo"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false
