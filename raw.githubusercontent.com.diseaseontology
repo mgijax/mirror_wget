@@ -11,10 +11,10 @@
 # HISTORY
 #
 # 09/22/2016	lec
-#	- Disease Ontology (DO)
+#	- TR12427/Disease Ontology (DO)
 #
 
-comment=""
+comment="doload"
 REMOTE_SITE=raw.githubusercontent.com
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/DiseaseOntology/HumanDiseaseOntology/master/src/ontology
