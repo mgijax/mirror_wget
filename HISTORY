@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-6-5
+DATE: 10/25/2016
+STAFF: lec
+CHANGES: 
+1) purl.obolibrary.org.cl-basic.obo
+moved from dailycron.sh to weeklycron.sh
+
 TAG: mirror_wget-6-0-6-4
 DATE: 10/05/2016
 STAFF: lec
