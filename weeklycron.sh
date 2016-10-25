@@ -73,6 +73,7 @@ ftp.xenbase.org.downloads
 mygene.info.wikipedia
 data.omim.org.omim
 www.genenames.org.hgnc
+purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.hp.obo
 ftp.pir.georgetown.edu.pirsfload
 ftp.pir.georgetown.edu.proload

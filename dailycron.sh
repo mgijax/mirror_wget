@@ -37,7 +37,6 @@ date
 FILES="build.berkeleybop.org.goload
 build.berkeleybop.org.gpad.goload
 purl.obolibrary.org.go-basic.obo 
-purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.eco.obo 
 purl.obolibrary.org.uberon.obo 
 www.gensat.org.EntrezGeneIds 
