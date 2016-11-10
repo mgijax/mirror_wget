@@ -49,7 +49,6 @@ ftp.sanger.ac.uk.vega_cdna
 ftp.sanger.ac.uk.vega_gtf 
 ftp.sanger.ac.uk.vega_ncrna
 ftp.ncbi.nih.gov.entrez_gene 
-ftp.ncbi.nih.gov.homologene
 ftp.geneontology.org.external2go 
 ftp.geneontology.org.goload"
 
