@@ -30,7 +30,8 @@ date
 FILES="ftp.ncbi.nih.gov.gbNC 
 ftp.ncbi.nih.gov.gbTpaNC 
 ftp.ncbi.nih.gov.refseqDaily 
-ftp.ncbi.nih.gov.gbDel"
+ftp.ncbi.nih.gov.gbDel
+pir.georgetown.edu.proisoform"
 
 LOG_FILES=""
 for package in $FILES

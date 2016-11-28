@@ -6,10 +6,11 @@
 #
 # History
 #
+# 11/28/2016	lec
+#	- add pir.georgetown.edu.proisoform
+#
 # 04/05/2016 lnh
 #    TR12266 : Migrate mirror_ftp to mirror_wget
-#
-# History
 #
 # 11/11/2013    lec
 #       - TR 11536/replace 'grcf.jhmi.edu' with 'ftp.omim.org'
@@ -77,6 +78,7 @@ purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.hp.obo
 ftp.pir.georgetown.edu.pirsfload
 ftp.pir.georgetown.edu.proload
+pir.georgetown.edu.proisoform
 raw.githubusercontent.com.diseaseontology"
 
 #
