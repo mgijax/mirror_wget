@@ -4,21 +4,26 @@
 #       download GO_Noctua/GPAD
 #
 # full url: 
-# http://build.berkeleybop.org/job/export-lego-to-legacy/lastSuccessfulBuild/artifact/legacy/gpad/production/mgi.gpad
+# http://build-artifacts.berkeleybop.org/export-lego-to-legacy/latest/gpad/production/mgi-gpad
 #
 # products:
 #	goload:gomousenoctua
 #
 # HISTORY
 #
+# 12/01/2016    lec 
+#       - TR12468/remote dir changed
+#
 # 07/27/2016    lec 
 #       - TR12345/GPAD/GPI/GO_Noctua
 #
 
 comment="goload:gomousenoctua"
-REMOTE_SITE=build.berkeleybop.org
+#REMOTE_SITE=build.berkeleybop.org
+REMOTE_SITE=build-artifacts.berkeleybop.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/job/export-lego-to-legacy/lastSuccessfulBuild/artifact/legacy/gpad/production
+#REMOTE_DIR=/job/export-lego-to-legacy/lastSuccessfulBuild/artifact/legacy/gpad/production
+REMOTE_DIR=/export-lego-to-legacy/latest/gpad/production
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 REMOTE_FILES="mgi.gpad"
 remote_user=anonymous
