@@ -4,12 +4,15 @@
 #       download CFP GAF file
 #
 # full url: 
-# http://build.berkeleybop.org/job/gaf-check-mgi/lastBuild/artifact/gene_association.mgi.inf.gaf
+# http://build.berkeleybop.org/job/gaf-check-mgi/lastBuildSuccessful/artifact/gene_association.mgi.inf.gaf
 #
 # products:
 #	goload:gocfp
 #
 # HISTORY
+#
+# 12/08/2016    lec 
+#       - TR12474/directory change
 #
 # 06/06/2016    lec 
 #       - TR12340/renamed package
@@ -18,7 +21,7 @@
 comment="goload:gocfp"
 REMOTE_SITE=build.berkeleybop.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/job/gaf-check-mgi/lastBuild/artifact
+REMOTE_DIR=/job/gaf-check-mgi/lastSuccessfulBuild/artifact
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 REMOTE_FILES="gene_association.mgi.inf.gaf"
 remote_user=anonymous
