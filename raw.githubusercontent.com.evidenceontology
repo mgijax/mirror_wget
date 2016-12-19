@@ -4,7 +4,7 @@
 #       download evidencenontology eco-to-3digit code translation
 #
 # full url:
-# raw.githubusercontent.com/evidenceontology/evidenceontology/master/gaf-eco-mapping-dervied.txt
+# raw.githubusercontent.com/evidenceontology/evidenceontology/master/gaf-eco-mapping-derived.txt
 #
 # products:
 #	goload/lib/ecolib.py
