@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Purpose:
+#       download evidencenontology eco-to-3digit code translation
+#
+# full url:
+# raw.githubusercontent.com/evidenceontology/evidenceontology/master/gaf-eco-mapping-dervied.txt
+#
+# products:
+#	goload/lib/ecolib.py
+#	goload/gomousenoctua
+#	reports_db/daily/GO_gene_association.py
+#
+# HISTORY
+#
+
+comment="goload/lib/ecolib.py"
+REMOTE_SITE=raw.githubusercontent.com
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/evidenceontology/evidenceontology/master
+REMOTE_FILES="gaf-eco-mapping-derived.txt"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true
+recursive=false

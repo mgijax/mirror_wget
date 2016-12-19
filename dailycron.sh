@@ -37,8 +37,8 @@ date
 FILES="build.berkeleybop.org.goload
 build.berkeleybop.org.gpad.goload
 purl.obolibrary.org.go-basic.obo 
-purl.obolibrary.org.eco.obo 
 purl.obolibrary.org.uberon.obo 
+raw.githubusercontent.com.evidenceontology
 www.gensat.org.EntrezGeneIds 
 ftp.ebi.ac.uk.goload
 ftp.ebi.ac.uk.interpro 
