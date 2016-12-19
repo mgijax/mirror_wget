@@ -18,7 +18,7 @@ comment="doload"
 REMOTE_SITE=raw.githubusercontent.com
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/DiseaseOntology/HumanDiseaseOntology/master/src/ontology
-REMOTE_FILES="doid.obo"
+REMOTE_FILES="doid-merged.obo"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
