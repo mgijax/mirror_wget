@@ -64,7 +64,7 @@ www.findmice.org.imsrwi
 zfin.org.downloads
 geisha.arizona.edu.geisha
 compbio.charite.de.phenotype_annotation
-emnet.informatics.jax.org.imsr_allStrains
+bhmgiimsr01.jax.org.imsr_allStrains
 www.mousephenotype.org.reports
 www.ebi.ac.uk.impc.json
 www.ebi.ac.uk.arrayexpress.json
