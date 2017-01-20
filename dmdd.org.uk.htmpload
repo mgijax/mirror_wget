@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download DMDD MP annotations
+#
+# full url: 
+# https://dmdd.org.uk/images/DMDD_MP_annotations.tsv
+#
+# products:
+#	htmpload
+#
+# HISTORY
+#
+# 01/20/2017    lec 
+#       - TR12447/DMDD phenotype data load
+#
+
+comment="htmpload"
+REMOTE_SITE=dmdd.org.uk
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/images
+LOCAL_DIR=$REMOTE_SITE
+REMOTE_FILES="DMDD_MP_annotations.tsv"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--no-parent -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false

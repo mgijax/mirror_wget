@@ -32,9 +32,10 @@
 #
 
 cd `dirname $0` 
-#
+
 WORKING_DIR=`pwd`
 SCRIPT_NAME=`basename $0`
+
 #
 # Check if the main config file exists
 #
@@ -79,7 +80,8 @@ purl.obolibrary.org.hp.obo
 ftp.pir.georgetown.edu.pirsfload
 ftp.pir.georgetown.edu.proload
 pir.georgetown.edu.proisoform
-raw.githubusercontent.com.diseaseontology"
+raw.githubusercontent.com.diseaseontology
+dmdd.org.uk.htmpload"
 
 #
 #disabled
