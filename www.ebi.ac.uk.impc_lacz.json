@@ -1,10 +1,10 @@
 #!/bin/sh
 #
 # Purpose:
-#       download EBI/impc.json file HTMP
+#       download the IMPC LacZdata
 #
 # full url: 
-# http://www.ebi.ac.uk/mi/impc/solr/genotype-phenotype
+# http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ALZ_001&wt=json&rows=30000
 #
 # products:
 #       htmpload
@@ -15,10 +15,10 @@
 comment="htmpload"
 REMOTE_SITE=www.ebi.ac.uk
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/mi/impc/solr/genotype-phenotype
+REMOTE_DIR=/mi/impc/solr/impc_images
 LOCAL_DIR=$REMOTE_SITE
-REMOTE_FILES="select?q=resource_name:"IMPC"&fl=phenotyping_center,marker_symbol,sex,strain_name,strain_accession_id,marker_accession_id,allele_symbol,allele_accession_id,resource_name,zygosity,mp_term_id,mp_term_name,colony_id&rows=100000&wt=json&indent=true"
-LOCAL_FILES="impc.json"
+REMOTE_FILES="select?q=procedure_stable_id:IMPC_ALZ_001&wt=json&rows=30000"
+LOCAL_FILES="impc_lacz.json"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd -m"
