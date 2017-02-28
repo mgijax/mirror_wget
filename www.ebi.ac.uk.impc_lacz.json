@@ -3,8 +3,9 @@
 # Purpose:
 #       download the IMPC LacZdata
 #
-# full url: 
-# http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ALZ_001&wt=json&rows=30000
+# full url:5
+# http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ALZ_001&wt=json&rows=50000
+# http://www.ebi.ac.uk/mi/impc/solr/impc_images/select?q=procedure_stable_id:IMPC_ELZ_001&wt=json&rows=50000
 #
 # products:
 #       htmpload
@@ -17,7 +18,7 @@ REMOTE_SITE=www.ebi.ac.uk
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/mi/impc/solr/impc_images
 LOCAL_DIR=$REMOTE_SITE
-REMOTE_FILES="select?q=procedure_stable_id:IMPC_ALZ_001&wt=json&rows=30000"
+REMOTE_FILES="select?q=procedure_stable_id:IMPC_ELZ_001&wt=json&rows=50000"
 LOCAL_FILES="impc_lacz.json"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
