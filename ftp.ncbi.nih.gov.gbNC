@@ -1,4 +1,10 @@
 #!/bin/sh
+#
+# HISTORY
+#
+# - sc 03/13/2017 - changed REMOTE_FILES="nc*.flat.gz" to REMOTE_FILES="*nc*.flat.gz" to 
+# pick up con_nc*.flat.gz files as well 
+#
 
 comment="Genbank Daily Non-cumulative"
 # This will be used in the naming the log file
@@ -11,7 +17,7 @@ REMOTE_DIR=/genbank/daily-nc
 LOCAL_DIR=$REMOTE_SITE/genbank/gb_daily-nc
 ## List of files to download
 #
-REMOTE_FILES="nc*.flat.gz"
+REMOTE_FILES="*nc*.flat.gz"
 #wget options
 #
 remote_user=anonymous

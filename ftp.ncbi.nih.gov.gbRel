@@ -13,6 +13,8 @@
 #
 # HISTORY
 #
+# - sc	03/13/2017 - added gbcon*.gz to REMOTE_FILES
+#
 # - lnh 01/27/2015 - added mirror write lock and
 #       a check to enforce to run the script only if 
 #       the date specified in the date range falls on a Saturday 
@@ -36,20 +38,7 @@ REMOTE_SITE=ftp.ncbi.nih.gov
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/genbank
 
-REMOTE_FILES="gbenv*.gz 
-gbest*.gz 
-gbgss*.gz 
-gbhtc*.gz 
-gbhtg*.gz 
-gbmam*.gz 
-gbpat*.gz 
-gbpri*.gz 
-gbrod*.gz 
-gbsts*.gz 
-gbsyn*.gz
-gbtsa*.gz
-gbuna*.gz
-gbvrt*.gz"
+REMOTE_FILES="gbcon*.gz"
 
 #
 # wget options
