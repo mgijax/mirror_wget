@@ -1,4 +1,12 @@
 TAG: mirror_wget-tr12488-2
+DATE: 03/23/2017
+STAFF: lnh
+CHANGES:scrum bob contigs epic
+1) removed ftp.ncbi.nih.gov.gbGenomicRel and gbGenomicRel.sh -
+   restored gb release contig files in ftp.ncbi.nih.gov.gbRel 
+2) removed ftp.ncbi.nih.gov.refseqGenomicRel and refseqGenomicRel.sh -
+   Added RefSeq genomic files in ftp.ncbi.nih.gov.refseqGenomicRel
+
 DATE: 03/22/2017
 STAFF: sc
 CHANGES:scrum bob contigs epic
