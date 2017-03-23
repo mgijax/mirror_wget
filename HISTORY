@@ -1,3 +1,15 @@
+TAG: mirror_wget-tr12488-2
+DATE: 03/22/2017
+STAFF: sc
+CHANGES:scrum bob contigs epic
+1) removed gb release contig files from ftp.ncbi.nih.gov.gbRel created 
+    ftp.ncbi.nih.gov.gbGenomicRel
+2) new:
+    ftp.ncbi.nih.gov.gbGenomicRel - genbank genomic release package file
+    ftp.ncbi.nih.gov.refseqGenomicRel - refseq genomic release package file
+    genbankGenomicRel.sh - run adhoc genbank genomic mirror
+    refseqGenomicRel.sh - run adhoc refseq genomic mirror
+
 TAG: mirror_wget-tr12488-1
 DATE: 03/14/2017
 STAFF: sc
