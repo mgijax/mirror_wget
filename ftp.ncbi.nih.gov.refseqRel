@@ -11,9 +11,11 @@
 #
 # Purpose:
 #
-#       Download the refseq release *.rna.gbff.* and *.protein.gpff.*
+#       Download the refseq release *.rna.gbff.*,*genomic.gbff*, and *.protein.gpff.*
 #
 #HISTORY
+#
+# - lnh 03/23/2017 - added genomic  downloads *genomic.gbff* 
 #
 ## - lnh 01/29/2015 - TR11918 
 #    Changed the mirror download base directory from release/vertebrate_mammalian to release/complete
@@ -34,10 +36,11 @@ REMOTE_SITE=ftp.ncbi.nih.gov
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/refseq/release
 
-LOCAL_DIR=$REMOTE_DIR
+LOCAL_DIR=/refseq_test/release
 
 REMOTE_FILES="complete/*rna.gbff* 
 complete/*protein.gpff* 
+complete/*genomic.gbff*
 release-catalog/release*.removed-records.gz
 RELEASE_NUMBER"
 
