@@ -25,18 +25,16 @@
 # - sc 09/30/14 - new
 #       Download the gb release
 #
-
-
 comment="Genbank Release Package"
-
 # This will be used in the naming the log file
 #
 # set path of files on remote server
 REMOTE_SITE=ftp.ncbi.nih.gov
-
 #url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/genbank
+
+LOCAL_DIR=$REMOTE_DIR
 
 REMOTE_FILES="gbcon*.gz
 gbenv*.gz 
@@ -53,8 +51,6 @@ gbsyn*.gz
 gbtsa*.gz
 gbuna*.gz
 gbvrt*.gz"
-
-LOCAL_DIR=/genbank_test
 #
 # wget options
 
