@@ -50,7 +50,8 @@ ftp.sanger.ac.uk.vega_gtf
 ftp.sanger.ac.uk.vega_ncrna
 ftp.ncbi.nih.gov.entrez_gene 
 ftp.geneontology.org.external2go 
-ftp.geneontology.org.goload"
+ftp.geneontology.org.goload
+ftp.ncbi.nih.gov.refseq_deletes"
 
 LOG_FILES=""
 for package in $FILES
