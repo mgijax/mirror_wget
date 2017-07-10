@@ -41,7 +41,6 @@ LOCAL_DIR=$REMOTE_DIR
 REMOTE_FILES="complete/*rna.gbff* 
 complete/*protein.gpff* 
 complete/*genomic.gbff*
-release-catalog/release*.removed-records.gz
 RELEASE_NUMBER"
 
 #
