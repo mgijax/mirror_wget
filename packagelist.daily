@@ -1,0 +1,23 @@
+# These packages are downloaded for the daily mirror.
+#
+# This file is also used by the log checker, so there should not be any
+# extra spaces or blank lines. Comment lines are OK.
+#
+build.berkeleybop.org.goload
+build.berkeleybop.org.gpad.goload
+ftp.ebi.ac.uk.arrayexpress
+ftp.ebi.ac.uk.goload
+ftp.ebi.ac.uk.interpro
+ftp.geneontology.org.external2go
+ftp.geneontology.org.goload
+ftp.hgu.mrc.ac.uk.emage
+ftp.ncbi.nih.gov.entrez_gene
+ftp.ncbi.nih.gov.refseq_deletes
+ftp.sanger.ac.uk.vega_cdna
+ftp.sanger.ac.uk.vega_gtf
+ftp.sanger.ac.uk.vega_ncrna
+ftp.sanger.ac.uk.vega_prot
+purl.obolibrary.org.go-basic.obo
+purl.obolibrary.org.uberon.obo
+raw.githubusercontent.com.evidenceontology
+www.gensat.org.EntrezGeneIds

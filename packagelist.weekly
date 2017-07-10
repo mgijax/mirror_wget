@@ -1,0 +1,35 @@
+# These packages are downloaded for the weekly mirror.
+#
+# This file is also used by the log checker, so there should not be any
+# extra spaces or blank lines. Comment lines are OK.
+#
+bhmgiimsr01.jax.org.imsr_allStrains
+compbio.charite.de.phenotype_annotation
+data.omim.org.omim
+dmdd.org.uk.htmpload
+ftp.ebi.ac.uk.sprot
+ftp.ebi.ac.uk.trembl
+ftp.ensembl.org.mouse_cdna
+ftp.ensembl.org.mouse_gtf
+ftp.ensembl.org.mouse_ncrna
+ftp.ensembl.org.mouse_prot
+ftp.ncbi.nih.gov.ccds
+ftp.ncbi.nih.gov.entrez_gene
+ftp.ncbi.nih.gov.homologene
+ftp.ncbi.nih.gov.mapview
+ftp.nextprot.org.nextprot
+ftp.pir.georgetown.edu.pirsfload
+ftp.pir.georgetown.edu.proload
+ftp.xenbase.org.downloads
+geisha.arizona.edu.geisha
+mygene.info.wikipedia
+pir.georgetown.edu.proisoform
+purl.obolibrary.org.cl-basic.obo
+purl.obolibrary.org.hp.obo
+raw.githubusercontent.com.diseaseontology
+www.ebi.ac.uk.arrayexpress.json
+www.ebi.ac.uk.impc.json
+www.findmice.org.imsrwi
+www.genenames.org.hgnc
+www.mousephenotype.org.reports
+zfin.org.downloads
