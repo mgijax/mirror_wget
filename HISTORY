@@ -1,3 +1,18 @@
+TAG: mirror_wget-6-0-10-2
+DATE: 07/10/2017
+STAFF: dbm
+CHANGES:
+1) run_mirror.sh: New script to download package lists
+2) run_mirror_logged.sh: New wrapper for downloading/logging in radar
+3) packagelist.daily: New daily package list
+4) packagelist.weekly: New weekly package list
+5) packagelist.weekly.logged: New weekly logged package list
+6) packagelist.genbank.release: New Genbank release package list
+7) packagelist.refseq.release: New Refseq release package list
+8) ftp.ncbi.nih.gov.refseqRel: Removed release*.removed-records.gz
+9) dailycron.sh, weeklycron.sh, weeklycron-logged.sh,
+       genbankRel.sh, refseqRel.sh, check_mirror_logs.sh: Retired
+
 TAG: mirror_wget-6-0-10-1
 DATE: 06/08/2017
 STAFF: sc
