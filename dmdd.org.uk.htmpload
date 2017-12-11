@@ -18,7 +18,7 @@
 comment="htmpload"
 REMOTE_SITE=dmdd.org.uk
 REMOTE_SITE_URL=https://$REMOTE_SITE
-REMOTE_DIR=/images
+REMOTE_DIR=/dmddimages
 LOCAL_DIR=$REMOTE_SITE
 REMOTE_FILES="DMDD_MP_annotations.tsv"
 remote_user=anonymous
