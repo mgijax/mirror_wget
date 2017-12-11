@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-11-3
+DATE: 12/11/2017
+STAFF: dbm
+CHANGES:
+1) dmdd.org.uk.htmpload: Updated remote path to file
+
 TAG: mirror_wget-6-0-11-2
 DATE: 11/13/2017
 STAFF: sc
