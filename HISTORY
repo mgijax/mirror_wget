@@ -1,3 +1,11 @@
+TAG: mirror_wget-6-0-11-4
+DATE: 02/05/2018
+STAFF: lec
+CHANGES:
+1) TR12783
+purl.obolibrary.org.pr.obo : new
+ftp.pir.georgetown.edu.proisoform : obsolete
+
 TAG: mirror_wget-6-0-11-3
 DATE: 12/11/2017
 STAFF: dbm
