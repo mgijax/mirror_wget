@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Purpose:
+#       download pro-isoform file
+#
+# full url: 
+# http://purl.obolibrary.org/obo/pro_reasoned.obo
+#
+# products:
+#       proisoformload
+#
+# HISTORY
+#
+# 02/05/2018    lec 
+#       - TR12783/directory change
+#
+
+comment="proisoformload"
+REMOTE_SITE=purl.obolibrary.org
+REMOTE_SITE_URL=http://$REMOTE_SITE
+REMOTE_DIR=/obo
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="pro_reasoned.obo"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m" 
+local_dir_check=true
+do_deletes=false
+recursive=false
