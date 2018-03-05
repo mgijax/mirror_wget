@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-11-6
+DATE: 03/01/2018
+STAFF:
+CHANGES: TR12802
+ rm ftp.sanger.ac.uk.vega_cdna ftp.sanger.ac.uk.vega_gtf ftp.sanger.ac.uk.vega_ncrna ftp.sanger.ac.uk.vega_prot
+
 TAG: mirror_wget-6-0-11-5
 TAG: mirror_wget-6-0-11-4
 DATE: 02/05/2018, 03/01/2018
