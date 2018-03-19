@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Purpose:
+#       download PIR/Protein Ontology
+#
+# full url: 
+# https://research.bioinformatics.udel.edu/PRO/mgi/PRO_mgi.txt
+#
+# products:
+#       proload
+#
+# HISTORY
+#
+# 03/19/2018
+#       - TR12827/file changed from ftp to https
+#
+# 06/24/2016
+#       - TR12345/new documentation
+#
+
+
+comment="proload"
+REMOTE_SITE=research.bioinformatics.udel.edu
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/PRO/mgi
+LOCAL_DIR=$REMOTE_SITE/PRO/mgi
+REMOTE_FILES="PRO_mgi.txt"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent --no-check-certificate -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true
