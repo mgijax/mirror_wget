@@ -1,7 +1,13 @@
-TAG: mirror_wget-6-0-11-10
+TAG: mirror_wget-6-0-11-11
 DATE: 04/05/2018
 STAFF: sc
 CHANGES: TR12734 Added ftp.ensembl.org.mouse_gff3 and packagelist.gff3.release
+
+TAG: mirror_wget-6-0-11-10
+DATE: 03/28/2018
+STAFF: lec
+CHANGES: 
+add '--no-check-certificate' to purl.obolibrary.org.pr.obo
 
 TAG: mirror_wget-6-0-11-9
 DATE: 03/19/2018
