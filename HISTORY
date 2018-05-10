@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-12-2
+DATE: 05/10/2018
+STAFF: sc
+CHANGES: TR12734 - saved ftp.ensembl.org.mouse_gff3 as ftp.ensembl.org.mouse_gff3.v91
+ updated ftp.ensembl.org.mouse_gff3 to v92
+
 TAG: mirror_wget-6-0-12-1
 DATE: 04/26/2018
 STAFF: lec  
