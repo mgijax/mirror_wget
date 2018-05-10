@@ -1,5 +1,5 @@
 TAG: mirror_wget-6-0-12-1
-DATE: 04/06/2018
+DATE: 04/26/2018
 STAFF: lec  
 CHANGES: TR12834/new GO qualifiers & pr.gpad file 
 build.berkeleybop.org.gpad.goload : new url, add pr.gpad
