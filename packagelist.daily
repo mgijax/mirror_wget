@@ -10,6 +10,7 @@ ftp.ebi.ac.uk.goload
 ftp.ebi.ac.uk.interpro
 ftp.geneontology.org.external2go
 ftp.geneontology.org.goload
+snapshot.geneontology.org.goload
 ftp.hgu.mrc.ac.uk.emage
 ftp.ncbi.nih.gov.entrez_gene
 ftp.ncbi.nih.gov.refseq_deletes
