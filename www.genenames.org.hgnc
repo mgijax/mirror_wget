@@ -15,13 +15,17 @@ comment="homologyload/hgncload.config"
 # set path of files on remote server
 REMOTE_SITE=www.genenames.org
 #url to remote site
-REMOTE_SITE_URL=http://biomart.genenames.org
-REMOTE_DIR=/martservice
+REMOTE_SITE_URL=http://$REMOTE_SITE
+#REMOTE_DIR=/martservice
+REMOTE_DIR=/cgi-bin/
 LOCAL_DIR=$REMOTE_SITE
 
-REMOTE_FILES="results?query=<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE Query><Query client=\"biomartclient\" processor=\"TSV\" limit=\"-1\" header=\"1\"><Dataset name=\"hgnc_gene_mart\" config=\"hgnc_gene_config\"><Filter name=\"hgnc_gene__status_1010\" value=\"Approved\" filter_list=\"\"/><Attribute name=\"hgnc_gene__hgnc_gene_id_1010\"/><Attribute name=\"hgnc_gene__mgd__mgi_id_1024\"/><Attribute name=\"hgnc_gene__ncbi_gene__gene_id_1026\"/></Dataset></Query>"
+#REMOTE_FILES="results?query=<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE Query><Query client=\"biomartclient\" processor=\"TSV\" limit=\"-1\" header=\"1\"><Dataset name=\"hgnc_gene_mart\" config=\"hgnc_gene_config\"><Filter name=\"hgnc_gene__status_1010\" value=\"Approved\" filter_list=\"\"/><Attribute name=\"hgnc_gene__hgnc_gene_id_1010\"/><Attribute name=\"hgnc_gene__mgd__mgi_id_1024\"/><Attribute name=\"hgnc_gene__ncbi_gene__gene_id_1026\"/></Dataset></Query>"
+#https://www.genenames.org/cgi-bin/download?col=gd_hgnc_id&col=gd_mgd_id&col=gd_pub_eg_id&status=Approved&status_opt=2&order_by=gd_app_sym_sort&format=text&limit=&hgnc_dbtag=on&submit=submit
+REMOTE_FILES="download?col=gd_hgnc_id&col=gd_mgd_id&col=md_eg_id&status=Approved&status_opt=2&where=&order_by=gd_app_sym_sort&format=text&limit=&hgnc_dbtag=on&submit=submit"
 
-LOCAL_FILES="hgnc.tsv"
+
+LOCAL_FILES="hgnc.new.tsv"
 #
 # wget options
 # Log in as anonymous and give email as password

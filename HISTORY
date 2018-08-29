@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-12-5
+DATE: 08/29/2018
+STAFF: sc
+CHANGES: TR12044 - New HGNC biomart call
+www.genenames.org.hgnc - updated biomart url
+
 TAG: mirror_wget-6-0-12-4
 DATE: 08/15/2018
 STAFF: lec
