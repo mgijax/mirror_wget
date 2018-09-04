@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-12-8
+DATE: 09/04/2018
+STAFF: lec
+CHANGES:
+remove ftp.ncbi.nih.gov.homologene from packagelist.weekly
+
 TAG: mirror_wget-6-0-12-7
 DATE: 09/04/2018
 STAFF: lec
