@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-12-7
+DATE: 09/04/2018
+STAFF: lec
+CHANGES:
+remove ftp.ncbi.nih.gov.mapview from packagelist.weekly
+
 TAG: mirror_wget-6-0-12-6
 TAG: mirror_wget-6-0-12-5
 DATE: 08/29/2018
