@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-12-9
+DATE: 09/04/2018
+STAFF: lec
+CHANGES:
+remove ftp.hgu.mrc.ac.uk.emage from packagelist.daily
+
 TAG: mirror_wget-6-0-12-8
 DATE: 09/04/2018
 STAFF: lec
