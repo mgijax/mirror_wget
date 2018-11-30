@@ -22,7 +22,9 @@ REMOTE_DIR=/mi/impc/solr/genotype-phenotype
 
 REMOTE_FILES="select?q=!resource_name:EuroPhenome%20AND%20!resource_name:MGP&fl=phenotyping_center,marker_symbol,sex,strain_name,strain_accession_id,marker_accession_id,allele_symbol,allele_accession_id,resource_name,zygosity,mp_term_id,mp_term_name,colony_id&rows=100000&wt=json&indent=true"
 
+LOCAL_DIR=$REMOTE_SITE
 LOCAL_FILES="impc.json"
+
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd -m"

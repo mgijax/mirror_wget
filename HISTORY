@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-13-1
+DATE: 11/30/2018
+STAFF: sc
+CHANGES: www.ebi.ac.uk.impc.json - add back in LOCAL_DIR=$REMOTE_SITE
+so file is downloaded to the proper place for the impc htmpload to find
+it. TR12994
+
 TAG: mirror_wget-6-0-12-10
 DATE: 09/13/2018
 STAFF: lec
