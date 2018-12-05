@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-13-2
+DATE: 12/05/2018
+STAFF: jsb
+CHANGES: 
+added raw.githubusercontent.com.sequenceontology (SO vocab) for DADT release;
+added it to packagelist.weekly
+
 TAG: mirror_wget-6-0-13-1
 DATE: 11/30/2018
 STAFF: sc
