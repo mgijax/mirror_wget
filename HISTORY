@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-13-3
+DATE: 12/11/2018
+STAFF: dbm
+CHANGES: 
+added "/custom" to URL in www.genenames.org.hgnc to get hgnc.tsv file
+
 TAG: mirror_wget-6-0-13-2
 DATE: 12/05/2018
 STAFF: jsb
