@@ -4,13 +4,13 @@
 # extra spaces or blank lines. Comment lines are OK.
 #
 build.berkeleybop.org.goload
-build.berkeleybop.org.gpad.goload
 ftp.ebi.ac.uk.arrayexpress
 ftp.ebi.ac.uk.goload
 ftp.ebi.ac.uk.interpro
 ftp.geneontology.org.external2go
 ftp.geneontology.org.goload
 snapshot.geneontology.org.goload
+snapshot.geneontology.org.goload.noctua
 ftp.hgu.mrc.ac.uk.emage
 ftp.ncbi.nih.gov.entrez_gene
 ftp.ncbi.nih.gov.refseq_deletes
