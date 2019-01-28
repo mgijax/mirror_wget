@@ -1,3 +1,11 @@
+TAG: mirror_wget-6-0-13-4
+DATE: 01/28/2019
+STAFF: lec
+CHANGES: 
+TR13011
+obsolete: build.berkeleybop.org.goload
+new : snapshot.geneontology.org.goload.noctua
+
 TAG: mirror_wget-6-0-13-3
 DATE: 12/11/2018
 STAFF: dbm
