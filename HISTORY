@@ -1,3 +1,11 @@
+TAG: mirror_wget-6-0-13-8
+DATE: 01/30/2019
+STAFF: lec
+CHANGES: 
+TR13029
+added CFP to this new package
+new : snapshot.geneontology.org.goload.noctua
+
 TAG: mirror_wget-6-0-13-7
 TAG: mirror_wget-6-0-13-6
 TAG: mirror_wget-6-0-13-5
@@ -5,7 +13,7 @@ DATE: 01/28/2019
 STAFF: lec
 CHANGES: 
 TR13011
-obsolete: build.berkeleybop.org.goload
+obsolete: build.berkeleybop.org.gpad.goload
 new : snapshot.geneontology.org.goload.noctua
 put the obsoleted package back in due to GO/input issues.
 
