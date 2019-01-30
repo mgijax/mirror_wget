@@ -1,8 +1,12 @@
+TAG: mirror_wget-6-0-13-9
 TAG: mirror_wget-6-0-13-8
 DATE: 01/30/2019
 STAFF: lec
 CHANGES: 
-TR13029
+TR13011/noctua
+TR13029/CFP/goc
+obsolete: build.berkeleybop.org.gpad.goload
+obsolete: build.berkeleybop.org.goload
 added CFP to this new package
 new : snapshot.geneontology.org.goload.noctua
 
