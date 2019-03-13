@@ -9,13 +9,11 @@ comment="Compbio Downloads"
 REMOTE_SITE=compbio.charite.de
 #url to remote site
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/jenkins/job/hpo.annotations/lastStableBuild/artifact/misc
-# Remote directory path  does not exist anymore
-
+REMOTE_DIR=/jenkins/job/hpo.annotations.2018/lastSuccessfulBuild/artifact/misc_2018
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 ## List of files to download
 #
-REMOTE_FILES="phenotype_annotation.tab"
+REMOTE_FILES="phenotype.hpoa"
 #
 #wget options
 #
