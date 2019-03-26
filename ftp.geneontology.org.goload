@@ -12,7 +12,7 @@
 # HISTORY
 #
 
-comment="goload:gorat
+comment="goload:gorat"
 REMOTE_SITE=current.geneontology.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/annotations
