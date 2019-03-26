@@ -4,19 +4,19 @@
 #       download GO rat GAF file
 #
 # full url:
-# ftp://ftp.geneontology.org/pub/go/gene-associations/gene_association.rgd.gz 
+# http://current.geneontology.org/annotations/rgd.gaf.gz
 #
 # products:
-#	goload:gorat/gorefgen
+#	goload:gorat
 #
 # HISTORY
 #
 
-comment="goload:gorat/gorefgen"
-REMOTE_SITE=ftp.geneontology.org
-REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/go/gene-associations
-REMOTE_FILES="gene_association.rgd.gz"
+comment="goload:gorat
+REMOTE_SITE=current.geneontology.org
+REMOTE_SITE_URL=http://$REMOTE_SITE
+REMOTE_DIR=/annotations
+REMOTE_FILES="rgd.gaf.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
