@@ -1,0 +1,60 @@
+#!/bin/sh
+#
+#
+# Author: sc
+# TR: TR13065
+# Date: 03/29/2019
+#
+# Package: ftp.ncbi.nih.gov.refseqVertebrate
+#
+# Original Author: sc
+#
+# Purpose:
+#
+#       Download the refseq vertebrate files, mammalian and other
+#
+# HISTORY
+#
+#   
+#
+
+
+comment="RefSeq Vertebrate Release Package"
+
+#
+# set path of files on remote server
+REMOTE_SITE=ftp.ncbi.nih.gov
+
+#url to remote site
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/refseq/release
+
+LOCAL_DIR=$REMOTE_DIR
+
+REMOTE_FILES="vertebrate_mammalian/*rna.gbff* 
+vertebrate_mammalian/*protein.gpff* 
+vertebrate_mammalian/*genomic.gbff*
+vertebrate_other/*rna.gbff*
+vertebrate_other/*protein.gpff*
+vertebrate_other/*genomic.gbff*
+RELEASE_NUMBER"
+# FASTA if we want to switch to them
+#vertebrate_mammalian/*rna.fna*
+#vertebrate_mammalian/*protein.faa*
+#vertebrate_mammalian/*genomic.fna*
+#vertebrate_other/*rna.fna*
+#vertebrate_other/*protein.faa*
+#vertebrate_other/*genomic.fna*"
+
+#
+# wget options
+
+WGET_OPTIONS="-S -t 10 -nd -m"
+#
+
+#******** Optional *************
+# Do not download any files if local directories do not exist
+local_dir_check=true
+
+# Remove any files in local directory that are not in remote directory
+do_deletes=true
