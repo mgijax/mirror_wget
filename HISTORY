@@ -1,3 +1,12 @@
+TAG: mirror_wget-6-0-13-13
+DATE: 04/03/2019
+STAFF: sc
+CHANGES: TR13065 - moving from refseq complete release
+to vertebrate only. Changes:
+* remove ftp.ncbi.nih.gov.refseqRel
+* add ftp.ncbi.nih.gov.refseqVertebrate
+* update packagelist.refseq.release
+
 TAG: mirror_wget-6-0-13-12
 TAG: mirror_wget-6-0-13-11
 DATE: 03/26/2019
