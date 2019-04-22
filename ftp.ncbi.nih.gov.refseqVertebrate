@@ -37,7 +37,7 @@ vertebrate_mammalian/*genomic.gbff*
 vertebrate_other/*rna.gbff*
 vertebrate_other/*protein.gpff*
 vertebrate_other/*genomic.gbff*
-RELEASE_NUMBER"
+REMOTE_FILES="RELEASE_NUMBER"
 # FASTA if we want to switch to them
 #vertebrate_mammalian/*rna.fna*
 #vertebrate_mammalian/*protein.faa*
