@@ -5,6 +5,7 @@
 #
 # full url: 
 # http://purl.obolibrary.org/obo/pr.obo
+# http://purl.obolibrary.org/obo/pr/pr-dev.obo
 #
 # products:
 #       proisoformload
@@ -20,7 +21,7 @@ REMOTE_SITE=purl.obolibrary.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/obo
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
-REMOTE_FILES="pr.obo"
+REMOTE_FILES="pr.obo pr/pr-dev.obo"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--no-parent --no-check-certificate -S -t 10 -nd -m" 
