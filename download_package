@@ -51,6 +51,8 @@ WORKING_DIR=`pwd`
 THIS_CONFIG_FILE=$1
 SCRIPT_NAME=`basename $0`
 SERVER_NAME=`hostname -a`
+REFSEQ_BASE="/data/downloads/refseq/release"
+echo "REFSEQ_BASE $REFSEQ_BASE"
 #
 # Check if package config file exists
 #
@@ -83,7 +85,7 @@ if [ "$LOCAL_DIR" = "" ]
 then
    LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 fi
-LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}/$LOCAL_DIR
+LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}$LOCAL_DIR
 
 if [ $loca_dir_is_absolute  ]
 then
@@ -124,6 +126,14 @@ if [ ! -d $LOCAL_DOWNLOAD_BASE ]
 then
    echo "Creating new directory $LOCAL_DOWNLOAD_BASE"
    mkdir -p $LOCAL_DOWNLOAD_BASE
+else
+   if [ $LOCAL_DOWNLOAD_BASE = $REFSEQ_BASE ]
+   then
+       echo "Removing directory $LOCAL_DOWNLOAD_BASE and its contents"
+       rm -rf $LOCAL_DOWNLOAD_BASE
+       echo "Creating new directory $LOCAL_DOWNLOAD_BASE"
+       mkdir -p $LOCAL_DOWNLOAD_BASE
+   fi
 fi
 
 # attempt to set write lock
