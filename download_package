@@ -51,8 +51,8 @@ WORKING_DIR=`pwd`
 THIS_CONFIG_FILE=$1
 SCRIPT_NAME=`basename $0`
 SERVER_NAME=`hostname -a`
-REFSEQ_BASE="/data/downloads/refseq/release"
-echo "REFSEQ_BASE $REFSEQ_BASE"
+REFSEQ_BASE="/data/downloads//refseq/release"
+#echo "REFSEQ_BASE $REFSEQ_BASE"
 #
 # Check if package config file exists
 #
@@ -85,7 +85,7 @@ if [ "$LOCAL_DIR" = "" ]
 then
    LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 fi
-LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}$LOCAL_DIR
+LOCAL_DOWNLOAD_BASE=${DATADOWNLOADS}/$LOCAL_DIR
 
 if [ $loca_dir_is_absolute  ]
 then

@@ -1,10 +1,12 @@
+TAG: mirror_wget-6-0-14-7
 TAG: mirror_wget-6-0-14-6
 TAG: mirror_wget-6-0-14-5
 DATE: 09/23/2019
 STAFF: sc
 CHANGES: typo in ftp.ncbi.nih.gov.refseqVertebrate
     causing download of extraneous files
-For refseq, first rm/make directory (to start fresh) then download
+download_files - For refseq, first rm/make directory (to start fresh) 
+    then download
 
 TAG: mirror_wget-6-0-14-4
 DATE: 08/19/2019
