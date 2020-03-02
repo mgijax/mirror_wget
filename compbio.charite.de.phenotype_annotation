@@ -9,7 +9,7 @@ comment="Compbio Downloads"
 REMOTE_SITE=compbio.charite.de
 #url to remote site
 REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/jenkins/job/hpo.annotations.current/lastSuccessfulBuild/artifact/misc_2018
+REMOTE_DIR=/jenkins/job/hpo.annotations.current/lastSuccessfulBuild/artifact/current
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 ## List of files to download
 #
