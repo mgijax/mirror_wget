@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-15-2
+DATE: 03/02/2020
+STAFF: sc
+CHANGES: TR13088
+
+1) www.ebi.ac.uk.arrayexpress.json - add new experiment type
+
 TAG: mirror_wget-6-0-15-1
 DATE: 03/02/2020
 STAFF: sc
