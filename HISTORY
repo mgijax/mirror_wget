@@ -1,4 +1,11 @@
 TAG: mirror_wget-6-0-15-1
+DATE: 05/04/2020
+STAFF: lec
+CHANGES: TR13299
+remove: purl.obolibrary.org.pr.obo
+add: purl.obolibrary.org.pr
+
+TAG: mirror_wget-6-0-15-1
 DATE: 03/02/2020
 STAFF: sc
 CHANGES: TR13275
