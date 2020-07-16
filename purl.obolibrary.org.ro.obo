@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Purpose:
+#       download ro.obo for vocload/RO
+#
+# full url: 
+# http://purl.obolibrary.org/obo/ro.obo
+#
+# products:
+#       vocload
+#
+# HISTORY
+#
+# 07/16/2020    lec 
+#	- TR13272/GO meeting/CalTech/tasks to-do
+#  
+
+REMOTE_SITE=purl.obolibrary.org
+REMOTE_SITE_URL=http://$REMOTE_SITE
+REMOTE_DIR=/obo
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="ro.obo"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false
