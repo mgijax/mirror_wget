@@ -1,6 +1,6 @@
 #!/bin/sh
 
-comment="NCBI mouse assembly"
+comment="NCBI mouse assembly Build 39"
 # This will be used in the naming the log file
 #
 # set path of files on remote server
@@ -8,7 +8,8 @@ REMOTE_SITE=ftp.ncbi.nih.gov
 #url to remote site
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/genbank/genomes/Eukaryotes/vertebrates_mammals/Mus_musculus/GRCm38/Primary_Assembly/assembled_chromosomes/FASTA/
-LOCAL_DIR=$REMOTE_SITE/genomes/M_musculus_Build38
+REMOTE_DIR=/genomes/all/GCA/000/001/635/GCA_000001635.9_GRCm39/GCA_000001635.9_GRCm39_assembly_structure/Primary_Assembly/assembled_chromosomes/FASTA/
+LOCAL_DIR=$REMOTE_SITE/genomes/M_musculus_Build39
 ##if not set, local_dir will be relative to /data/downloads/
 ## otherwise local_dir is absolute
 ## 
@@ -16,7 +17,7 @@ LOCAL_DIR=$REMOTE_SITE/genomes/M_musculus_Build38
 #
 ## List of files to download
 #
-REMOTE_FILES="*.fa.gz"
+REMOTE_FILES="*.fna.gz"
 #
 #wget options
 #
