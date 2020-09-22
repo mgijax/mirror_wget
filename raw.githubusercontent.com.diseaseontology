@@ -4,7 +4,7 @@
 #       download diseae ontology
 #
 # full url:
-# https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid-merged.obo
+# https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/main/src/ontology/doid-merged.obo
 #
 # products:
 #
@@ -17,7 +17,7 @@
 comment="doload"
 REMOTE_SITE=raw.githubusercontent.com
 REMOTE_SITE_URL=https://$REMOTE_SITE
-REMOTE_DIR=/DiseaseOntology/HumanDiseaseOntology/master/src/ontology
+REMOTE_DIR=/DiseaseOntology/HumanDiseaseOntology/main/src/ontology
 REMOTE_FILES="doid-merged.obo"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org

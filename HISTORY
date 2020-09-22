@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-16-4
+DATE: 09/22/2020
+STAFF: lec
+CHANGES:
+TR13390/raw.githubusercontent.com.diseaseontology : change "master" to "main"
+
 TAG: mirror_wget-6-0-16-3
 DATE: 09/01/2020
 STAFF: lec
