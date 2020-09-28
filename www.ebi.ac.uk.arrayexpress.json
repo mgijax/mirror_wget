@@ -34,7 +34,7 @@ RANGE="[$DATE_TO_BEGIN $DATE_TO_END]"
 
 # note we have to double quote the string to expand RANGE, so therefore must
 # escape the double quotes around the attribute values (dbl quotes required)
-REMOTE_FILES="experiments?date=${RANGE}&organism=mus&exptype=\"RNA-seq of coding RNA\"+OR+\"RNA-seq of non coding RNA\"+OR+\"transcription profiling by array\"+OR+\"transcription profiling by tiling array\"+OR+\"microRNA profiling by array\"+OR+\"microRNA profiling by high-throughput sequencing\"+OR+\"tiling path by array\""
+REMOTE_FILES="experiments?date=${RANGE}&organism=mus&exptype=\"RNA-seq of total RNA\"+OR+\"RNA-seq of coding RNA\"+OR+\"RNA-seq of non coding RNA\"+OR+\"transcription profiling by array\"+OR+\"transcription profiling by tiling array\"+OR+\"microRNA profiling by array\"+OR+\"microRNA profiling by high-throughput sequencing\"+OR+\"tiling path by array\""
 LOCAL_DIR=$REMOTE_SITE
 LOCAL_FILES="arrayexpress.json"
 
