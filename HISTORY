@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-16-6
+DATE: 09/28/2020
+STAFF: sc
+CHANGES: packagelist.weekly - moved sprot and trembl
+    packages to end of list. See comment at top of the
+    file
+
 TAG: mirror_wget-6-0-16-5
 DATE: 09/28/2020
 STAFF: sc

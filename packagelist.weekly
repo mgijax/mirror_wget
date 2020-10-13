@@ -3,11 +3,15 @@
 # This file is also used by the log checker, so there should not be any
 # extra spaces or blank lines. Comment lines are OK.
 #
+# sc - 10/13/20, moved ftp.ebi.ac.uk.sprot and ftp.ebi.ac.uk.trembl
+# to the end as they pull data only every two months and when they
+# do they delay the other mirrors sprot takes 4 1/2 hour to mirror
+# this causes loads in saturday tasks to not find new data e.g.
+# gxdhtload
+#
 bhmgiimsr01.jax.org.imsr_allStrains
 compbio.charite.de.phenotype_annotation
 data.omim.org.omim
-ftp.ebi.ac.uk.sprot
-ftp.ebi.ac.uk.trembl
 ftp.ensembl.org.mouse_cdna
 ftp.ensembl.org.mouse_gtf
 ftp.ensembl.org.mouse_ncrna
@@ -30,3 +34,5 @@ www.findmice.org.imsrwi
 www.genenames.org.hgnc
 www.mousephenotype.org.reports
 zfin.org.downloads
+ftp.ebi.ac.uk.sprot
+ftp.ebi.ac.uk.trembl
