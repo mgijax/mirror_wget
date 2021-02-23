@@ -1,3 +1,11 @@
+TAG: mirror_wget-6-0-16-8
+DATE: 02/23/2021
+STAFF: dbm
+CHANGES: TR13468
+1) compbio.charite.de.phenotype_annotation: removed - obsolete
+2) purl.obolibrary.org.phenotype.hpoa: new
+3) packagelist.weekly: updated with new package name
+
 TAG: mirror_wget-6-0-16-7
 DATE: 01/27/2021
 STAFF: sc
