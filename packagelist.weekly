@@ -10,7 +10,6 @@
 # gxdhtload
 #
 bhmgiimsr01.jax.org.imsr_allStrains
-compbio.charite.de.phenotype_annotation
 data.omim.org.omim
 ftp.ensembl.org.mouse_cdna
 ftp.ensembl.org.mouse_gtf
@@ -26,6 +25,7 @@ mygene.info.wikipedia
 proconsortium.org
 purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.hp.obo
+purl.obolibrary.org.phenotype.hpoa
 raw.githubusercontent.com.diseaseontology
 raw.githubusercontent.com.sequenceontology
 www.ebi.ac.uk.arrayexpress.json
