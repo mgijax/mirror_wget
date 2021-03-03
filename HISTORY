@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-16-10
+DATE: 03/04/2021
+STAFF: lec
+CHANGES:
+TR13471/Changes to Proper places to get GO mapping files
+ftp.geneontology.org.external2go
+
 TAG: mirror_wget-6-0-16-9
 DATE: 02/24/2021
 STAFF: dbm
