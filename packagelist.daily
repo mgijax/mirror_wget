@@ -3,6 +3,7 @@
 # This file is also used by the log checker, so there should not be any
 # extra spaces or blank lines. Comment lines are OK.
 #
+alliancegenome.org.gene_descriptions
 ftp.ebi.ac.uk.arrayexpress
 ftp.ebi.ac.uk.goload
 ftp.ebi.ac.uk.interpro
