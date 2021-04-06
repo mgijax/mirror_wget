@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-16-13
+DATE: 04/06/2021
+TAFF: sc
+CHANGES: TR13349 - Build39 project
+alliancegenome.org.humandisease - new for public covid human disease rpt
+alliancegenome.org.orthology - updated with static url
+
 TAG: mirror_wget-6-0-16-12
 DATE: 04/05/2021
 STAFF: dbm

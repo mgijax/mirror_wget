@@ -3,19 +3,17 @@
 
 comment="homologyload"
 
-REMOTE_SITE=download.alliancegenome.org
-#REMOTE_SITE=alliancegenome.org
+REMOTE_SITE=fms.alliancegenome.org
 #url to remote site
-REMOTE_SITE_URL=http://$REMOTE_SITE
-REMOTE_DIR=/3.2.0/ORTHOLOGY-ALLIANCE/COMBINED
-#REMOTE_DIR=/downloads
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/download
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 # Log in as anonymous and give email as password
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 ## List of files to download
 #
-REMOTE_FILES="ORTHOLOGY-ALLIANCE_COMBINED_37.tsv"
+REMOTE_FILES="ORTHOLOGY-ALLIANCE_COMBINED.tsv.gz"
 #
 # wget options
 WGET_OPTIONS=" --no-parent -S -t 10 -nd -m"
