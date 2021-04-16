@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-16-15
+DATE: 04/16/2021
+STAFF: sc
+CHANGES: TR11349
+1) deleted ftp.ensembl.org.mouse_gff3.v92
+2) updated ftp.ensembl.org.mouse_gff3
+
 TAG: mirror_wget-6-0-16-14
 DATE: 04/12/2021
 STAFF: sc
