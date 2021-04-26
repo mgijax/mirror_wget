@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-16-16
+DATE: 04/26/2021
+STAFF: dbm
+CHANGES:
+1) removed ftp.ncbi.nih.gov.unigene
+2) removed ftp.ncbi.nih.gov.unists
+
 TAG: mirror_wget-6-0-16-15
 DATE: 04/16/2021
 STAFF: sc
