@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# Purpose:
+#       download PIRSF input file
+#
+# full url: 
+# https://www.uniprot.org/uniprot/?query=organism%3A%22Mus+musculus+%28Mouse%29+%5B10090%5D%22+database%3A%28type%3Apirsf%29&sort=score&force=yes&format=xml
+#
+# products:
+#       pirsfload
+#
+# HISTORY
+#
+# 05/19/2021 - sc
+#       - rename package/add documentation
+#
+
+comment="pirsfload"
+REMOTE_SITE=www.uniprot.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/uniprot
+LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
+REMOTE_FILES="?query=organism%3A%22Mus+musculus+%28Mouse%29+%5B10090%5D%22+database%3A%28type%3Apirsf%29&sort=score&force=yes&format=xml"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+LOCAL_DIR=www.uniprot.org/pirsfload
+LOCAL_FILES="m_musculus.xml"
+#
+# The is_xml_query  variable is added for complex query strings to make sure
+# the REMOTE_FILES variable is parsed as a string by the download_mirror
+# script and not traited as an array - which is the default
+is_xml_query=1
+
+WGET_OPTIONS="-O $LOCAL_FILES --user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+
+local_dir_check=true
+do_deletes=true
