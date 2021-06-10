@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-17-1
+DATE: 06/10/2021
+STAFF: sc
+CHANGES: WTS2-620 - new package file for pirsfload www.uniprot.org.pirsfload
+        need to remove ftp.proteininformationresource.org.pirsfload
+        once load is tested
+
 TAG: mirror_wget-6-0-16-19
 TAG: mirror_wget-6-0-16-18
 DATE: 05/04/2021
