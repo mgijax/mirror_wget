@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-17-2
+DATE: 06/16/2021
+STAFF: sc
+CHANGES: removed ftp.proteininformationresource.org.pirsfload and call in
+    packagelist.weekly
+
 TAG: mirror_wget-6-0-17-1
 DATE: 06/10/2021
 STAFF: sc
