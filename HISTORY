@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-17-3
+DATE: 10/14/2021
+STAFF: dbm
+CHANGES:
+1) data.omim.org.omim: added "--no-check-certificate" option to wget call
+                       because the mirror was failing certification
+
 TAG: mirror_wget-6-0-17-2
 DATE: 06/16/2021
 STAFF: sc
