@@ -1,9 +1,18 @@
+TAG: mirror_wget-6-0-17-5
+DATE: 10/18/2021
+STAFF: dbm
+CHANGES:
+1) ftp.nextprot.org.nextprot: removed - ftp site is no longer available
+2) download.nextprot.org: new package
+3) packagelist.weekly: replaced nextprot package file name
+
 TAG: mirror_wget-6-0-17-4
 DATE: 10/15/2021
 STAFF: dbm
 CHANGES:
 1) data.omim.org.omim: revert certificate change because Mike updated the
                        certificate on our servers to allow the connection
+
 TAG: mirror_wget-6-0-17-3
 DATE: 10/14/2021
 STAFF: dbm
