@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-17-6
+DATE: 12/30/2021
+STAFF: sc
+CHANGES:
+1) remove mygene.info.wikipedia
+2) remove mygene.info.wikipedia from pakagelist.weekly
+
 TAG: mirror_wget-6-0-17-5
 DATE: 10/18/2021
 STAFF: dbm
