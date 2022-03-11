@@ -20,7 +20,7 @@ REMOTE_SITE=ftp.ncbi.nih.gov
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/gene/DATA
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
-REMOTE_FILES="gene2accession.gz gene2pubmed.gz gene2refseq.gz gene_history.gz gene_info.gz"
+REMOTE_FILES="gene2accession.gz gene2pubmed.gz gene2refseq.gz gene_history.gz gene_info.gz mim2gene_medgen"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
