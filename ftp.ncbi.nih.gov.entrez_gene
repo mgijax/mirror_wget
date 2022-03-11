@@ -11,9 +11,6 @@
 #
 # HISTORY
 #
-# 06/16/2021    lec
-#       - wts2-646/remove mim2gene_medgen
-#
 
 comment="entrezgeneload"
 REMOTE_SITE=ftp.ncbi.nih.gov
