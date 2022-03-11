@@ -1,8 +1,10 @@
+TAG: mirror_wget-6-0-18-2
 TAG: mirror_wget-6-0-18-1
 DATE: 03/08/2022
 STAFF: lec
 CHANGES:
 wts2-813/Load ENSEMBL and VISTA Regulatory Elements/ftp.ensembl.org.mouse_regulatory
+ftp.ncbi.nih.gov.entrez_gene/re-added mim2gene_medgen:
 
 TAG: mirror_wget-6-0-17-6
 DATE: 12/30/2021
