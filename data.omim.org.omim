@@ -1,16 +1,18 @@
 #!/bin/sh
 #
-# https://data.omim.org/downloads/7czWx_PqSx-QX7T4SYkfoQ/omim.txt.gz
+# https://data.omim.org/downloads/vYoXs0CgtYIcE5IW9shWRg/omim.txt.gz
+#
+# wts2-808/New OMIM load API key/ modify OMIM load
 #
 comment="vocload/OMIM.config"
 REMOTE_SITE=data.omim.org
 REMOTE_SITE_URL=https://$REMOTE_SITE
-REMOTE_DIR=/downloads/7czWx_PqSx-QX7T4SYkfoQ
+REMOTE_DIR=/downloads/vYoXs0CgtYIcE5IW9shWRg
 LOCAL_DIR=$REMOTE_SITE
 REMOTE_FILES="omim.txt.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m --no-check-certificate"
 local_dir_check=true
 do_deletes=false
 recursive=false
