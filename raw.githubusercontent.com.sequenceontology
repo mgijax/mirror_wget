@@ -4,7 +4,7 @@
 #       download sequence ontology (SO)
 #
 # full url:
-# https://raw.githubusercontent.com/The-Sequence-Ontology/SO-Ontologies/master/so.obo
+# https://raw.githubusercontent.com/The-Sequence-Ontology/SO-Ontologies/master/Ontology_Files/so.obo
 #
 # products:
 #
@@ -17,7 +17,7 @@
 comment="soload"
 REMOTE_SITE=raw.githubusercontent.com
 REMOTE_SITE_URL=https://$REMOTE_SITE
-REMOTE_DIR=/The-Sequence-Ontology/SO-Ontologies/master
+REMOTE_DIR=/The-Sequence-Ontology/SO-Ontologies/master/Ontology_Files
 REMOTE_FILES="so.obo"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
