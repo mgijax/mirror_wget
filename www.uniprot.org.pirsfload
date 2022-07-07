@@ -16,11 +16,11 @@
 #
 
 comment="pirsfload"
-REMOTE_SITE=www.uniprot.org
+REMOTE_SITE=rest.uniprot.org
 REMOTE_SITE_URL=https://$REMOTE_SITE
-REMOTE_DIR=/uniprot
+REMOTE_DIR=/uniprotkb
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
-REMOTE_FILES="?query=organism%3A%22Mus+musculus+%28Mouse%29+%5B10090%5D%22+database%3A%28type%3Apirsf%29&sort=score&force=yes&format=xml"
+REMOTE_FILES="stream?compressed=false&format=xml&query=%28database%3Apirsf%29%20AND%20%28taxonomy_id%3A10090%29"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 LOCAL_DIR=www.uniprot.org/pirsfload
