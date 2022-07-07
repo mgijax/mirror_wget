@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-21-2
+DATE: 07/07/2022
+STAFF: dbm
+CHANGES:
+1) www.uniprot.org.pirsfload: new URL to get the input file
+
 TAG: mirror_wget-6-0-21-1
 DATE: 07/05/2022
 STAFF: lec
