@@ -10,7 +10,9 @@
 #       entrezgeneload
 #
 # HISTORY
-#       - 07/21/2022 lec; wts2-646/remove mim2gene_medgen
+#
+# 06/16/2021    lec
+#       - wts2-646/remove mim2gene_medgen
 #
 
 comment="entrezgeneload"
