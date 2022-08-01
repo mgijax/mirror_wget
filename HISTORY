@@ -1,9 +1,10 @@
+TAG: mirror_wget-6-0-22-2
 TAG: mirror_wget-6-0-22-1
 TAG: mirror_wget-6-0-21-3
-DATE: 07/21/2022, 07/25/2022
+DATE: 07/21/2022, 07/25/2022, 08/01/2022
 STAFF: lec
 CHANGES:
-wts2-646/ftp.ncbi.nih.gov/gene/DATA/mim2gene_medgen : removed/obsolete
+wts2-646/ftp.ncbi.nih.gov/gene/DATA/mim2gene_medgen : keep
 
 TAG: mirror_wget-6-0-21-2
 DATE: 07/07/2022
