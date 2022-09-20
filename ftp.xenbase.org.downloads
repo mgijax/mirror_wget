@@ -8,7 +8,7 @@ comment="homologyload/xenbaseload.config"
 # set path of files on remote server
 REMOTE_SITE=ftp.xenbase.org
 #url to remote site
-REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/pub/GenePageReports
 # Remote directory path  does not exist anymore
 
