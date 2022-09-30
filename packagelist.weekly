@@ -30,10 +30,13 @@ www.ebi.ac.uk.arrayexpress.json
 www.ebi.ac.uk.impc.json
 www.findmice.org.imsrwi
 www.genenames.org.hgnc
-www.mousephenotype.org.reports
 zfin.org.downloads
 ftp.ebi.ac.uk.sprot
 ftp.ebi.ac.uk.trembl
 alliancegenome.org.humandisease
 alliancegenome.org.orthology
 www.uniprot.org.pirsfload
+www.gentar.org.crispr
+www.gentar.org.es_cell
+www.gentar.org.modification
+www.gentar.org.phenotyping
