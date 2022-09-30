@@ -156,7 +156,18 @@ fi
 ##   echo `ls -lh `
 ##   rm -f *
 ##fi
-if [ $is_xml_query ]
+if [ $is_gentar_query ]
+then
+    echo "GENTAR"
+    target_file="$REMOTE_SITE_URL$REMOTE_DIR"
+    target_local_dir=$remote_file
+
+    echo "$WGET $WGET_OPTIONS $target_file" | tee -a  ${LOG_FILE}
+   #cd to LOCAL_DOWNLOAD_BASE and run wget command
+   cd ${LOCAL_DOWNLOAD_BASE}/$target_local_dir
+    ## remote file not specified want to use our own name in options
+    $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file" | tee -a  ${LOG_FILE}
+elif [ $is_xml_query ]
 then
    ##don't do the loop if this is a xml query string
    target_file="$REMOTE_SITE_URL$REMOTE_DIR/${REMOTE_FILES}"
