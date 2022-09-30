@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# Purpose:
+#       downloads files for the targetedalleleload
+#
+# full urls in order of loads above: 
+# https://www.gentar.org/tracker-api/api/reports/mgi_es_cell
+#
+# products:
+#       targetedalleleload
+#
+# HISTORY
+#
+# 09/23/2022     sc
+#       https://mgi-jira.atlassian.net/browse/WTS2-558
+#
+#
+
+comment="targetedalleleload"
+is_gentar_query=1
+REMOTE_SITE=www.gentar.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/tracker-api/api/reports/mgi_es_cell
+LOCAL_DIR=$REMOTE_SITE/
+
+# this is peculiar to gentar, needed by download_package
+REMOTE_FILES=$REMOTE_DIR
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS=" --no-parent -S -t 10 -nd -m -O mgi_es_cell_current"
+local_dir_check=true
+do_deletes=false
+recursive=false
