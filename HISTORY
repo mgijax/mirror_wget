@@ -1,3 +1,15 @@
+TAG: mirror_wget-6-0-22-5
+DATE: 09/30/2022
+STAFF: sc
+CHANGES: wts2-558
+* remove www.mousephenotyping.reports mirror
+* added:
+  * www.gentar.org.mgi_crispr
+  * www.gentar.org.mgi_modification
+  * www.gentar.org.mgi_es_cell
+  * www.gentar.org.mgi_phenotyping
+ 
+
 TAG: mirror_wget-6-0-22-4
 DATE: 09/20/2022
 STAFF: dbm
