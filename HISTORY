@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-22-6
+DATE: 10/13/2022
+STAFF: sc
+CHANGES: wts2-412 Skip load processing if input files do not exist (TR12754) 
+ftp.geneontology.org.goload - set do_deletes=false
+download_package - report when deleting local files
+
 TAG: mirror_wget-6-0-22-5
 DATE: 09/30/2022
 STAFF: sc

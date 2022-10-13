@@ -200,6 +200,7 @@ do
    # delete local files as needed
    if [ "$do_deletes" = true ]
    then
+       echo "deleting  ${LOCAL_DOWNLOAD_BASE}/$remote_file" | tee -a  ${LOG_FILE}
        rm -f $remote_file
    fi
    $WGET -a ${LOG_FILE} $WGET_OPTIONS "$target_file" 
