@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-22-7
+DATE: 11/14/2022
+STAFF: sc
+CHANGES: http://wts.informatics.jax.org/searches/tr.detail.cgi?TR_Nr=11893
+Return Human Gene-Associated Diseases from HMDC Pheno Queries
+Added raw.githubusercontent.com.mp_hp and listed it in packagelist.weekly
+
 TAG: mirror_wget-6-0-22-6
 DATE: 10/13/2022
 STAFF: sc
