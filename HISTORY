@@ -1,8 +1,10 @@
+TAG: mirror_wget-6-0-22-10
 TAG: mirror_wget-6-0-22-9
 DATE: 12/06/2022
 STAFF: sc
-CHANGES: ftp.ensembl.org.mouse_regulatory - updated the hardcoded filename to a wildcard - date suffix 
-    changes with each release
+CHANGES: wts2-1037
+    ftp.ensembl.org.mouse_regulatory - updated the hardcoded filename to a wildcard - date suffix 
+    changes with each release. Also, this was never added to packagelist.weekly
 
 TAG: mirror_wget-6-0-22-8
 DATE: 11/29/2022
