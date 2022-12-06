@@ -14,7 +14,7 @@ comment="Ensembl mouse regulatory"
 REMOTE_SITE=ftp.ensembl.org
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/current_regulation/mus_musculus
-REMOTE_FILES="mus_musculus.GRCm39.Regulatory_Build.regulatory_features.20201021.gff.gz"
+REMOTE_FILES="mus_musculus.GRCm39.Regulatory_Build.regulatory_features.*"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
