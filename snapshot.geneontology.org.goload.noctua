@@ -5,7 +5,6 @@
 #
 # full url:
 # http://snapshot.geneontology.org/products/annotations/noctua_mgi.gaf.gz
-# http://snapshot.geneontology.org/products/annotations/noctua_pr.gpad.gz
 # http://snapshot.geneontology.org/products/annotations/mgi-prediction.gaf
 #
 # products:
@@ -13,13 +12,15 @@
 #	goload:gocfp
 #
 # HISTORY
+#       02/17/2023      lec
+#       wts2-1125/remove noctua_pr.gpad.gz
 #
 
 comment="goload:gomousenoctua:gocfp"
 REMOTE_SITE=snapshot.geneontology.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/products/annotations
-REMOTE_FILES="noctua_mgi.gpad.gz noctua_pr.gpad.gz mgi-prediction.gaf"
+REMOTE_FILES="noctua_mgi.gpad.gz mgi-prediction.gaf"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"

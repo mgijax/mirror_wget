@@ -1,6 +1,11 @@
+TAG: mirror_wget-6-0-22-11
+DATE: 02/21/2023
+STAFF: lec
+CHANGES:
+wts2-1125/fl2-220/Modify the Noctua load to only include the noctua_mgi file. 
+
 TAG: mirror_wget-6-0-22-10
 TAG: mirror_wget-6-0-22-9
-DATE: 12/06/2022
 STAFF: sc
 CHANGES: wts2-1037
     ftp.ensembl.org.mouse_regulatory - updated the hardcoded filename to a wildcard - date suffix 
