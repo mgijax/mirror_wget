@@ -1,3 +1,14 @@
+TAG: mirror_wget-6-0-22-13
+DATE: 04/11/2023
+STAFF: dbm
+CHANGES:
+1) purl.obolibrary.org.ma.obo: retired package
+2) purl.obolibrary.org.mod.obo: retired package
+3) www.genetraps.org.igtc: retired package
+4) www.gensat.org.EntrezGeneIds: retired package
+5) www.sequenceontology.org.current_release.obo: retired package
+fl2-278 clean-up
+
 TAG: mirror_wget-6-0-22-12
 DATE: 03/24/2023
 STAFF: lec
