@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Purpose:
+#       fetch IMSR allStrains.csv file from Solr
+#
+# full url:
+#       http://bhmgiimsrtest-01lt.jax.org:48983/solr/imsr/select/?q=*%3A*&start=0&rows=10000000&wt=csv
+#       &fl=allele_id,gene_id,strain_name,provider,strain_states,strain_id
+#
+# products:
+#       use IMSR_STRAINS_CSV variable
+#       qcreports_db
+#       reports_db
+#
+comment="fetch IMSR allStrains.csv file from Solr"
+REMOTE_SITE=bhmgiimsrtest-01lt.jax.org
+REMOTE_SITE_URL=http://$REMOTE_SITE:48983
+REMOTE_DIR=/solr/imsr/select
+LOCAL_DIR=$REMOTE_SITE
+REMOTE_FILES='?q=*%3A*&start=0&rows=10000000&wt=csv&fl=allele_id,gene_id,strain_name,provider,strain_states,strain_id'
+LOCAL_FILES="allStrains.csv"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd"
+local_dir_check=true
+do_deletes=false
+recursive=false
