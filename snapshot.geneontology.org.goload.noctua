@@ -8,11 +8,11 @@
 # 03/22/2023
 #
 # from:
-# http://snapshot.geneontology.org/products/annotations/noctua_mgi.gaf.gz
+# http://snapshot.geneontology.org/products/annotations/noctua_mgi.gpad.gz
 # http://snapshot.geneontology.org/products/annotations/mgi-prediction.gaf
 #
 # to
-# http://snapshot.geneontology.org/products/upstream_and_raw_data/noctua_mgi.gaf.gz
+# http://snapshot.geneontology.org/products/upstream_and_raw_data/noctua_mgi.gpad.gz
 # http://snapshot.geneontology.org/products/upstream_and_raw_data/mgi-prediction.gaf
 #
 # products:
