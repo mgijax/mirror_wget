@@ -21,7 +21,7 @@ remote_password=1f0und1t
 REMOTE_FILES="kompCounts.txt mgiCounts.txt"
 #
 # wget options
-WGET_OPTIONS=" --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS=" -e robots=off --no-parent -S -t 10 -nd -m"
 
 #
 # wget
