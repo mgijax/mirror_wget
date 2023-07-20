@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Purpose:
+#       download GO paint GAF file
+#
+# full url:
+# http://snapshot.geneontology.org/annotations/mgi.gaf.gz
+#
+# products:
+#	goload:gorefgen
+#
+# HISTORY
+#	06/03/2023	lec
+#	wts2-1155/add mgi.gpad.gz
+#
+
+comment="goload:goamousenoctua:gorefgen"
+REMOTE_SITE=snapshot.geneontology.org
+REMOTE_SITE_URL=http://$REMOTE_SITE
+REMOTE_DIR=/annotations
+REMOTE_FILES="mgi.gpad.gz mgi.gaf.gz"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true
+recursive=false
