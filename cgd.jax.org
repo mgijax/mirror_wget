@@ -1,1 +1,0 @@
-http://cgd.jax.org/mousemapconverter/Revised_HSmap_SNPs.csv cgd.jax.org
