@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Purpose:
+#       download GlyGen: Computational and Informatics Resources for Glycoscience
+#
+# full url:
+# https://data.glygen.org/ln2data/releases/data/current/reviewed/protein_glygen_mgi_xref_mapping.tsv
+#
+# products:
+#	glygenload
+#
+# HISTORY
+#
+# 02/12/2024    lec
+#       wts2-575/fl2-743/Add GlyGen links to MGI gene detail pages (TR13475)
+#
+comment="glygenload"
+REMOTE_SITE=data.glygen.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/ln2data/releases/data/current/reviewed
+REMOTE_FILES="protein_glygen_mgi_xref_mapping.tsv"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false

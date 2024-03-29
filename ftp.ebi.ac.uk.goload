@@ -1,33 +1,29 @@
 #!/bin/sh
 #
 # Purpose:
-#       download GOA mouse GAF files & GPI file
-#	download GOA human GAF files
+#       download GOC mouse GPI file
 #
 # full url:
-# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gaf.gz
 # ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gpi.gz
-# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse_isoform.gaf.gz
-# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human.gaf.gz
-# ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human_isoform.gaf.gz
+# remove: ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse.gaf.gz
+# remove: ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/MOUSE/goa_mouse_isoform.gaf.gz
+# remove: ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human.gaf.gz
+# remove: ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/goa_human_isoform.gaf.gz
 #
 # products:
-#	goload:goamouse,goahuman
+#	goload
 #
 # HISTORY
 #
-# 07/26/2016	lec
-#	- TR12378/add goa_mouse_isoform.gaf.gz/goa_human.gaf.gz/goa_human_isoform.gaf.gz
+# 08/22/2023    lec
+#       wts2-1155/GOC taking over GOA mouse, GOA human, etc.
+#       still need goa_mouse.gpi.gz for reports_db/GO_gpi.py
 #
-# 06/06/2016	lec
-#	- TR12340/gene_association.goa_mouse.gz changed to goa_mouse.gaf.gz
-#
-
-comment="goload:goamouse,goahuman,reports_db/daily/GO_gpi.py"
+comment="reports_db/daily/GO_gpi.py"
 REMOTE_SITE=ftp.ebi.ac.uk
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/databases/GO/goa
-REMOTE_FILES="MOUSE/goa_mouse.gaf.gz MOUSE/goa_mouse.gpi.gz MOUSE/goa_mouse_isoform.gaf.gz HUMAN/goa_human.gaf.gz HUMAN/goa_human_isoform.gaf.gz"
+REMOTE_DIR=/pub/databases/GO/goa/MOUSE
+REMOTE_FILES="goa_mouse.gpi.gz"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"

@@ -1,3 +1,25 @@
+TAG: mirror_wget-6-0-23-1
+DATE: 03/29/2024
+wts2-1155/GOC taking over GOA mouse, GOA human, etc.
+wts2-575/fl2-743/Add GlyGen links to MGI gene detail pages (TR13475)
+#       new file:   data.glygen.org
+#       new file:   snapshot.geneontology.org.goload
+#
+#       modified:   ftp.ebi.ac.uk.goload
+#       modified:   ftp.ebi.ac.uk.interpro
+#       modified:   packagelist.daily
+#       modified:   packagelist.weekly
+#       modified:   purl.obolibrary.org.hp.obo
+#
+#       renamed:    ftp.geneontology.org.external2go -> snapshot.geneontology.org.uniprotload
+#       
+#       deleted:    bhmgiimsrtest-01lt.jax.org.imsr_allStrains
+#       deleted:    cgd.jax.org
+#       deleted:    ftp.geneontology.org.goload
+#       deleted:    research.bioinformatics.udel.edu
+#       deleted:    snapshot.geneontology.org.goload.noctua
+#
+
 TAG: mirror_wget-6-0-22-17
 DATE: 06/27/2023
 STAFF: dbm
@@ -147,8 +169,7 @@ TAG: mirror_wget-6-0-17-4
 DATE: 10/15/2021
 STAFF: dbm
 CHANGES:
-1) data.omim.org.omim: revert certificate change because Mike updated the
-                       certificate on our servers to allow the connection
+1) data.omim.org.omim: revert certificate change because Mike updated the certificate on our servers to allow the connection
 
 TAG: mirror_wget-6-0-17-3
 DATE: 10/14/2021

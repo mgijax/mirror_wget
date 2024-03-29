@@ -6,10 +6,13 @@
 # sc - 10/13/20, moved ftp.ebi.ac.uk.sprot and ftp.ebi.ac.uk.trembl
 # to the end as they pull data only every two months and when they
 # do they delay the other mirrors sprot takes 4 1/2 hour to mirror
-# this causes loads in saturday tasks to not find new data e.g.
-# gxdhtload
+# this causes loads in saturday tasks to not find new data e.g.  gxdhtload
 #
+alliancegenome.org.humandisease
+alliancegenome.org.orthology
+alliancegenome.org.human_coordload
 bhmgiimsr01.jax.org.imsr_allStrains
+data.glygen.org
 data.omim.org.omim
 download.nextprot.org
 ftp.ensembl.org.mouse_cdna
@@ -26,20 +29,17 @@ purl.obolibrary.org.cl-basic.obo
 purl.obolibrary.org.hp.obo
 purl.obolibrary.org.phenotype.hpoa
 raw.githubusercontent.com.diseaseontology
+raw.githubusercontent.com.mp_hp
 raw.githubusercontent.com.sequenceontology
 www.ebi.ac.uk.arrayexpress.json
 www.ebi.ac.uk.impc.json
 www.findmice.org.imsrwi
 www.genenames.org.hgnc
-zfin.org.downloads
-ftp.ebi.ac.uk.sprot
-ftp.ebi.ac.uk.trembl
-alliancegenome.org.humandisease
-alliancegenome.org.orthology
-alliancegenome.org.human_coordload
-www.uniprot.org.pirsfload
 www.gentar.org.crispr
 www.gentar.org.es_cell
 www.gentar.org.modification
 www.gentar.org.phenotyping
-raw.githubusercontent.com.mp_hp
+www.uniprot.org.pirsfload
+zfin.org.downloads
+ftp.ebi.ac.uk.sprot
+ftp.ebi.ac.uk.trembl
