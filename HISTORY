@@ -20,6 +20,19 @@ wts2-575/fl2-743/Add GlyGen links to MGI gene detail pages (TR13475)
 #       deleted:    snapshot.geneontology.org.goload.noctua
 #
 
+TAG: mirror_wget-6-0-22-19
+DATE: 11/14/2023
+STAFF: dbm
+CHANGES:
+Remove cgd.jax.org: retired genmapload
+
+TAG: mirror_wget-6-0-22-18
+DATE: 10/20/2023
+STAFF: sc
+CHANGES: updated www.gentar.org.es_cell
+The targetedalleleload was turned off/archived on 10/19/23
+ We continue to download the file for qc reports
+
 TAG: mirror_wget-6-0-22-17
 DATE: 06/27/2023
 STAFF: dbm
