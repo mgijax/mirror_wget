@@ -1,3 +1,8 @@
+TAG: mirror_wget-6-0-23-3
+DATE: 04/09/2024
+remove unused go files
+#       modified:   packagelist.daily
+
 TAG: mirror_wget-6-0-23-2
 TAG: mirror_wget-6-0-23-1
 DATE: 03/29/2024
