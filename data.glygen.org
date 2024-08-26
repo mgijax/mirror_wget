@@ -21,7 +21,7 @@ REMOTE_DIR=/ln2data/releases/data/current/reviewed
 REMOTE_FILES="protein_glygen_mgi_xref_mapping.tsv"
 remote_user=anonymous
 remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent --no-check-certificate -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=false
 recursive=false

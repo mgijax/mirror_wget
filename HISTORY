@@ -1,3 +1,8 @@
+TAG: mirror_wget-6-0-24-1
+DATE: 08/26/2024
+wts2-1540/fl2-955/added --no-check-certificate
+#       modified:   data.glygen.org
+
 TAG: mirror_wget-6-0-23-3
 DATE: 04/09/2024
 remove unused go files
