@@ -1,3 +1,8 @@
+TAG: mirror_wget-6-0-24-2
+DATE: 08/29/2024
+wts2-1528/fl2-951/Add NCBI regulatory regions/biological_region to MGIreg.gff3 file
+#       new file:   ftp.ncbi.nih.gov.regulator
+
 TAG: mirror_wget-6-0-24-1
 DATE: 08/26/2024
 wts2-1540/fl2-955/added --no-check-certificate
