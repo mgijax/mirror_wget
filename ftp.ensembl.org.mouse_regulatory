@@ -7,7 +7,8 @@
 #       ftp.ensembl.org/pub/current_regulation/mus_musculus
 #
 # Products
-#       mus_musculus.GRCm39.Regulatory_Build.regulatory_features.20201021.gff.gz
+#       used by genemodelload: mus_musculus.GRCm39.Regulatory_Build.regulatory_features.20220822.gff.gz
+#       not currently used: mus_musculus.GRCm39.Regulatory_Build.regulatory_features.20221007.gff.gz
 #
 
 comment="Ensembl mouse regulatory"
