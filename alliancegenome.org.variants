@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# Purpose:
+#       download Alliance Variants
+#
+# full url:
+# https://download.alliancegenome.org/variants/7.4.0/MGI/MGI.vep.vcf.gz
+#
+# products:
+#	
+#
+# HISTORY
+#	11/08/2024	lec
+#
+
+comment=""
+REMOTE_SITE=download.alliancegenome.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/variants/7.4.0/MGI
+REMOTE_FILES="MGI.vep.vcf.gz"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true
+recursive=false

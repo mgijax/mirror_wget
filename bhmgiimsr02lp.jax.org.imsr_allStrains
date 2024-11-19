@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Purpose:
+#       fetch IMSR allStrains.csv file from Solr
+#
+# full url:
+#       http://bhmgiimsr02lp.jax.org:48983/solr/imsr/select/?q=*%3A*&start=0&rows=10000000&wt=csv
+#       &fl=allele_id,gene_id,strain_name,provider,strain_states,strain_id
+#
+# products:
+#       use IMSR_STRAINS_CSV variable
+#       qcreports_db
+#       reports_db
+#
+# HISTORY
+#
+# 02/17/2023 lec
+#       - wts2-1095/added repository ids for reports_db/weekly/MGI_HumanMouseOneToOne.py
+#
+comment="fetch IMSR allStrains.csv file from Solr"
+REMOTE_SITE=bhmgiimsr02lp.jax.org
+REMOTE_SITE_URL=https://$REMOTE_SITE:48983
+REMOTE_DIR=/solr/imsr/select
+LOCAL_DIR=$REMOTE_SITE
+REMOTE_FILES='?q=*%3A*&start=0&rows=10000000&wt=csv&fl=allele_id,gene_id,strain_name,provider,strain_states,strain_id'
+LOCAL_FILES="allStrains.csv"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd"
+local_dir_check=true
+do_deletes=false
+recursive=false
