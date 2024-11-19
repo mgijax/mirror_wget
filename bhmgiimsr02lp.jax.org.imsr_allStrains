@@ -19,7 +19,7 @@
 #
 comment="fetch IMSR allStrains.csv file from Solr"
 REMOTE_SITE=bhmgiimsr02lp.jax.org
-REMOTE_SITE_URL=https://$REMOTE_SITE:48983
+REMOTE_SITE_URL=http://$REMOTE_SITE:48983
 REMOTE_DIR=/solr/imsr/select
 LOCAL_DIR=$REMOTE_SITE
 REMOTE_FILES='?q=*%3A*&start=0&rows=10000000&wt=csv&fl=allele_id,gene_id,strain_name,provider,strain_states,strain_id'

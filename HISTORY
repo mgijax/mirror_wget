@@ -1,6 +1,6 @@
-TAG: mirror_wget-6-0-24-?
+TAG: mirror_wget-6-0-24-3
 DATE: 11/19/2024
-wts2-1580/e4g-77/mirror_wget/bhmgiimsr01.jax.org.imsr_allStrains : new server bhmgiimsr02lp.jax.org issue
+wts2-1580/e4g-77/mirror_wget/bhmgiimsr01.jax.org.imsr_allStrains -> bhmgiimsr02lp.jax.org issue
 #       deleted:    bhmgiimsr01.jax.org.imsr_allStrains
 #       new file:   bhmgiimsr02lp.jax.org.imsr_allStrains
 #       modified:   packagelist.weekly
