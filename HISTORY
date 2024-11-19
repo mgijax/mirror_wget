@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-24-?
+DATE: 11/19/2024
+wts2-1580/e4g-77/mirror_wget/bhmgiimsr01.jax.org.imsr_allStrains : new server bhmgiimsr02lp.jax.org issue
+#       deleted:    bhmgiimsr01.jax.org.imsr_allStrains
+#       new file:   bhmgiimsr02lp.jax.org.imsr_allStrains
+#       modified:   packagelist.weekly
+
 TAG: mirror_wget-6-0-24-2
 DATE: 08/29/2024
 wts2-1528/fl2-951/Add NCBI regulatory regions/biological_region to MGIreg.gff3 file
