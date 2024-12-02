@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# Purpose:
+#       fetch MPD_downloads/straininfo.csv
+#
+# full url:
+# 	https://phenome.jax.org/phenomedoc?name=MPD_downloads/straininfo.csv
+#
+# products:
+#       qcreports_db
+#       reports_db
+#
+# HISTORY
+#
+# 12/02/2024 lec
+#       - wts2-1585/e4g-88/Jax Pheno Strain Info Curl Issue
+#
+comment="fetch MPD_downloads/straininfo.csv"
+REMOTE_SITE=phenome.jax.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/
+LOCAL_DIR=$REMOTE_SITE
+REMOTE_FILES="phenomedoc?name=MPD_downloads/straininfo.csv"
+LOCAL_FILES="straininfo.csv"
+remote_user=anonymous
+remote_password=mgscron@informatics.jax.org
+WGET_OPTIONS="-O $LOCAL_FILES --no-parent --no-check-certificate -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false
