@@ -29,14 +29,8 @@ REMOTE_DIR=/export/gondor/ftp/private/imsr/incoming
 
 ## List of files to download
 REMOTE_FILES="*.dat *.txt"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 
-#
-# wget options
-# Log in as anonymous and give email as password
-remote_user=imsr
-remote_password=1f0und1t
-
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
 #
 # wget
 # -S = print the headers sent by HTTP servers and responses sent by FTP servers.

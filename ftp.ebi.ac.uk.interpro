@@ -18,9 +18,7 @@ REMOTE_SITE=ftp.ebi.ac.uk
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/databases/interpro/current_release
 REMOTE_FILES="interpro2go names.dat short_names.dat"
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd --retr-symlinks -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd --retr-symlinks -m"
 local_dir_check=true
 do_deletes=false
 recursive=false

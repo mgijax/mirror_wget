@@ -15,9 +15,7 @@ REMOTE_SITE=ftp.ncbi.nih.gov
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/genomes/refseq/vertebrate_mammalian/Mus_musculus/annotation_releases/GCF_000001635.27-RS_2024_02
 REMOTE_FILES="GCF_000001635.27_GRCm39_genomic.gff.gz"
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=false
 recursive=false

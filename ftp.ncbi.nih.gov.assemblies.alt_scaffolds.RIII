@@ -1,5 +1,3 @@
-#!/bin/sh
-
 comment="NCBI mouse assembly"
 # This will be used in the naming the log file
 #
@@ -21,10 +19,7 @@ REMOTE_FILES="alt.scaf.fa.gz"
 #
 #wget options
 #
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 
 #
 # wget

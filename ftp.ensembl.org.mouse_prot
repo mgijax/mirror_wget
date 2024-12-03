@@ -15,9 +15,7 @@ REMOTE_SITE=ftp.ensembl.org
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/current_fasta/mus_musculus/pep
 REMOTE_FILES="Mus_musculus.*.pep.all.fa.gz"
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=false
 recursive=false

@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-24-5
+DATE: 12/03/2024
+as part of the wts2-1109/e4g-13/postgres upgrade/IT training
+removed "remote_user=anonymous
+removed "remote_password=mgscron@informatics.jax.org"
+
 TAG: mirror_wget-6-0-24-4
 DATE: 12/02/2024
 wts2-1585/e4g-88/Jax Pheno Strain Info Curl Issue

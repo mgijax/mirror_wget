@@ -19,9 +19,7 @@ REMOTE_SITE=snapshot.geneontology.org
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/annotations
 REMOTE_FILES="mgi.gpad.gz"
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=true
 recursive=false

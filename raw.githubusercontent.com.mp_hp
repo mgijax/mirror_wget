@@ -16,9 +16,6 @@ LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 REMOTE_FILES="mp_hp_mgi_all.sssom.tsv mp_hp_eye_impc.sssom.tsv mp_hp_hwt_impc.sssom.tsv mp_hp_owt_impc.sssom.tsv mp_hp_pat_impc.sssom.tsv mp_hp_pistoia.sssom.tsv mp_hp_xry_impc.sssom.tsv"
 #
 # Log in as anonymous and give email as password
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-
 WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 
 #

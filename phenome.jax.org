@@ -22,8 +22,6 @@ REMOTE_DIR=/
 LOCAL_DIR=$REMOTE_SITE
 REMOTE_FILES="phenomedoc?name=MPD_downloads/straininfo.csv"
 LOCAL_FILES="straininfo.csv"
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS="-O $LOCAL_FILES --no-parent --no-check-certificate -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=false

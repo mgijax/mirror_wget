@@ -14,10 +14,7 @@ LOCAL_DIR=$REMOTE_SITE/genbank/gb_deletes
 REMOTE_FILES="gbdel.txt.gz"
 #wget options
 #
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 
 #
 # wget

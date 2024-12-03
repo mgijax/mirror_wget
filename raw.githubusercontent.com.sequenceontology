@@ -19,9 +19,7 @@ REMOTE_SITE=raw.githubusercontent.com
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/The-Sequence-Ontology/SO-Ontologies/master/Ontology_Files
 REMOTE_FILES="so.obo"
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-WGET_OPTIONS="--user=$remote_user --password=$remote_password --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=false
 recursive=false

@@ -26,11 +26,7 @@ REMOTE_SITE=www.gentar.org
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/tracker-api/api/reports/mgi_initial_crispr
 LOCAL_DIR=$REMOTE_SITE/
-
-# this is peculiar to gentar, needed by download_package
 REMOTE_FILES=$REMOTE_DIR
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
 WGET_OPTIONS=" --no-parent -S -t 10 -nd -m -O mgi_crispr_current"
 local_dir_check=true
 do_deletes=false

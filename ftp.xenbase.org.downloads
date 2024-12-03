@@ -24,9 +24,6 @@ REMOTE_FILES="XenbaseGeneMouseOrthologMapping.txt  GenePageTropicalisEntrezGeneU
 #wget options
 #
 # Log in as anonymous and give email as password
-remote_user=anonymous
-remote_password=mgscron@informatics.jax.org
-
 WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 
 #
