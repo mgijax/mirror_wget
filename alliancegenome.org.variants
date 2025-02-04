@@ -1,23 +1,25 @@
 #!/bin/sh
 #
 # Purpose:
-#       download Alliance Variants
+#       download Alliance Variants for use with SNPs
 #
 # full url:
-# https://download.alliancegenome.org/variants/7.4.0/MGI/MGI.vep.vcf.gz
+# https://download.alliancegenome.org/variants/7.4.0/MGI/
+# all chromosomes
 #
 # products:
-#	
+#	snpcacheload
 #
 # HISTORY
-#	11/08/2024	lec
+#	01/24/2025	lec
+#	e4g-127/Process Alliance File to Load SNP_ConsensusSnp_Marker
 #
 
 comment=""
 REMOTE_SITE=download.alliancegenome.org
 REMOTE_SITE_URL=https://$REMOTE_SITE
 REMOTE_DIR=/variants/7.4.0/MGI
-REMOTE_FILES="MGI.vep.vcf.gz"
+REMOTE_FILES="MGI.vep.1.vcf.gz MGI.vep.2.vcf.gz MGI.vep.3.vcf.gz MGI.vep.4.vcf.gz MGI.vep.5.vcf.gz MGI.vep.6.vcf.gz MGI.vep.7.vcf.gz MGI.vep.8.vcf.gz MGI.vep.9.vcf.gz MGI.vep.10.vcf.gz MGI.vep.11.vcf.gz MGI.vep.12.vcf.gz MGI.vep.13.vcf.gz MGI.vep.14.vcf.gz MGI.vep.15.vcf.gz MGI.vep.16.vcf.gz MGI.vep.17.vcf.gz MGI.vep.18.vcf.gz MGI.vep.19.vcf.gz MGI.vep.MT.vcf.gz MGI.vep.X.vcf.gz MGI.vep.Y.vcf.gz"
 WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=true
