@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Purpose:
+#       download RNAAcentral file
+#
+# full url:
+# https://ftp.ebi.ac.uk/pub/databases/RNAcentral/current_release/id_mapping/database_mappings/mgi.tsv
+#
+# products:
+#	gornacentral
+#
+# HISTORY
+#
+# 03/31/2025	lec
+#       wts2-562/e4g-207/mapping RNA central ids to MGI genes (TR13445)
+#
+comment="reports_db/daily/GO_gpi.py"
+REMOTE_SITE=ftp.ebi.ac.uk
+REMOTE_SITE_URL=ftp://$REMOTE_SITE
+REMOTE_DIR=/pub/databases/RNAcentral/current_release/id_mapping/database_mappings
+REMOTE_FILES="mgi.tsv"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false
