@@ -1,8 +1,13 @@
-TAG: mirror_wget-6-0-25-6
+TAG: mirror_wget-6-0-25-7
 DATE: 04/22/2025
 wts2-1647/e4g-220/Retire neXtProt from MGI
 #	modified:   packagelist.weekly
 #	deleted:    download.nextprot.org   
+
+TAG: mirror_wget-6-0-25-6
+DATE: 04/18/2025
+e4g-215 femover - IMSR file interaction
+#	get IMSR files for the mover
 
 TAG: mirror_wget-6-0-25-5
 TAG: mirror_wget-6-0-25-4

@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Purpose:
+#       download the Strains list from IMSR
+#
+# full url:
+# https://www.findmice.org/report.txt?query=&states=Any&_states=1&types=Any&_types=1&repositories=Any&_repositories=1&_mutations=on&results=500000&startIndex=0&sort=score&dir
+#
+# products:
+#       femover
+#
+# HISTORY
+#
+# 04/16/2025    jer
+#       - E4G-215 femover - IMSR file interaction
+#
+
+comment="femover"
+REMOTE_SITE=www.findmice.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/
+LOCAL_DIR=$REMOTE_SITE
+REMOTE_FILES="report.txt?query=&states=Any&_states=1&types=Any&_types=1&repositories=Any&_repositories=1&_mutations=on&results=500000&startIndex=0&sort=score&dir"
+LOCAL_FILES="strains.txt"
+WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd -m"
+local_dir_check=true
+do_deletes=false
+recursive=false
