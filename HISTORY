@@ -1,3 +1,11 @@
+TAG: mirror_wget-6-0-25-8
+DATE: 05/20/2025
+remove -t 10; use default of 20
+        modified:   raw.githubusercontent.com.diseaseontology
+        modified:   raw.githubusercontent.com.evidenceontology
+        modified:   raw.githubusercontent.com.mp_hp
+        modified:   raw.githubusercontent.com.sequenceontology
+
 TAG: mirror_wget-6-0-25-7
 DATE: 04/22/2025
 wts2-1647/e4g-220/Retire neXtProt from MGI
