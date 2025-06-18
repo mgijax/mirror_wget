@@ -1,3 +1,9 @@
+TAG: mirror_wget-6-0-25-9
+DATE: 06/18/2025
+move GO mirror from daily to weekly
+        modified:   packagelist.daily
+        modified:   packagelist.weekly
+
 TAG: mirror_wget-6-0-25-8
 DATE: 05/20/2025
 remove -t 10; use default of 20
