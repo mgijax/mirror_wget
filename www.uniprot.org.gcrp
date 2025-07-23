@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Purpose:
+#       download UniProt/GCRP (Gene Reference Proteome) input file
+#
+# full url: 
+# https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000000589/UP000000589_10090.fasta.gz
+#
+# products:
+#       unirptload/postUniProt.sh
+#
+# HISTORY
+#
+# 07/23/2025 lec
+#       - wts2-1555/e4g-314/Cross-references changes in UniProt
+#
+
+comment="uniprotload/postUniProt.sh"
+REMOTE_SITE=ftp.uniprot.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000000589
+REMOTE_FILES="UP000000589_10090.fasta.gz"
+WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
+local_dir_check=true
+do_deletes=true
