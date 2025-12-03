@@ -1,3 +1,17 @@
+TAG: mirror_wget-6-0-26-?
+DATE: 11/19/2025
+wts2-1684/sprt-18/Test new GO Central Load
+	new file: current.geneontology.org.goload
+        new file: current.geneontology.org.uniprotload
+	deleted:  snapshot.geneontology.org.goload
+	deleted:  snapshot.geneontology.org.uniprotload
+
+TAG: mirror_wget-6-0-26-3
+DATE: 12/03/2025
+wts2-1766/sprt-146/Weekly Mirror www.ebi.ac.uk.arrayexpress.json
+comment www.ebi.ac.uk.arrayexpress.json out of packagelist.weekly
+        modified:   packagelist.weekly
+
 TAG: mirror_wget-6-0-26-2
 DATE: 09/18/2025
 wts2-1725/sprt-59/inconsistencies between MGI GPI and GOA_mouse GPI

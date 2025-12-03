@@ -38,7 +38,7 @@ raw.githubusercontent.com.mp_hp
 raw.githubusercontent.com.sequenceontology
 ftp.ebi.ac.uk.goload
 snapshot.geneontology.org.goload
-www.ebi.ac.uk.arrayexpress.json
+#www.ebi.ac.uk.arrayexpress.json ; connie is doing this manually; see gxdhtload
 www.ebi.ac.uk.impc.json
 www.findmice.org.imsrwi
 www.findmice.org.imsrwi_strains
