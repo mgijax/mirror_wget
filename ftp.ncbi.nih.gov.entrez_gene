@@ -11,6 +11,9 @@
 #
 # HISTORY
 #
+# - lec 04/21/2026
+#	do_deletes=false
+#
 
 comment="entrezgeneload"
 REMOTE_SITE=ftp.ncbi.nih.gov
@@ -20,6 +23,6 @@ LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 REMOTE_FILES="gene2accession.gz gene2pubmed.gz gene2refseq.gz gene_history.gz gene_info.gz mim2gene_medgen"
 WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
-do_deletes=true
+do_deletes=false
 recursive=false
 
