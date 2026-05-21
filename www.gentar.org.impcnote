@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Purpose:
+#       downloads files for the impc molecular note
+#
+# full urls in order of loads above: 
+# https://www.gentar.org/tracker-api/api/reports/mgi_allele_template
+#
+# products:
+#	alleleload/bin/impcmolnote.csh
+#
+# HISTORY
+#
+# 05/21/2026     sc
+#       https://mgi-jira.atlassian.net/browse/WTS2-1857
+#
+
+comment="impc htmpload, impc molecular note"
+is_gentar_query=1
+REMOTE_SITE=www.gentar.org
+REMOTE_SITE_URL=https://$REMOTE_SITE
+REMOTE_DIR=/tracker-api/api/reports/mgi_allele_template
+LOCAL_DIR=$REMOTE_SITE/
+REMOTE_FILES=$REMOTE_DIR
+WGET_OPTIONS=" --no-parent -S -t 10 -nd -m -O mgi_allele_template_current"
+local_dir_check=true
+do_deletes=false
+recursive=false
