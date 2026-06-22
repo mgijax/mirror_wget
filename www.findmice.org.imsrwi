@@ -1,7 +1,7 @@
 #!/bin/sh
 
 comment="imsrwi"
-REMOTE_SITE=www.findmice.org
+REMOTE_SITE=prod.findmice.org
 REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/report
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
