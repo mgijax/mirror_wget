@@ -22,7 +22,7 @@ REMOTE_DIR=/
 LOCAL_DIR=$REMOTE_SITE
 REMOTE_FILES="report.txt?query=&states=Any&_states=1&types=Any&_types=1&repositories=Any&_repositories=1&_mutations=on&results=500000&startIndex=0&sort=score&dir"
 LOCAL_FILES="strains.txt"
-WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd -m"
+WGET_OPTIONS="-O $LOCAL_FILES --no-parent -t 10 -nd -m --no-check-certificate"
 local_dir_check=true
 do_deletes=false
 recursive=false

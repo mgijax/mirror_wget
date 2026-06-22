@@ -6,7 +6,7 @@ REMOTE_SITE_URL=http://$REMOTE_SITE
 REMOTE_DIR=/report
 LOCAL_DIR=$REMOTE_SITE$REMOTE_DIR
 REMOTE_FILES="kompCounts.txt mgiCounts.txt"
-WGET_OPTIONS=" -e robots=off --no-parent -S -t 10 -nd -m"
+WGET_OPTIONS=" -e robots=off --no-parent -S -t 10 -nd -m --no-check-certificate"
 local_dir_check=true
 do_deletes=false
 recursive=false

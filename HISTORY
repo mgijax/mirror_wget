@@ -1,3 +1,10 @@
+TAG: mirror_wget-6-0-28-3
+DATE: 06/22/2026
+wts2-1855/www.findmice.org issue: called from mirror_wget
+added "--no-check-certificate" to scripts
+        modified:   www.findmice.org.imsrwi
+        modified:   www.findmice.org.imsrwi_strains
+
 TAG: mirror_wget-6-0-28-2
 DATE: 05/21/2026
 wts2-1857/Allele Molecular Note Load
