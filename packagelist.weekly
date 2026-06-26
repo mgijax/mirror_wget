@@ -11,10 +11,10 @@ data.glygen.org
 data.omim.org.omim
 phenome.jax.org
 ftp.ensembl.org.mouse_cdna
-ftp.ensembl.org.mouse_gtf
 ftp.ensembl.org.mouse_ncrna
 ftp.ensembl.org.mouse_prot
-ftp.ensembl.org.mouse_regulatory
+#ftp.ensembl.org.mouse_gtf
+#ftp.ensembl.org.mouse_regulatory
 ftp.ncbi.nih.gov.ccds
 ftp.ncbi.nih.gov.entrez_gene
 ftp.ncbi.nih.gov.regulator
