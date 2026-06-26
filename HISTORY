@@ -1,7 +1,9 @@
+TAG: mirror_wget-6-0-28-8
 TAG: mirror_wget-6-0-28-7
 TAG: mirror_wget-6-0-28-6
 DATE: 06/26/2026
         modified:   packagelist.weekly
+	deleted:    snapshot.geneontology.org.uniprotload
 no longer exist ftp.ensembl.org.mouse_gtf ftp.ensembl.org.mouse_regulatory
 perhaps remove these mirrors
 
