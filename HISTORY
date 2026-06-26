@@ -2,6 +2,7 @@ TAG: mirror_wget-6-0-28-?
 DATE: 06/26/2026
         modified:   packagelist.weekly
 no longer exist ftp.ensembl.org.mouse_gtf ftp.ensembl.org.mouse_regulatory
+perhaps remove these mirrors
 
 TAG: mirror_wget-6-0-28-5
 TAG: mirror_wget-6-0-28-4
