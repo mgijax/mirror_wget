@@ -4,7 +4,7 @@
 #       download Ensembl mouse protein
 #
 # Full url
-#       ftp.ensembl.org/pub/current_gtf/mus_musculus
+#       ftp.ensembl.org/pub/current/gtf/mus_musculus
 #
 # Products
 #       Mus_musculus.*gtf.gz
@@ -13,7 +13,7 @@
 comment="Ensembl mouse protein"
 REMOTE_SITE=ftp.ensembl.org
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/current_gtf/mus_musculus
+REMOTE_DIR=/pub/current/gtf/mus_musculus
 REMOTE_FILES="Mus_musculus.*gtf.gz"
 WGET_OPTIONS="--password=$remote_password --no-parent -S -t 10 -nd -m"
 local_dir_check=true

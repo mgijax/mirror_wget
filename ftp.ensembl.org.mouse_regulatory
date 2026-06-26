@@ -4,7 +4,7 @@
 #       download Ensembl mouse regulatory
 #
 # Full url
-#       ftp.ensembl.org/pub/current_regulation/mus_musculus
+#       ftp.ensembl.org/pub/current/regulation/mus_musculus/GRCm39/annotation
 #
 # Products
 #       used by genemodelload: mus_musculus.GRCm39.Regulatory_Build.regulatory_features.20240230.gff.gz
@@ -14,8 +14,8 @@
 comment="Ensembl mouse regulatory"
 REMOTE_SITE=ftp.ensembl.org
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
-REMOTE_DIR=/pub/current_regulation/mus_musculus
-REMOTE_FILES="mus_musculus.GRCm39.Regulatory_Build.regulatory_features.*"
+REMOTE_DIR=/pub/current/regulation/mus_musculus/GRCm39/annotation
+REMOTE_FILES="Mus_musculus.GRCm39.regulatory_features.*gff3.gz"
 WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=false
