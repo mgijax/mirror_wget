@@ -4,21 +4,24 @@
 #       download GO GPAD
 #
 # full url:
-# https://snapshot.geneontology.org/annotations/mgi.gpad.gz
+# https://current.geneontology.org/annotations/gpad/MOUSE-mod.gpad.gz
 #
 # products:
 #	goload
 #
 # HISTORY
+#	06/26/2026	lec
+#	wts2-1868/URLs changes for the GO annotation files
+#
 #	03/11/2024	lec
 #	wts2-1155/add mgi.gpad.gz
 #
 
 comment="goload"
-REMOTE_SITE=snapshot.geneontology.org
+REMOTE_SITE=current.geneontology.org
 REMOTE_SITE_URL=https://$REMOTE_SITE
-REMOTE_DIR=/annotations
-REMOTE_FILES="mgi.gpad.gz"
+REMOTE_DIR=/annotations/gpad
+REMOTE_FILES="MOUSE-mod.gpad.gz"
 WGET_OPTIONS="--no-parent -S -t 10 -nd -m"
 local_dir_check=true
 do_deletes=true
