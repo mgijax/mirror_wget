@@ -5,9 +5,7 @@
 #
 # full url:
 #       http://ftp.ebi.ac.uk/pub/databases/interpro/current_release/
-#               interpro2go 
 #               names.dat 
-#               short_names.dat
 # 
 # products:
 #       vocload/IP
@@ -17,7 +15,7 @@ comment="uniprotload,vocload/IP.config"
 REMOTE_SITE=ftp.ebi.ac.uk
 REMOTE_SITE_URL=ftp://$REMOTE_SITE
 REMOTE_DIR=/pub/databases/interpro/current_release
-REMOTE_FILES="interpro2go names.dat short_names.dat"
+REMOTE_FILES="names.dat"
 WGET_OPTIONS="--no-parent -S -t 10 -nd --retr-symlinks -m"
 local_dir_check=true
 do_deletes=false
