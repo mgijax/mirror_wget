@@ -1,3 +1,8 @@
+TAG: mirror_wget-6-0-29-2
+DATE: 10/26/2026
+add user-agent per Matt Dunn at Phenome
+        modified:   phenome.jax.org
+
 TAG: mirror_wget-6-0-29-1
 DATE: 06/29/2026
 wts2-1874/UniProt load/calls vocabulary load/IP.config : mirror_wget has changed
