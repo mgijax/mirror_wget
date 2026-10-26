@@ -1,7 +1,12 @@
-TAG: mirror_wget-6-0-29-2
+TAG: mirror_wget-6-0-29-3
 DATE: 10/26/2026
 add user-agent per Matt Dunn at Phenome
         modified:   phenome.jax.org
+
+TAG: mirror_wget-6-0-29-2
+DATE: 07/27/2026
+SPRT-391 Update mirror_wget for Ensembl 116
+        modified:   ftp.ensembl.org.mouse_gff3
 
 TAG: mirror_wget-6-0-29-1
 DATE: 06/29/2026
